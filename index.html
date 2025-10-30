@@ -1,28 +1,197 @@
-<!-- BEGIN: Booking Section -->
-<section id="book" class="section alt">
-  <div class="container">
-    <h2>Book a time that works for you</h2>
-    <p>Pick a quick 15-minute call, a 30-minute coverage review, or a 45-minute new-client consult. You’ll get a calendar invite and reminder automatically.</p>
-
-    <!-- Quick buttons to specific event types -->
-    <div class="grid cards" style="margin-top:14px">
-      <a class="card" href="https://calendly.com/insurewithyuki/15min" target="_blank" rel="noopener">
-        <h3>15-min • Quick Question</h3>
-        <p>Fast check-in or a quick quote scenario.</p>
-      </a>
-      <a class="card" href="https://calendly.com/insurewithyuki/30min" target="_blank" rel="noopener">
-        <h3>30-min • Coverage Review</h3>
-        <p>Side-by-side comparison and discounts.</p>
-      </a>
-      <a class="card" href="https://calendly.com/insurewithyuki/45min" target="_blank" rel="noopener">
-        <h3>45-min • New Client Consult</h3>
-        <p>Home/Auto/Commercial or Life strategy.</p>
-      </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insure with Yuki — Farmers Insurance</title>
+  <meta name="description" content="Auto, Home, Umbrella, Life, and Commercial — tailored with care by Yukiko ‘Yuki’ Kobayashi at Chris McMurry Farmers Insurance (Bonita, CA).">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/farmers-mark.svg" alt="Farmers Insurance" class="logo">
+        <div class="brand-text">
+          <h1 class="brand-name">Insure with Yuki</h1>
+          <p class="brand-sub">Farmers Insurance — Chris McMurry Agency • Bonita, CA</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="#services">Services</a>
+        <a href="#bundles">Bundles</a>
+        <a href="#life">Life</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#about">About</a>
+        <a href="#book" class="cta">Book</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Optional inline Calendly embed (shows your scheduler on the page) -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/insurewithyuki?hide_gdpr_banner=1&primary_color=0B3C5D" style="min-width:320px;height:700px;margin-top:18px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  </div>
-</section>
-<!-- END: Booking Section -->
+  <!-- HERO with BOOK box (replaces old quote box) -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h2>Coverage that fits — from a local advisor who listens</h2>
+        <p>Auto, Home, Umbrella, Life, and Commercial — I help you match protection to your goals and budget.</p>
+        <a href="#book" class="btn-primary">Book an Appointment</a>
+        <a href="#services" class="btn-secondary">See Services</a>
+      </div>
+
+      <!-- BOOK CARD (no form) -->
+      <div class="hero-card">
+        <h3>Book an Appointment</h3>
+        <p>Pick a time that works for you. I’ll send a calendar invite and reminder.</p>
+        <div class="grid cards" style="margin-top:10px">
+          <a class="card" href="https://calendly.com/insurewithyuki/15min" target="_blank" rel="noopener">
+            <h4>15-min • Quick Question</h4>
+            <p>Fast check-in or a quick quote scenario.</p>
+          </a>
+          <a class="card" href="https://calendly.com/insurewithyuki/30min" target="_blank" rel="noopener">
+            <h4>30-min • Coverage Review</h4>
+            <p>Side-by-side comparison and discounts.</p>
+          </a>
+          <a class="card" href="https://calendly.com/insurewithyuki/45min" target="_blank" rel="noopener">
+            <h4>45-min • New Client Consult</h4>
+            <p>Home/Auto/Commercial or Life strategy.</p>
+          </a>
+        </div>
+        <p class="form-note">You can also use the scheduler below.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="grid cards">
+        <div class="card"><h3>Auto</h3><p>Liability, Comprehensive, Collision, and specialty options.</p></div>
+        <div class="card"><h3>Home & Renters</h3><p>Customized dwelling, personal property, and liability limits.</p></div>
+        <div class="card"><h3>Umbrella</h3><p>Extra liability protection above Auto/Home.</p></div>
+        <div class="card"><h3>Life</h3><p>Term, Return of Premium Term, and Indexed Universal Life (IUL).</p></div>
+        <div class="card"><h3>Small Business</h3><p>BOP/Prop-Box strategies, Commercial Auto, and more.</p></div>
+        <div class="card"><h3>Contractor Focus</h3><p>Commercial Auto + Prop-Box pairing for artisan contractors.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bundles -->
+  <section id="bundles" class="section alt">
+    <div class="container two-col">
+      <div>
+        <h2>Bundles & Discounts</h2>
+        <p>Bundle Home with Auto or add Umbrella to unlock stronger multi-line discounts — similar to wholesale vs retail pricing.</p>
+      </div>
+      <div class="callout">
+        <h3>Fast Start</h3>
+        <p>Email your current declaration pages and I’ll match coverage apples-to-apples, then check eligible discounts.</p>
+        <a href="#contact" class="btn-primary">Email My Declarations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Life -->
+  <section id="life" class="section">
+    <div class="container two-col">
+      <div>
+        <h2>Life Insurance</h2>
+        <p>Start with income-replacement Term or Return of Premium Term; for long-term strategies, IUL provides flexible protection with index-linked crediting.</p>
+        <p class="note">Availability varies by state. Life products are not available in certain states.</p>
+      </div>
+      <div class="card">
+        <h3>Quick Life Check</h3>
+        <ul class="bullets">
+          <li>Goal & budget review</li>
+          <li>Needs analysis (income replacement)</li>
+          <li>Riders & features overview</li>
+          <li>Fast LEA e-application where available</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial -->
+  <section id="commercial" class="section alt">
+    <div class="container">
+      <h2>Commercial & Contractor Strategy</h2>
+      <p>Commercial Auto remains highly competitive. Pair with Prop-Box to keep equipment and installation covered, even when GL is placed externally.</p>
+    </div>
+  </section>
+
+  <!-- BEGIN: Booking Section (inline scheduler) -->
+  <section id="book" class="section alt">
+    <div class="container">
+      <h2>Book a time that works for you</h2>
+      <p>Choose 15, 30, or 45 minutes. You’ll receive a calendar invite and reminder automatically.</p>
+
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/insurewithyuki?hide_gdpr_banner=1&primary_color=0B3C5D"
+           style="min-width:320px;height:700px;margin-top:18px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  </section>
+  <!-- END: Booking Section -->
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container two-col">
+      <div>
+        <h2>About Yuki</h2>
+        <p>I’m a Protégé Agency Producer training under the Chris McMurry Agency in Bonita. I focus on education, transparency, and consistent follow-through.</p>
+        <div class="info-block">
+          <h3>Ownership Path & Milestones</h3>
+          <ul class="bullets">
+            <li>P&amp;C + Life/Health licensing</li>
+            <li>Complete University of Farmers (Protégé)</li>
+            <li>Self-generate $100K GFP in 12 months → ownership with capital waived</li>
+            <li>Bonuses at $30K / $60K / $100K</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Why clients choose me</h3>
+        <ul class="bullets">
+          <li>Clear side-by-side comparisons</li>
+          <li>Fast communication by text, phone, or email</li>
+          <li>Spanish/English support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Get in touch</h2>
+      <div class="grid contact-grid">
+        <div>
+          <p><strong>Phone (cell, preferred):</strong> (858) 828-7337</p>
+          <p><strong>Office:</strong> (619) 470-2613</p>
+          <p><strong>Primary email:</strong> <a href="mailto:Yukiko.cmcmurry@farmersagency.com">Yukiko.cmcmurry@farmersagency.com</a></p>
+          <p><strong>Alternate email:</strong> <a href="mailto:hello@insurewithyuki.com">hello@insurewithyuki.com</a></p>
+          <p><strong>Office:</strong> Chris McMurry Farmers Insurance — Bonita, CA</p>
+          <p><strong>CA Lic#:</strong> 4456617</p>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent — thank you!');">
+          <label>Name<input type="text" required></label>
+          <label>Email<input type="email" required></label>
+          <label>How can I help?<textarea rows="4" required></textarea></label>
+          <button type="submit" class="btn-primary btn-block">Send Message</button>
+        </form>
+      </div>
+      <p class="privacy">Quotes are estimates and subject to underwriting. No coverage is bound until confirmed in writing. Product availability varies by state. Life issued by Farmers New World Life Insurance Company.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Yukiko “Yuki” Kobayashi. Farmers Insurance® is a registered trademark of Farmers Group, Inc. Used for identification purposes only.</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
