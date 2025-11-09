@@ -1,228 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Insure with Yuki — Farmers Insurance</title>
-  <meta name="description" content="Auto, Home, Umbrella, Life, and Commercial — tailored with care by Yukiko ‘Yuki’ Kobayashi at Chris McMurry Farmers Insurance (Bonita, CA).">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Preview — Insure with Yuki</title>
+  <meta name="description" content="Preview of the new Insure with Yuki homepage design — modern, balanced, and mobile-first." />
+  <meta name="theme-color" content="#0b214a" />
+  <link rel="icon" href="assets/farmers-logo.png" />
+  <style>
+    :root{
+      --ink:#0b214a;        /* Farmers navy */
+      --ink2:#15356b;
+      --sky:#f6f8fc;        /* soft bg */
+      --card:#fff;
+      --muted:#5b6b86;
+      --accent:#e31c3d;     /* subtle red accents */
+      --ring:rgba(11,33,74,.14);
+      --shadow:0 10px 28px rgba(11,33,74,.10);
+      --r:14px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: var(--sky);
+      color: var(--ink);
+      line-height:1.5;
+    }
+
+    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* Topbar */
+    .top{position:sticky;top:0;z-index:50;background:#ffffffcc;backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(11,33,74,.08)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+    .brand img{height:34px;border-radius:6px}
+    .brand h1{font-size:18px;margin:0}
+    .links a{margin-left:18px;color:var(--ink);text-decoration:none;font-weight:600}
+    .links a:hover{color:var(--accent)}
+
+    /* Hero */
+    .hero{
+      background:
+        radial-gradient(1000px 400px at 50% -10%, #e6edff 0%, transparent 60%),
+        linear-gradient(180deg,#fff,#f2f5fb);
+      padding:56px 0 28px;border-bottom:1px solid rgba(11,33,74,.06)
+    }
+    .heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(11,33,74,.1);padding:8px 12px;border-radius:999px;box-shadow:0 6px 16px var(--ring);font-weight:600}
+    .hero h2{font-size:38px;line-height:1.15;margin:12px 0 8px}
+    .hero p{color:var(--muted);margin:0 0 14px}
+
+    /* Booking buttons */
+    .appt{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .btn{
+      display:flex;flex-direction:column;gap:6px;text-decoration:none;color:#fff;background:var(--ink);
+      padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,.08);box-shadow:0 6px 18px var(--ring);
+      transition:transform .06s, box-shadow .2s, background .2s
+    }
+    .btn:hover{transform:translateY(-1px);background:var(--ink2);box-shadow:0 16px 30px var(--ring)}
+    .btn small{color:#e9efff}
+
+    /* Cards / sections */
+    .card{background:var(--card);border:1px solid rgba(11,33,74,.08);border-radius:var(--r);box-shadow:var(--shadow);padding:16px}
+    .headshot{width:100%;border-radius:10px;object-fit:cover;aspect-ratio:4/3;background:#f1f4fb}
+    .section{padding:36px 0}
+    .lead{color:var(--muted);max-width:65ch}
+
+    /* Product grid */
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
+    .pCard{background:var(--card);border:1px solid rgba(11,33,74,.08);border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
+    .icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#e9efff,#dfe8ff);display:grid;place-items:center;color:var(--ink2);font-weight:800;margin-bottom:10px;box-shadow:0 6px 16px var(--ring)}
+    .pCard h3{margin:0 0 6px}
+    .pCard p{margin:0 0 8px;color:var(--muted)}
+    .chip{display:inline-block;font-size:12px;background:#f3f6ff;color:#244073;border:1px solid #d5dff7;padding:6px 9px;border-radius:999px;margin:6px 8px 0 0}
+
+    /* Value */
+    .two{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .list{margin:0;padding-left:18px}
+    .list li{margin:6px 0}
+    .mono{font-variant-numeric:tabular-nums}
+
+    /* Contact */
+    .contact{background:linear-gradient(180deg,#f2f5fb,#ffffff);border-top:1px solid rgba(11,33,74,.06);padding:32px 0 44px}
+    .cta{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;background:#fff;border:1px solid rgba(11,33,74,.08);border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
+    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:18px;color:var(--muted)}
+
+    /* Accent line */
+    .accent-line{height:4px;background:linear-gradient(90deg,var(--accent),#ff8a8a00);border-radius:999px;margin:10px 0 0}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .heroGrid{grid-template-columns:1fr}
+      .appt{grid-template-columns:1fr}
+      .grid4{grid-template-columns:repeat(2,1fr)}
+      .two{grid-template-columns:1fr}
+      .cta{grid-template-columns:1fr}
+      .hero h2{font-size:32px}
+    }
+    @media (max-width:560px){ .grid4{grid-template-columns:1fr} }
+  </style>
 </head>
 <body>
-  <!-- ===== Header ===== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="assets/farmers-mark.svg" alt="Farmers Insurance" class="logo">
-        <div class="brand-text">
-          <h1 class="brand-name">Insure with Yuki</h1>
-          <p class="brand-sub">Farmers Insurance — Chris McMurry Agency • Bonita, CA</p>
+
+  <!-- Topbar -->
+  <header class="top">
+    <div class="wrap">
+      <nav class="nav">
+        <a class="brand" href="#top">
+          <img src="assets/farmers-logo.png" alt="Farmers Insurance logo" onerror="this.src='';this.replaceWith(makeLogoFallback())">
+          <div>
+            <h1>Insure with Yuki</h1>
+            <div style="font-size:12px;color:var(--muted)">CA Lic #4456617</div>
+          </div>
+        </a>
+        <div class="links">
+          <a href="#book">Book</a>
+          <a href="#products">Products</a>
+          <a href="#value">Why Us</a>
+          <a href="#contact">Contact</a>
         </div>
-      </div>
-      <nav class="top-nav">
-        <a href="#services">Services</a>
-        <a href="#bundles">Bundles</a>
-        <a href="#life">Life</a>
-        <a href="#commercial">Commercial</a>
-        <a href="#about">About</a>
-        <a href="#book" class="cta">Book</a>
-        <a href="#contact" class="cta">Get a Quote</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h2>Coverage that fits — from a local advisor who listens</h2>
-        <p>Auto, Home, Umbrella, Life, and Commercial — I help you match protection to your goals and budget, with same-day options available on many policies.</p>
-        <a href="#book" class="btn-primary">Book an Appointment</a>
-        <a href="#services" class="btn-secondary">See Services</a>
-      </div>
-      <div class="hero-card">
-        <h3>Quick Quote — Home</h3>
-        <form class="quote-form" onsubmit="event.preventDefault(); alert('Thanks! I’ll follow up shortly.');">
-          <label>Full Name<input type="text" placeholder="First & Last Name" required></label>
-          <label>Email<input type="email" placeholder="you@example.com" required></label>
-          <label>Phone<input type="tel" placeholder="(###) ###-####" required></label>
-          <label>Property ZIP<input type="text" inputmode="numeric" maxlength="10" placeholder="ZIP Code" required></label>
-          <button type="submit" class="btn-primary btn-block">Send</button>
-          <p class="form-note">Prefer email? Send your current declaration page for a precise, apples-to-apples quote.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Services ===== -->
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="grid cards">
-        <div class="card"><h3>Auto</h3><p>Liability, Comprehensive, Collision, and specialty options.</p></div>
-        <div class="card"><h3>Home & Renters</h3><p>Customized dwelling, personal property, and liability limits.</p></div>
-        <div class="card"><h3>Umbrella</h3><p>Extra liability limits that sit above Auto/Home.</p></div>
-        <div class="card"><h3>Life</h3><p>Term, Return of Premium Term, and Indexed Universal Life (IUL).</p></div>
-        <div class="card"><h3>Small Business</h3><p>BOP / Prop-Box strategies, Commercial Auto, and more.</p></div>
-        <div class="card"><h3>Contractor Focus</h3><p>Commercial Auto + Prop-Box pairing for artisan contractors.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Bundles ===== -->
-  <section id="bundles" class="section alt">
-    <div class="container two-col">
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="wrap heroGrid">
       <div>
-        <h2>Bundles & Discounts</h2>
-        <p>Combine Home with Auto or an Umbrella to unlock stronger multi-line discounts — like wholesale vs. retail pricing for stand-alone coverage.</p>
-      </div>
-      <div class="callout">
-        <h3>Fast Start</h3>
-        <p>Email your current declaration pages and I’ll match coverage apples-to-apples, then check eligible discounts.</p>
-        <a href="#contact" class="btn-primary">Email My Declarations</a>
-      </div>
-    </div>
-  </section>
+        <span class="pill">Auto • Home • Life • Umbrella • Commercial</span>
+        <h2>Coverage that grows with your life.</h2>
+        <p>Clear options, smart recommendations, and fast follow-through. Pick a time below and we’ll tailor a plan that fits your goals and budget.</p>
 
-  <!-- ===== Life ===== -->
-  <section id="life" class="section">
-    <div class="container two-col">
-      <div>
-        <h2>Life Insurance</h2>
-        <p>
-          Protect income and future goals with the right fit:
-          <strong>Term</strong> for affordable protection,
-          <strong>Return of Premium Term</strong> for protection with the potential to get back paid premiums at the end of term, and
-          <strong>Indexed Universal Life (IUL)</strong> for flexible coverage with index-linked crediting.
-        </p>
-        <ul class="bullets">
-          <li>Fast needs analysis and side-by-side options</li>
-          <li>Budget-based designs with clear illustrations</li>
-          <li>Simple e-application when you’re ready</li>
-        </ul>
-
-        <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
-          <a class="btn-primary" href="#contact">Get a Life Quote</a>
-          <a class="btn-secondary" href="YOUR_30MIN_LIFE_REVIEW_LINK" target="_blank" rel="noopener">
-            Book 30-min Life Review
+        <!-- Outlook booking buttons (placeholders) -->
+        <div id="book" class="appt">
+          <a class="btn" href="https://outlook.office.com/bookwithme/user/your-alias?type=15min" target="_blank" rel="noopener">
+            15-Minute Intro Call
+            <small>Quick questions or policy check-in</small>
+          </a>
+          <a class="btn" href="https://outlook.office.com/bookwithme/user/your-alias?type=30min" target="_blank" rel="noopener">
+            30-Minute Coverage Review
+            <small>Home/Auto/Bundle comparison</small>
+          </a>
+          <a class="btn" href="https://outlook.office.com/bookwithme/user/your-alias?type=45min" target="_blank" rel="noopener">
+            45-Minute Full Planning
+            <small>Home + Auto + Umbrella or Life</small>
           </a>
         </div>
 
-        <p class="note" style="margin-top:10px">
-          Availability varies by state. Quotes are estimates and subject to underwriting.
-          No coverage is bound until confirmed in writing.
+        <p style="margin-top:10px">Prefer to browse all times?
+          <a href="https://outlook.office.com/bookwithme/user/your-alias" target="_blank" rel="noopener">See full availability</a>.
         </p>
+        <div class="accent-line"></div>
       </div>
 
-      <div class="card">
-        <h3>Quick Life Check</h3>
-        <ul class="bullets">
-          <li>Income-replacement target</li>
-          <li>Term vs ROP Term vs IUL comparison</li>
-          <li>Riders & features explained</li>
-          <li>Next steps and timing</li>
-        </ul>
-        <a class="btn-primary btn-block" href="YOUR_45MIN_NEW_CLIENT_LINK" target="_blank" rel="noopener">
-          Book New-Client Consult (45-min)
-        </a>
-      </div>
+      <!-- Profile card -->
+      <aside class="card" aria-label="Yuki profile">
+        <img class="headshot" src="assets/yuki-headshot.jpg" alt="Yuki — Farmers Insurance"
+             onerror="this.style.background='linear-gradient(135deg,#eaf1ff,#f7f9ff)';this.replaceWith(makeHeadshotFallback())">
+        <div style="display:flex;align-items:center;gap:10px;margin-top:10px">
+          <img src="assets/farmers-logo.png" alt="Farmers logo" style="height:24px" onerror="this.style.display='none'">
+          <strong style="color:var(--ink2)">Insure with Yuki</strong>
+        </div>
+      </aside>
     </div>
   </section>
 
-  <!-- ===== Commercial ===== -->
-  <section id="commercial" class="section alt">
-    <div class="container">
-      <h2>Commercial & Contractor Strategy</h2>
-      <p>Commercial Auto remains highly competitive. Pair with Prop-Box to keep equipment and installation covered, even when GL is placed externally.</p>
-    </div>
-  </section>
+  <!-- Products -->
+  <section id="products" class="section">
+    <div class="wrap">
+      <h3>Products</h3>
+      <p class="lead">Build your plan with the essentials — then layer protections that match your lifestyle and assets.</p>
 
-  <!-- ===== Booking ===== -->
-  <!-- BEGIN: Booking Section -->
-  <section id="book" class="section alt">
-    <div class="container">
-      <h2>Book a time that works for you</h2>
-      <p>Pick a quick 15-minute call, a 30-minute coverage review, or a 45-minute new-client consult. You’ll get a calendar invite and reminder automatically.</p>
+      <div class="grid4">
+        <div class="pCard">
+          <div class="icon">🚗</div>
+          <h3>Auto</h3>
+          <p>100/300 BI & UM as the smart default, PD tailored to vehicle mix. Deductibles sized for long-term savings.</p>
+          <span class="chip">Liability</span><span class="chip">Comp & Collision</span><span class="chip">Medical Payments</span>
+        </div>
 
-      <!-- Quick buttons to specific event types -->
-      <div class="grid cards" style="margin-top:14px">
-        <a class="card" href="YOUR_15MIN_LINK" target="_blank" rel="noopener">
-          <h3>15-min • Quick Question</h3>
-          <p>Fast check-in or a quick quote scenario.</p>
-        </a>
-        <a class="card" href="YOUR_30MIN_LINK" target="_blank" rel="noopener">
-          <h3>30-min • Coverage Review</h3>
-          <p>Side-by-side comparison and discounts.</p>
-        </a>
-        <a class="card" href="YOUR_45MIN_LINK" target="_blank" rel="noopener">
-          <h3>45-min • New Client Consult</h3>
-          <p>Home/Auto/Commercial or Life strategy.</p>
-        </a>
-      </div>
+        <div class="pCard">
+          <div class="icon">🏠</div>
+          <h3>Home / Condo / Renters</h3>
+          <p>Replacement-focused structure with water protection and device requirements explained simply.</p>
+          <span class="chip">Extended Replacement</span><span class="chip">Water Backup</span><span class="chip">Device Credits</span>
+        </div>
 
-      <!-- Inline Calendly embed (shows your scheduler on the page) -->
-      <div class="calendly-inline-widget" data-url="YOUR_MAIN_CALENDLY_LINK" style="min-width:320px;height:700px;margin-top:18px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </div>
-  </section>
-  <!-- END: Booking Section -->
+        <div class="pCard">
+          <div class="icon">🛡️</div>
+          <h3>Umbrella</h3>
+          <p>Add $1M+ of extra liability over auto and home for high-impact protection at a low cost.</p>
+          <span class="chip">1–5M Limits</span><span class="chip">Underlying Review</span>
+        </div>
 
-  <!-- ===== About ===== -->
-  <section id="about" class="section">
-    <div class="container two-col">
-      <div>
-        <h2>About Yuki</h2>
-        <p>I’m a Protégé Agency Producer training under the Chris McMurry Agency in Bonita. I focus on education, transparency, and consistent follow-through.</p>
-        <div class="info-block">
-          <h3>Ownership Path & Milestones</h3>
-          <ul class="bullets">
-            <li>P&amp;C + Life/Health licensing</li>
-            <li>Complete University of Farmers (Protégé)</li>
-            <li>Self-generate $100K GFP in 12 months → ownership with capital waived</li>
-            <li>Bonuses at $30K / $60K / $100K</li>
-          </ul>
+        <div class="pCard">
+          <div class="icon">💼</div>
+          <h3>Commercial</h3>
+          <p>Contractors, offices, restaurants, and more. Ask about Commercial Auto + BOP pairing.</p>
+          <span class="chip">BOP</span><span class="chip">Workers’ Comp</span><span class="chip">Commercial Auto</span>
+        </div>
+
+        <div class="pCard">
+          <div class="icon">❤️</div>
+          <h3>Life & Income Replacement</h3>
+          <p>Term, Return-of-Premium, or IUL options — with underwriting guidance and a plain-English walkthrough.</p>
+          <span class="chip">Term / ROP</span><span class="chip">IUL</span><span class="chip">Riders</span>
+        </div>
+
+        <div class="pCard">
+          <div class="icon">🌊</div>
+          <h3>Earthquake (CEA)</h3>
+          <p>Pair with your home policy for broader protection in California’s seismic zones.</p>
+          <span class="chip">CEA</span><span class="chip">Deductible Options</span>
+        </div>
+
+        <div class="pCard">
+          <div class="icon">📦</div>
+          <h3>Fair Plan + DIC</h3>
+          <p>When required, we structure a companion plan and revisit when private-carrier options open.</p>
+          <span class="chip">Compliance</span><span class="chip">Re-market Review</span>
+        </div>
+
+        <div class="pCard">
+          <div class="icon">🧭</div>
+          <h3>Bundle Strategy</h3>
+          <p>Think “wholesale vs retail” — bundling improves protection and overall value over time.</p>
+          <span class="chip">Multi-line Discounts</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="value" class="section">
+    <div class="wrap two">
       <div class="card">
-        <h3>Why clients choose me</h3>
-        <ul class="bullets">
-          <li>Clear side-by-side comparisons</li>
-          <li>Fast communication by text, phone, or email</li>
-          <li>Spanish/English support</li>
+        <h3>Why clients choose Yuki</h3>
+        <ul class="list">
+          <li><strong>Clarity first:</strong> I match your current coverage, then show the enhanced option side-by-side.</li>
+          <li><strong>Efficiency:</strong> One conversation, the right structure, no guesswork.</li>
+          <li><strong>Accountability:</strong> Direct access and follow-through — I keep your file moving.</li>
+          <li><strong>Long-term value:</strong> We prioritize high-impact protection and eliminate unnecessary spend.</li>
         </ul>
+      </div>
+      <div class="card">
+        <h4 class="mono" style="margin:0 0 8px">Quick math example</h4>
+        <p>Raising a $500 auto deductible to $1,000 might reduce premium by ≈ <strong>$200/year</strong>. If claim-free for ~2.5 years, you likely come out ahead.</p>
+        <p style="color:var(--muted);font-size:14px">Amounts vary by driver, vehicle, and rating factors.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== Contact ===== -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Get in touch</h2>
-      <div class="grid contact-grid">
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="cta">
         <div>
-          <p><strong>Phone (cell, preferred):</strong> (858) 828-7337</p>
-          <p><strong>Office:</strong> (619) 470-2613</p>
-          <p><strong>Primary email:</strong> <a href="mailto:Yukiko.cmcmurry@farmersagency.com">Yukiko.cmcmurry@farmersagency.com</a></p>
-          <p><strong>Alternate email:</strong> <a href="mailto:hello@insurewithyuki.com">hello@insurewithyuki.com</a></p>
-          <p><strong>Office:</strong> Chris McMurry Farmers Insurance — Bonita, CA</p>
-          <p><strong>CA Lic#:</strong> 4456617</p>
+          <h3>Ready to compare your options?</h3>
+          <p style="color:var(--muted)">Pick a time that works, or email your current declarations page and I’ll build a precise side-by-side.</p>
         </div>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent — thank you!');">
-          <label>Name<input type="text" required></label>
-          <label>Email<input type="email" required></label>
-          <label>How can I help?<textarea rows="4" required></textarea></label>
-          <button type="submit" class="btn-primary btn-block">Send Message</button>
-        </form>
+        <div style="display:grid;gap:10px">
+          <a class="btn" style="text-align:center" href="https://outlook.office.com/bookwithme/user/your-alias?type=30min" target="_blank" rel="noopener">
+            Book 30-Minute Coverage Review
+          </a>
+          <a href="mailto:Yukiko.cmcmurry@farmersagency.com" style="text-decoration:none;color:var(--ink);font-weight:700">Email your current declarations →</a>
+        </div>
       </div>
-      <p class="privacy">Quotes are estimates and subject to underwriting. No coverage is bound until confirmed in writing. Product availability varies by state. Life issued by Farmers New World Life Insurance Company.</p>
+
+      <div class="foot">
+        <div>
+          <div><strong>Phone:</strong> (858) 886-8107</div>
+          <div><strong>Email:</strong> Yukiko.cmcmurry@farmersagency.com</div>
+          <div><strong>Site:</strong> insurewithyuki.com</div>
+        </div>
+        <div>
+          <div>CA Lic #4456617</div>
+          <div style="font-size:13px">This page provides general information and is not a contract. Availability varies by state and product.</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Yukiko “Yuki” Kobayashi. Farmers Insurance® is a registered trademark of Farmers Group, Inc. Used for identification purposes only.</p>
-    </div>
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Simple fallbacks so preview still looks polished if assets aren’t uploaded yet.
+    function makeLogoFallback(){
+      const s = document.createElement('span');
+      s.textContent = 'Y';
+      s.style.cssText = 'width:34px;height:34px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(135deg,#0b214a,#1e3a8a);color:#fff;font-weight:800;box-shadow:0 4px 14px rgba(11,33,74,.16)';
+      return s;
+    }
+    function makeHeadshotFallback(){
+      const d = document.createElement('div');
+      d.style.cssText='width:100%;aspect-ratio:4/3;border-radius:10px;background:linear-gradient(135deg,#eaf1ff,#f7f9ff);display:grid;place-items:center;color:#244073;font-weight:700';
+      d.textContent='Headshot preview';
+      return d;
+    }
+  </script>
 </body>
 </html>
