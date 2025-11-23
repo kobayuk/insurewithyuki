@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Life Insurance • Insure with Yuki</title>
+  <title>Insure with Yuki • Farmers Insurance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -36,9 +36,10 @@
       color:var(--blue);
       font-size:1.05rem;
     }
+
     .hero{
       max-width:960px;
-      margin:16px auto 24px;
+      margin:24px auto;
       padding:24px 16px;
       display:block;
     }
@@ -47,26 +48,8 @@
       margin-bottom:10px;
       color:var(--blue);
     }
-    h2{
-      font-size:1.4rem;
-      margin-bottom:10px;
-      color:var(--blue);
-    }
     .hero p{
-      margin-bottom:12px;
-    }
-    .section{
-      max-width:960px;
-      margin:0 auto 24px;
-      padding:0 16px 8px;
-    }
-    .card{
-      background:#ffffff;
-      border-radius:10px;
-      border:1px solid #dde3f0;
-      padding:16px;
-      margin-bottom:12px;
-      font-size:.95rem;
+      margin-bottom:14px;
     }
     .btn{
       display:inline-block;
@@ -77,15 +60,46 @@
       color:#ffffff;
       text-decoration:none;
       font-size:.95rem;
-      margin-top:8px;
+      margin-right:8px;
+      margin-bottom:8px;
     }
-    .back-link{
+    .small{
+      font-size:.85rem;
+      color:#5a6784;
+      margin-top:6px;
+    }
+
+    .section{
       max-width:960px;
-      margin:10px auto 0;
-      padding:0 16px;
-      font-size:.9rem;
+      margin:0 auto 24px;
+      padding:0 16px 8px;
     }
-    .back-link a{text-decoration:none;color:var(--blue);}
+    h2{
+      font-size:1.4rem;
+      margin-bottom:10px;
+      color:var(--blue);
+    }
+    .card{
+      background:#ffffff;
+      border-radius:10px;
+      border:1px solid #dde3f0;
+      padding:16px;
+      margin-bottom:12px;
+      font-size:.95rem;
+    }
+    .tag-row{
+      font-size:.8rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#7482a0;
+      margin-bottom:8px;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:16px;
+    }
+
     footer{
       background:#0f1b33;
       color:#c9d2e3;
@@ -95,70 +109,88 @@
     footer .wrap{
       padding:12px 16px;
     }
+    @media (max-width:720px){
+      .nav{flex-direction:row;justify-content:space-between;}
+      .contact-grid{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="wrap nav">
-      <div class="brand-name"><a href="index.html" style="text-decoration:none;color:inherit;">Insure with Yuki</a></div>
+      <div class="brand-name">Insure with Yuki</div>
       <div>Farmers Insurance • Bonita CA</div>
     </div>
   </header>
 
-  <div class="back-link">
-    <a href="index.html">&larr; Back to home</a>
-  </div>
-
   <main>
     <!-- Hero -->
     <section class="hero">
-      <h1>Life insurance options</h1>
+      <h1>Insurance made clear and personal.</h1>
       <p>
-        Life insurance is about more than a number on a page. It is about making sure your family has time space and money if something happens to you.
+        Auto home life and business insurance can feel confusing.
+        I help you review what you have now and set up clear coverage that matches your real risks and your monthly comfort.
+        My goal is that you finish our appointment feeling calm clear and confident about what you pay for and how you are protected.
       </p>
-      <p>
-        We can keep it simple or build something more advanced depending on your goals and your budget. Below are the four main types we can review together.
-      </p>
+
       <a class="btn" href="https://outlook.office.com/bookwithme/user/31659bfed4c34964bad4f12a37b73299@chrismcmurryinsurance.com?anonymous&ep=signature&ismsaljsauthenabled" target="_blank">
-        Book a life insurance review
+        Book an appointment
       </a>
+
+      <p class="small">
+        Email a copy of your current declarations page so I can compare your coverage and build a clear side by side comparison with Farmers.
+      </p>
     </section>
 
-    <!-- Term -->
+    <!-- Insurance services -->
     <section class="section">
+      <h2>Insurance services</h2>
       <div class="card">
-        <h2>Term life</h2>
-        <p>
-          Term life is simple protection for a set amount of time like 10 or 20 years. It is usually the lowest monthly cost.
-        </p>
-        <ul style="margin-top:6px;padding-left:18px;">
-          <li>Covers you for a set term while kids are growing or a mortgage is in place.</li>
-          <li>Higher coverage amounts can be more affordable than permanent life.</li>
-          <li>Good for income replacement and mortgage protection during your main working years.</li>
+        <div class="tag-row">
+          Auto • Home • Life • Commercial • Business
+        </div>
+        <ul style="margin-top:4px;padding-left:18px;">
+          <li>Auto and commercial vehicle coverage</li>
+          <li>Homeowners and umbrella protection</li>
+          <li>Renters and condo insurance</li>
+          <li>Business general liability and workers comp</li>
+          <li>Life and financial protection</li>
+          <li>Accidental death and income replacement</li>
         </ul>
       </div>
     </section>
 
-    <!-- Return of Premium -->
+    <!-- Life insurance (multiple cards, including IUL Juvenile) -->
     <section class="section">
+      <h2>Life insurance</h2>
+
       <div class="card">
-        <h2>Return of Premium term</h2>
+        <h3 style="margin-bottom:6px;">Term life</h3>
+        <p>
+          Term life is simple protection for a set period of time like 10 or 20 years. It is usually the lowest monthly cost.
+        </p>
+        <ul style="margin-top:6px;padding-left:18px;">
+          <li>Covers you during key years while kids are growing or a mortgage is in place.</li>
+          <li>Higher coverage amounts can be more affordable than permanent life insurance.</li>
+          <li>Good for income replacement and mortgage protection during your main working years.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:6px;">Return of Premium term</h3>
         <p>
           Return of Premium term works like term life but if you outlive the term you can get close to your money back.
         </p>
         <ul style="margin-top:6px;padding-left:18px;">
           <li>Protection during the term just like regular term life.</li>
           <li>If you keep the policy to the end you can receive back most of what you paid in premiums.</li>
-          <li>Feels like a forced savings plan that can be used later for debt savings or another strategy.</li>
+          <li>Feels like a forced savings plan you can use later for debt savings or another strategy.</li>
         </ul>
       </div>
-    </section>
 
-    <!-- Whole life -->
-    <section class="section">
       <div class="card">
-        <h2>Whole life</h2>
+        <h3 style="margin-bottom:6px;">Whole life</h3>
         <p>
           Whole life is permanent coverage with a fixed monthly payment and steady cash value growth.
         </p>
@@ -169,40 +201,79 @@
           <li>Can help with final expenses or emergencies while still leaving a benefit to your family.</li>
         </ul>
       </div>
-    </section>
 
-    <!-- Indexed Universal Life -->
-    <section class="section">
       <div class="card">
-        <h2>Indexed Universal Life</h2>
+        <h3 style="margin-bottom:6px;">Indexed Universal Life</h3>
         <p>
           Indexed Universal Life is flexible life insurance with a savings bucket that can grow over time.
         </p>
         <ul style="margin-top:6px;padding-left:18px;">
           <li>Flexible premium structure so you can increase or decrease funding within limits.</li>
-          <li>Cash value is tied to market indexes with protection on the downside so it is not invested directly in stocks.</li>
-          <li>Possible to use the cash value for big goals emergencies or retirement income later in life.</li>
+          <li>Cash value is tied to market indexes with downside protection not invested directly in stocks.</li>
+          <li>Possible to use the cash value later for big goals emergencies or retirement income.</li>
           <li>The life insurance can still pay the remaining amount to your family when you pass away.</li>
         </ul>
-        <p style="margin-top:8px;">
-          During our appointment we can look at whether a simple term plan a Return of Premium option or a mix with cash value makes sense for you.
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:6px;">Indexed Universal Life (Juvenile)</h3>
+        <p>
+          An Indexed Universal Life Juvenile policy is designed for children or young adults so you can lock in protection and long term savings early.
+        </p>
+        <ul style="margin-top:6px;padding-left:18px;">
+          <li>Covers a child or young adult while they are generally younger and healthier.</li>
+          <li>Premiums are based on their age which can keep the cost more manageable.</li>
+          <li>A portion of what you pay goes into a cash value bucket that can grow over many years.</li>
+          <li>Later in life they may be able to use the cash value for goals like education a first home or retirement support while keeping coverage.</li>
+        </ul>
+        <p style="margin-top:6px;">
+          During our appointment we can look at whether a simple term plan a Return of Premium option or a mix with Whole Life and Indexed Universal Life Juvenile makes the most sense for your family.
         </p>
       </div>
     </section>
 
-    <!-- Call to action -->
+    <!-- Commercial -->
     <section class="section">
+      <h2>Commercial insurance</h2>
       <div class="card">
-        <h2>How we will review your options</h2>
-        <p>
-          We will start with what you want this money to do for your family. Then we will build a simple side by side view of Term Return of Premium Whole Life and Indexed Universal Life.
+        <p>We can set up protection for your business so your work vehicles and your company are not exposed if something happens.</p>
+        <ul style="margin-top:6px;padding-left:18px;">
+          <li>Commercial auto for contractors and small fleets</li>
+          <li>Business owners policy for offices shops and salons</li>
+          <li>General liability when a job location or client asks for proof of insurance</li>
+          <li>Workers compensation when you have employees on payroll</li>
+        </ul>
+        <p style="margin-top:8px;">
+          Bring your current policies or we can start from the beginning and build something that matches how your business runs day to day.
         </p>
-        <p style="margin-top:6px;">
-          If you already have life insurance you can email me a copy of your current policy or statements and I will compare it during our meeting.
-        </p>
-        <a class="btn" href="https://outlook.office.com/bookwithme/user/31659bfed4c34964bad4f12a37b73299@chrismcmurryinsurance.com?anonymous&ep=signature&ismsaljsauthenabled" target="_blank">
-          Schedule your life review
-        </a>
+      </div>
+    </section>
+
+    <!-- Contact at the bottom -->
+    <section class="section">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="card">
+          <p>
+            Address 5120 Robinwood Rd Ste B22<br>
+            Bonita CA 91902
+          </p>
+          <br>
+          <p>
+            Direct
+            <a href="tel:+18588868107">858 886 8107</a><br>
+            Office
+            <a href="tel:+16194702613">(619) 470 2613</a><br>
+            Email
+            <a href="mailto:Yukiko.cmcmurry@farmersagency.com">Yukiko.cmcmurry@farmersagency.com</a><br>
+            CA License 4456617
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            I help families new homeowners self employed professionals and small business owners who want clear coverage and one main point of contact instead of a generic 800 number.
+          </p>
+        </div>
       </div>
     </section>
   </main>
