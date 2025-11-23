@@ -28,14 +28,7 @@
       align-items:center;
       justify-content:space-between;
       gap:16px;
-    }
-    .logo{
-      height:40px;
-      width:auto;
-    }
-    .brand-block{
-      text-align:right;
-      font-size:.9rem;
+      font-size:.95rem;
       color:#5a6784;
     }
     .brand-name{
@@ -48,10 +41,7 @@
       max-width:960px;
       margin:24px auto;
       padding:24px 16px;
-      display:grid;
-      grid-template-columns:1.2fr 0.8fr;
-      gap:24px;
-      align-items:center;
+      display:block;
     }
     h1{
       font-size:1.9rem;
@@ -73,26 +63,10 @@
       margin-right:8px;
       margin-bottom:8px;
     }
-    .btn.secondary{
-      background:#ffffff;
-      color:var(--blue);
-    }
-    .small{font-size:.85rem;color:#5a6784;margin-top:6px;}
-
-    .headshot{
-      width:100%;
-      max-width:260px;
-      border-radius:12px;
-      display:block;
-      margin:0 auto 10px;
-    }
-    .hero-card{
-      background:#ffffff;
-      border-radius:10px;
-      border:1px solid #dde3f0;
-      padding:16px;
-      font-size:.95rem;
-      text-align:center;
+    .small{
+      font-size:.85rem;
+      color:#5a6784;
+      margin-top:6px;
     }
 
     .section{
@@ -137,9 +111,7 @@
     }
     @media (max-width:720px){
       .nav{flex-direction:row;justify-content:space-between;}
-      .hero{grid-template-columns:1fr;}
       .contact-grid{grid-template-columns:1fr;}
-      .brand-block{text-align:left;}
     }
   </style>
 </head>
@@ -147,42 +119,27 @@
 
   <header>
     <div class="wrap nav">
-      <img src="farmers-logo.png" alt="Farmers Insurance" class="logo">
-      <div class="brand-block">
-        <div class="brand-name">Insure with Yuki</div>
-        <div>Farmers Insurance • Bonita CA</div>
-      </div>
+      <div class="brand-name">Insure with Yuki</div>
+      <div>Farmers Insurance • Bonita CA</div>
     </div>
   </header>
 
   <main>
-    <!-- Hero with your photo -->
+    <!-- Hero -->
     <section class="hero">
-      <div>
-        <h1>Insurance made clear and personal.</h1>
-        <p>Auto home life and commercial coverage tailored to your situation and your budget. We can review what you have today and build a smarter structure going forward.</p>
+      <h1>Insurance made clear and personal.</h1>
+      <p>
+        Auto home life and commercial coverage tailored to your situation and your budget.
+        We can review what you have today and build a smarter structure that fits your comfort each month.
+      </p>
 
-        <a class="btn" href="https://outlook.office.com/bookwithme/user/31659bfed4c34964bad4f12a37b73299@chrismcmurryinsurance.com?anonymous&ep=signature&ismsaljsauthenabled" target="_blank">
-          Book an appointment
-        </a>
+      <a class="btn" href="https://outlook.office.com/bookwithme/user/31659bfed4c34964bad4f12a37b73299@chrismcmurryinsurance.com?anonymous&ep=signature&ismsaljsauthenabled" target="_blank">
+        Book an appointment
+      </a>
 
-        <p class="small">
-          Attach a copy of your current declarations page so I can compare your coverage and build a clear side by side comparison with Farmers.
-        </p>
-      </div>
-
-      <div>
-        <div class="hero-card">
-          <img src="yuki-headshot.jpg" alt="Yukiko Kobayashi" class="headshot">
-          <p>
-            Yukiko “Yuki” Kobayashi<br>
-            Farmers Insurance Bonita CA
-          </p>
-          <p style="margin-top:6px;">
-            I will walk you through your options in simple language so you know what you are paying for and where you are protected.
-          </p>
-        </div>
-      </div>
+      <p class="small">
+        Attach a copy of your current declarations page so I can compare your coverage and build a clear side by side comparison with Farmers.
+      </p>
     </section>
 
     <!-- Insurance services -->
@@ -211,19 +168,27 @@
         <ul style="margin-top:6px;padding-left:18px;">
           <li>
             <strong>Term life</strong><br>
-            10 or 20 year coverage with a simple death benefit and a lower monthly payment than permanent life insurance. This works well if you want to replace income or protect a mortgage during your main working years.
+            10 or 20 year coverage with a simple death benefit and a lower monthly payment than permanent life insurance.
+            This works well if you want to replace income or protect a mortgage during your main working years.
           </li>
           <li style="margin-top:6px;">
             <strong>Return of Premium term</strong><br>
-            If you outlive the term you can get close to your money back. It feels more like a forced savings plan with protection the whole time. At the end of the term you can use that money to help pay down debt add to savings or roll it into another plan.
+            If you outlive the term you can get close to your money back.
+            It feels more like a forced savings plan with protection the whole time.
+            At the end of the term you can use that money to help pay down debt add to savings or roll it into another plan.
           </li>
           <li style="margin-top:6px;">
             <strong>Whole life</strong><br>
-            Lifetime coverage with a fixed monthly payment and a cash value that grows slowly every year. This is good if you want a rate that does not change and a policy that will be there no matter how long you live. The cash value is steady and does not depend on the market. You can use it later for emergencies or final expenses and your family can still receive the remaining life insurance when you pass away.
+            Lifetime coverage with a fixed monthly payment and a cash value that grows slowly every year.
+            This is good if you want a rate that does not change and a policy that will be there no matter how long you live.
+            The cash value is steady and does not depend on the market.
+            You can use it later for emergencies or final expenses and your family can still receive the remaining life insurance when you pass away.
           </li>
           <li style="margin-top:6px;">
             <strong>Indexed Universal Life</strong><br>
-            A flexible life policy with a savings bucket that can grow over time. The cash value is linked to market indexes with protection on the downside so it can grow without direct market loss. You can use the cash value later for emergencies big goals or retirement income and the life insurance can still pay the remaining amount to your family if something happens to you.
+            A flexible life policy with a savings bucket that can grow over time.
+            The cash value is linked to market indexes with protection on the downside so it can grow without direct market loss.
+            You can use the cash value later for emergencies big goals or retirement income and the life insurance can still pay the remaining amount to your family if something happens to you.
           </li>
         </ul>
         <p style="margin-top:8px;">
