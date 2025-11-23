@@ -8,7 +8,6 @@
   <style>
     :root{
       --blue:#002D62;
-      --red:#D52B1E;
       --bg:#f6f8fb;
       --text:#1f2a44;
     }
@@ -28,31 +27,35 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:12px;
+      gap:16px;
     }
-    .brand{font-weight:700;color:var(--blue);font-size:1.1rem;}
+    .logo{
+      height:40px;
+      width:auto;
+    }
+    .brand-block{
+      text-align:right;
+      font-size:.9rem;
+      color:#5a6784;
+    }
+    .brand-name{
+      font-weight:700;
+      color:var(--blue);
+      font-size:1.05rem;
+    }
+
     .hero{
       max-width:960px;
       margin:24px auto;
       padding:24px 16px;
       display:grid;
-      grid-template-columns:1.3fr 0.7fr;
+      grid-template-columns:1.2fr 0.8fr;
       gap:24px;
       align-items:center;
     }
-    .badge{
-      display:inline-block;
-      background:#eef3ff;
-      border:1px solid #d5e0ff;
-      border-radius:999px;
-      padding:4px 10px;
-      font-size:.8rem;
-      margin-bottom:8px;
-      color:var(--blue);
-    }
     h1{
       font-size:1.9rem;
-      margin-bottom:8px;
+      margin-bottom:10px;
       color:var(--blue);
     }
     .hero p{
@@ -74,6 +77,24 @@
       background:#ffffff;
       color:var(--blue);
     }
+    .small{font-size:.85rem;color:#5a6784;margin-top:6px;}
+
+    .headshot{
+      width:100%;
+      max-width:260px;
+      border-radius:12px;
+      display:block;
+      margin:0 auto 10px;
+    }
+    .hero-card{
+      background:#ffffff;
+      border-radius:10px;
+      border:1px solid #dde3f0;
+      padding:16px;
+      font-size:.95rem;
+      text-align:center;
+    }
+
     .section{
       max-width:960px;
       margin:0 auto 24px;
@@ -92,12 +113,6 @@
       margin-bottom:12px;
       font-size:.95rem;
     }
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1.1fr 0.9fr;
-      gap:16px;
-    }
-    .small{font-size:.85rem;color:#5a6784;margin-top:6px;}
     .tag-row{
       font-size:.8rem;
       letter-spacing:.08em;
@@ -105,13 +120,12 @@
       color:#7482a0;
       margin-bottom:8px;
     }
-    .headshot{
-      width:100%;
-      max-width:280px;
-      border-radius:12px;
-      display:block;
-      margin:0 auto 10px;
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:16px;
     }
+
     footer{
       background:#0f1b33;
       color:#c9d2e3;
@@ -122,8 +136,10 @@
       padding:12px 16px;
     }
     @media (max-width:720px){
+      .nav{flex-direction:row;justify-content:space-between;}
       .hero{grid-template-columns:1fr;}
       .contact-grid{grid-template-columns:1fr;}
+      .brand-block{text-align:left;}
     }
   </style>
 </head>
@@ -131,59 +147,45 @@
 
   <header>
     <div class="wrap nav">
-      <div class="brand">Insure with Yuki</div>
-      <div style="font-size:.9rem;color:#5a6784;">Farmers Insurance • Bonita, CA</div>
+      <img src="farmers-logo.png" alt="Farmers Insurance" class="logo">
+      <div class="brand-block">
+        <div class="brand-name">Insure with Yuki</div>
+        <div>Farmers Insurance • Bonita CA</div>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero with your photo -->
     <section class="hero">
       <div>
-        <div class="badge">CA License #: 4456617</div>
         <h1>Insurance made clear and personal.</h1>
-        <p>Auto, home, life and commercial coverage tailored to your situation and your budget. We can review what you have today and build a smarter structure going forward.</p>
+        <p>Auto home life and commercial coverage tailored to your situation and your budget. We can review what you have today and build a smarter structure going forward.</p>
+
         <a class="btn" href="https://outlook.office.com/bookwithme/user/31659bfed4c34964bad4f12a37b73299@chrismcmurryinsurance.com?anonymous&ep=signature&ismsaljsauthenabled" target="_blank">
           Book an appointment
         </a>
-        <a class="btn secondary" href="mailto:Yukiko.cmcmurry@farmersagency.com">
-          Email me your current policy
-        </a>
+
         <p class="small">
           Attach a copy of your current declarations page so I can compare your coverage and build a clear side by side comparison with Farmers.
         </p>
-        <p class="small">
-          Use the booking link to choose the best time for you. We can meet by phone or virtual call.
-        </p>
       </div>
+
       <div>
-        <div class="card" style="text-align:center;">
+        <div class="hero-card">
           <img src="yuki-headshot.jpg" alt="Yukiko Kobayashi" class="headshot">
-          <strong>How I work</strong>
-          <p style="margin-top:6px;text-align:left;">
-            I treat your insurance like a financial plan, not just a quick quote. We look at what you have now, what really needs to be protected and what fits your monthly comfort so you do not overpay where you do not need to.
+          <p>
+            Yukiko “Yuki” Kobayashi<br>
+            Farmers Insurance Bonita CA
+          </p>
+          <p style="margin-top:6px;">
+            I will walk you through your options in simple language so you know what you are paying for and where you are protected.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- What we can go over -->
-    <section class="section">
-      <h2>What we can go over</h2>
-      <div class="card">
-        <ul style="margin-top:6px;padding-left:18px;">
-          <li>Auto coverage limits and deductibles</li>
-          <li>Home coverage and water protection</li>
-          <li>Umbrella eligibility and extra liability</li>
-          <li>Term, Return of Premium and IUL life options</li>
-        </ul>
-        <p style="margin-top:8px;">
-          You can send me your current declarations pages or we can start from zero and build everything together during the appointment.
-        </p>
-      </div>
-    </section>
-
-    <!-- Insurance services from your slide -->
+    <!-- Insurance services -->
     <section class="section">
       <h2>Insurance services</h2>
       <div class="card">
@@ -191,13 +193,42 @@
           Auto • Home • Life • Commercial • Business
         </div>
         <ul style="margin-top:4px;padding-left:18px;">
-          <li>Auto &amp; Commercial Vehicle Coverage</li>
-          <li>Homeowners &amp; Umbrella Protection</li>
-          <li>Renters &amp; Condo Insurance</li>
-          <li>Business – General Liability &amp; Workers Comp</li>
-          <li>Life &amp; Financial Protection</li>
-          <li>Accidental Death – Income Replacement</li>
+          <li>Auto and commercial vehicle coverage</li>
+          <li>Homeowners and umbrella protection</li>
+          <li>Renters and condo insurance</li>
+          <li>Business general liability and workers comp</li>
+          <li>Life and financial protection</li>
+          <li>Accidental death and income replacement</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Life insurance focus -->
+    <section class="section">
+      <h2>Life insurance</h2>
+      <div class="card">
+        <p>We can look at different ways to protect your family and also build savings for later.</p>
+        <ul style="margin-top:6px;padding-left:18px;">
+          <li>
+            <strong>Term life</strong><br>
+            10 or 20 year coverage with a simple death benefit and a lower monthly payment than permanent life insurance. This works well if you want to replace income or protect a mortgage during your main working years.
+          </li>
+          <li style="margin-top:6px;">
+            <strong>Return of Premium term</strong><br>
+            If you outlive the term you can get close to your money back. It feels more like a forced savings plan with protection the whole time. At the end of the term you can use that money to help pay down debt add to savings or roll it into another plan.
+          </li>
+          <li style="margin-top:6px;">
+            <strong>Whole life</strong><br>
+            Lifetime coverage with a fixed monthly payment and a cash value that grows slowly every year. This is good if you want a rate that does not change and a policy that will be there no matter how long you live. The cash value is steady and does not depend on the market. You can use it later for emergencies or final expenses and your family can still receive the remaining life insurance when you pass away.
+          </li>
+          <li style="margin-top:6px;">
+            <strong>Indexed Universal Life</strong><br>
+            A flexible life policy with a savings bucket that can grow over time. The cash value is linked to market indexes with protection on the downside so it can grow without direct market loss. You can use the cash value later for emergencies big goals or retirement income and the life insurance can still pay the remaining amount to your family if something happens to you.
+          </li>
+        </ul>
+        <p style="margin-top:8px;">
+          During our appointment we can see which option or mix of options fits your budget today and what you want this money to do in the future.
+        </p>
       </div>
     </section>
 
@@ -207,24 +238,23 @@
       <div class="contact-grid">
         <div class="card">
           <p>
-            Address: 5120 Robinwood Rd, Ste B22<br>
-            Bonita, CA 91902
+            Address 5120 Robinwood Rd Ste B22<br>
+            Bonita CA 91902
           </p>
           <br>
           <p>
-            Direct:
-            <a href="tel:+18588868107">858-886-8107</a><br>
-            Office:
-            <a href="tel:+16194702613">(619) 470-2613</a><br>
-            Email:
+            Direct
+            <a href="tel:+18588868107">858 886 8107</a><br>
+            Office
+            <a href="tel:+16194702613">(619) 470 2613</a><br>
+            Email
             <a href="mailto:Yukiko.cmcmurry@farmersagency.com">Yukiko.cmcmurry@farmersagency.com</a><br>
-            CA License #: 4456617
+            CA License 4456617
           </p>
         </div>
         <div class="card">
-          <strong>Clients I can help</strong>
-          <p style="margin-top:6px;">
-            Families, new homeowners, self employed professionals and small business owners who want clear coverage and one main point of contact instead of calling a generic 800 number.
+          <p>
+            I help families new homeowners self employed professionals and small business owners who want clear coverage and one main point of contact instead of a generic 800 number.
           </p>
         </div>
       </div>
@@ -236,16 +266,13 @@
       <div class="card">
         <p>We can set up protection for your business so your work vehicles and your company are not exposed if something happens.</p>
         <ul style="margin-top:6px;padding-left:18px;">
-          <li>Commercial Auto for contractors and small fleets</li>
-          <li>Business Owners Policy for offices, shops and salons</li>
-          <li>General Liability for jobs where the location or client requires proof of insurance</li>
-          <li>Workers Compensation when you have employees on payroll</li>
+          <li>Commercial auto for contractors and small fleets</li>
+          <li>Business owners policy for offices shops and salons</li>
+          <li>General liability when a job location or client asks for proof of insurance</li>
+          <li>Workers compensation when you have employees on payroll</li>
         </ul>
         <p style="margin-top:8px;">
-          If you already have a policy, I can review your current limits and pricing. If you are just starting, we can go over what you do day to day and decide what you really need so you feel comfortable and protected.
-        </p>
-        <p style="margin-top:8px;">
-          Use the booking button at the top to choose a time and we will walk through everything together.
+          Bring your current policies or we can start from the beginning and build something that matches how your business runs day to day.
         </p>
       </div>
     </section>
