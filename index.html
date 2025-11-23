@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Insure with Yuki • Farmers Insurance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root{
+      --blue:#002D62;
+      --red:#D52B1E;
+      --bg:#f6f8fb;
+      --text:#1f2a44;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    header{
+      background:#ffffff;
+      border-bottom:1px solid #dde3f0;
+      padding:12px 16px;
+    }
+    .wrap{max-width:960px;margin:0 auto;padding:0 16px;}
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{font-weight:700;color:var(--blue);font-size:1.1rem;}
+    .hero{
+      max-width:960px;
+      margin:24px auto;
+      padding:24px 16px;
+      display:grid;
+      grid-template-columns:1.3fr 0.7fr;
+      gap:24px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-block;
+      background:#eef3ff;
+      border:1px solid #d5e0ff;
+      border-radius:999px;
+      padding:4px 10px;
+      font-size:.8rem;
+      margin-bottom:8px;
+      color:var(--blue);
+    }
+    h1{
+      font-size:1.9rem;
+      margin-bottom:8px;
+      color:var(--blue);
+    }
+    .hero p{
+      margin-bottom:14px;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:8px;
+      border:1px solid var(--blue);
+      background:var(--blue);
+      color:#ffffff;
+      text-decoration:none;
+      font-size:.95rem;
+      margin-right:8px;
+      margin-bottom:8px;
+    }
+    .btn.secondary{
+      background:#ffffff;
+      color:var(--blue);
+    }
+    .section{
+      max-width:960px;
+      margin:0 auto 24px;
+      padding:0 16px 8px;
+    }
+    h2{
+      font-size:1.4rem;
+      margin-bottom:10px;
+      color:var(--blue);
+    }
+    .card{
+      background:#ffffff;
+      border-radius:10px;
+      border:1px solid #dde3f0;
+      padding:16px;
+      margin-bottom:12px;
+      font-size:.95rem;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:16px;
+    }
+    .small{font-size:.85rem;color:#5a6784;margin-top:6px;}
+    footer{
+      background:#0f1b33;
+      color:#c9d2e3;
+      font-size:.8rem;
+      margin-top:24px;
+    }
+    footer .wrap{
+      padding:12px 16px;
+    }
+    @media (max-width:720px){
+      .hero{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Insure with Yuki</div>
+      <div style="font-size:.9rem;color:#5a6784;">Farmers Insurance • Bonita, CA</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="badge">CA License #: 4456617</div>
+        <h1>Insurance made clear and personal.</h1>
+        <p>Auto, home, life and commercial coverage tailored to your situation and your budget. We can review what you have today and build a smarter structure going forward.</p>
+        <a class="btn" href="https://outlook.office.com/bookwithme/user/31659bfed4c34964bad4f12a37b73299@chrismcmurryinsurance.com?anonymous&ep=signature&ismsaljsauthenabled" target="_blank">
+          Book an appointment
+        </a>
+        <a class="btn secondary" href="mailto:Yukiko.cmcmurry@farmersagency.com">
+          Email me your current policy
+        </a>
+        <p class="small">Use the booking link to choose the best time for you. We can meet by phone or virtual call.</p>
+      </div>
+      <div>
+        <div class="card">
+          <strong>What we can go over:</strong>
+          <ul style="margin-top:6px;padding-left:18px;">
+            <li>Auto coverage limits and deductibles</li>
+            <li>Home coverage and water protection</li>
+            <li>Umbrella eligibility and extra liability</li>
+            <li>Term, Return of Premium and IUL life options</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="card">
+          <p>
+            Address: 5120 Robinwood Rd, Ste B22<br>
+            Bonita, CA 91902
+          </p>
+          <br>
+          <p>
+            Direct:
+            <a href="tel:+18588868107">858-886-8107</a><br>
+            Office:
+            <a href="tel:+16194702613">(619) 470-2613</a><br>
+            Email:
+            <a href="mailto:Yukiko.cmcmurry@farmersagency.com">Yukiko.cmcmurry@farmersagency.com</a><br>
+            CA License #: 4456617
+          </p>
+        </div>
+        <div class="card">
+          <strong>How I work</strong>
+          <p style="margin-top:6px;">
+            I treat your insurance like a financial plan, not just a quick quote. We look at your current policies, risks and goals and then adjust coverages so you are protected where it matters most.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> Insure with Yuki • Farmers Insurance
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
