@@ -1,144 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Insure with Yuki | Farmers Insurance</title>
-  <meta name="description" content="Risk Protection & Asset Strategy with Yukiko “Yuki” Kobayashi, Insurance Strategist — Farmers Insurance." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insure with Yuki | Farmers Insurance</title>
+<meta name="description" content="Risk Protection & Asset Strategy with Yukiko “Yuki” Kobayashi — Farmers Insurance." />
 
-  <style>
-    :root {
-      --primary:#0b214a;
-      --accent:#e31c3d;
-      --light:#f4f7fc;
-      --muted:#5b6b86;
-    }
-
-    body {
-      margin:0;
-      font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-      background:var(--light);
-      color:var(--primary);
-      line-height:1.6;
-    }
-
-    header {
-      background:white;
-      padding:20px 30px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    header img {
-      height:45px;
-    }
-
-    nav a {
-      margin-left:20px;
-      text-decoration:none;
-      font-weight:600;
-      color:var(--primary);
-    }
-
-    .hero {
-      text-align:center;
-      padding:100px 20px;
-    }
-
-    .hero h1 {
-      font-size:2.4rem;
-      margin-bottom:10px;
-    }
-
-    .hero h2 {
-      font-weight:400;
-      color:var(--muted);
-      margin-top:0;
-    }
-
-    .btn {
-      display:inline-block;
-      margin-top:30px;
-      padding:14px 28px;
-      background:var(--accent);
-      color:white;
-      text-decoration:none;
-      border-radius:8px;
-      font-weight:600;
-    }
-
-    .section {
-      padding:60px 20px;
-      max-width:1000px;
-      margin:auto;
-      text-align:center;
-    }
-
-    footer {
-      text-align:center;
-      padding:40px 20px;
-      background:white;
-      font-size:0.85rem;
-      color:var(--muted);
-      margin-top:60px;
-    }
-
-  </style>
+<style>
+:root{
+--primary:#0b214a;
+--accent:#e31c3d;
+--light:#f4f7fc;
+--muted:#5b6b86;
+--radius:14px;
+}
+body{
+margin:0;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+background:var(--light);
+color:var(--primary);
+line-height:1.6;
+scroll-behavior:smooth;
+}
+header{
+background:white;
+padding:20px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+header img{
+height:45px;
+}
+nav a{
+margin-left:20px;
+text-decoration:none;
+font-weight:600;
+color:var(--primary);
+}
+.hero{
+text-align:center;
+padding:100px 20px;
+}
+.hero h1{
+font-size:2.4rem;
+margin-bottom:5px;
+}
+.hero h2{
+font-weight:400;
+color:var(--muted);
+margin:5px 0;
+}
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+background:var(--accent);
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+}
+.section{
+padding:70px 20px;
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+.grid{
+display:grid;
+gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+margin-top:30px;
+}
+.card{
+background:white;
+padding:25px;
+border-radius:var(--radius);
+box-shadow:0 6px 14px rgba(0,0,0,0.05);
+}
+.card h3{
+margin-top:0;
+}
+.headshot{
+width:95px;
+height:95px;
+object-fit:cover;
+border-radius:50%;
+border:3px solid #eee;
+}
+footer{
+text-align:center;
+padding:40px 20px;
+background:white;
+font-size:0.85rem;
+color:var(--muted);
+margin-top:60px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div>
-    <img src="assets/farmers-logo.png" alt="Farmers Insurance">
-  </div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-  </nav>
+<div>
+<img src="assets/farmers-logo.png" alt="Farmers Insurance">
+</div>
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <h1>Yukiko “Yuki” Kobayashi</h1>
-  <h2>Insurance Strategist</h2>
-  <h2>Risk Protection & Asset Strategy</h2>
-  <p>Farmers Insurance</p>
+<h1>Yukiko “Yuki” Kobayashi</h1>
+<h2>Insurance Strategist</h2>
+<h2>Risk Protection & Asset Strategy</h2>
+<p>Farmers Insurance</p>
 
-  <a class="btn" href="#">Strategy Sessions Coming Soon</a>
+<a class="btn" href="#contact">Schedule a Strategy Session</a>
 </section>
 
 <section class="section" id="about">
-  <h2>Strategic Insurance Guidance</h2>
-  <p>
-    Protection is not about price — it's about structure, liability positioning,
-    and long-term asset preservation. I work with individuals, families,
-    and business owners to design risk strategies that evolve with their growth.
-  </p>
+<h2>Strategic Insurance Guidance</h2>
+<p>
+Insurance is not about price — it’s about structure, liability positioning,
+and long-term asset protection. I help individuals, families, and business owners
+design coverage strategies that evolve with their growth.
+</p>
 </section>
 
 <section class="section" id="services">
-  <h2>Insurance Services</h2>
-  <p>
-    Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL4)
-  </p>
+<h2>Insurance Services</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Auto & Commercial Auto</h3>
+<p>Liability-driven protection structured around real-world exposure and asset preservation.</p>
+</div>
+
+<div class="card">
+<h3>Home & Umbrella</h3>
+<p>Replacement strategy, extended dwelling options, and umbrella alignment to protect net worth.</p>
+</div>
+
+<div class="card">
+<h3>Business Protection</h3>
+<p>BOP, General Liability, Commercial Auto, and Workers’ Comp support for small business owners.</p>
+</div>
+
+<div class="card">
+<h3>Life Insurance</h3>
+<p>Term, Return of Premium Term, and Indexed UL (IUL4) designed for family and long-term wealth strategy.</p>
+</div>
+</div>
 </section>
 
-<section class="section">
-  <h3>Office Location</h3>
-  <p>
-    9988 Hibert Street Ste 212<br>
-    San Diego CA 92131
-  </p>
-</section>
+<section class="section" id="contact">
+<h2>Contact</h2>
 
-<section class="section">
-  <p>CA DOI License #: 4456617</p>
+<div style="display:flex;justify-content:center;align-items:center;gap:20px;margin-bottom:20px;">
+<img src="assets/IMG_5179.png" alt="Yukiko Kobayashi" class="headshot" />
+<div style="text-align:left;">
+<strong>Yukiko “Yuki” Kobayashi</strong><br>
+Insurance Strategist • Farmers Insurance
+</div>
+</div>
+
+<p><strong>Phone:</strong> <a href="tel:+16192500023">(619) 250-0023</a></p>
+<p><strong>Office Location:</strong><br>
+9988 Hibert Street Ste 212<br>
+San Diego CA 92131
+</p>
+<p>CA DOI License #: 4456617</p>
+
 </section>
 
 <footer>
-  © 2025 Insure with Yuki | Farmers Insurance
+© 2025 Insure with Yuki | Farmers Insurance
 </footer>
 
 </body>
