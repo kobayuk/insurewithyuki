@@ -1,281 +1,209 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Insure with Yuki • Farmers Insurance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insure with Yuki — Auto • Home • Life • Commercial</title>
+  <meta name="description" content="Auto, Home, Umbrella, Commercial, and Life Insurance with Yukiko “Yuki” Kobayashi — Farmers Insurance, Bonita CA." />
   <style>
-    :root{
-      --blue:#002D62;
-      --bg:#f6f8fb;
-      --text:#1f2a44;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-    }
-    header{
-      background:#ffffff;
-      border-bottom:1px solid #dde3f0;
-      padding:12px 16px;
-    }
-    .wrap{max-width:960px;margin:0 auto;padding:0 16px;}
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      font-size:.95rem;
-      color:#5a6784;
-    }
-    .brand-name{
-      font-weight:700;
-      color:var(--blue);
-      font-size:1.05rem;
-    }
-
-    .hero{
-      max-width:960px;
-      margin:24px auto;
-      padding:24px 16px;
-      display:block;
-    }
-    h1{
-      font-size:1.9rem;
-      margin-bottom:10px;
-      color:var(--blue);
-    }
-    .hero p{
-      margin-bottom:14px;
-    }
-    .btn{
-      display:inline-block;
-      padding:10px 18px;
-      border-radius:10px;
-      border:1px solid var(--blue);
-      background:var(--blue);
-      color:#ffffff;
-      text-decoration:none;
-      font-size:.95rem;
-      margin-right:8px;
-      margin-bottom:8px;
-    }
-    .small{
-      font-size:.85rem;
-      color:#5a6784;
-      margin-top:6px;
-    }
-
-    .section{
-      max-width:960px;
-      margin:0 auto 24px;
-      padding:0 16px 8px;
-    }
-    h2{
-      font-size:1.4rem;
-      margin-bottom:10px;
-      color:var(--blue);
-    }
-    .card{
-      background:#ffffff;
-      border-radius:10px;
-      border:1px solid #dde3f0;
-      padding:16px;
-      margin-bottom:12px;
-      font-size:.95rem;
-    }
-    .tag-row{
-      font-size:.8rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#7482a0;
-      margin-bottom:8px;
-    }
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1.1fr 0.9fr;
-      gap:16px;
-    }
-
-    footer{
-      background:#0f1b33;
-      color:#c9d2e3;
-      font-size:.8rem;
-      margin-top:24px;
-    }
-    footer .wrap{
-      padding:12px 16px;
-    }
-    @media (max-width:720px){
-      .nav{flex-direction:row;justify-content:space-between;}
-      .contact-grid{grid-template-columns:1fr;}
+    :root{--ink:#0b214a;--ink2:#15356b;--sky:#f6f8fc;--card:#fff;--muted:#5b6b86;--accent:#e31c3d;--radius:14px;}
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;font-family:system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--sky);line-height:1.6;scroll-behavior:smooth;}
+    a{color:var(--ink2);text-decoration:none;}
+    header{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.08);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+    .brand{display:flex;align-items:center;gap:12px;}
+    .brand img{height:48px;}
+    nav a{margin-left:14px;font-weight:600;font-size:.95rem;}
+    .lang-toggle{border:none;background:var(--accent);color:#fff;padding:6px 12px;border-radius:8px;cursor:pointer;margin-left:14px;font-size:.85rem;}
+    .btn{display:inline-block;padding:12px 22px;border-radius:var(--radius);font-weight:600;font-size:.95rem;}
+    .btn.primary{background:var(--accent);color:#fff;}
+    .btn.secondary{background:#e7ecf6;color:#0b214a;}
+    .container{max-width:1000px;margin:auto;padding:0 20px;}
+    .section{padding:60px 0;}
+    .hero{padding:80px 0;background:linear-gradient(145deg,#f5f8fc,#fff);text-align:center;}
+    .hero h1{font-size:2.2rem;margin:.3rem 0 .6rem;}
+    .hero p{color:var(--muted);}
+    .grid{display:grid;gap:20px;}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+    .card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 4px 10px rgba(0,0,0,.06);}
+    .card h3{margin-top:0;}
+    .badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef3ff;color:#15356b;font-weight:600;font-size:.8rem;}
+    .small{font-size:.95rem;color:var(--muted);}
+    .headshot{width:90px;height:90px;object-fit:cover;border-radius:50%;border:2px solid #e6eaf2;}
+    .list{list-style:none;padding:0;margin:0;}
+    .list li{margin:6px 0;}
+    hr.sep{border:none;border-top:1px solid #e8ecf4;margin:26px 0;}
+    footer{background:#fff;text-align:center;padding:30px 20px;color:var(--muted);font-size:.85rem;}
+    @media(max-width:700px){
+      header{flex-direction:column;align-items:flex-start;gap:8px;}
+      nav a,.lang-toggle{margin-left:0;margin-right:12px;display:inline-block;margin-top:4px;}
     }
   </style>
 </head>
 <body>
+<header>
+  <div class="brand">
+    <!-- If your logo file has a different name, change the src below -->
+    <img src="assets/farmers-logo.png" alt="Farmers Insurance logo" />
+    <strong>Insure with Yuki</strong>
+  </div>
+  <nav>
+    <a href="#home" data-en="Home" data-es="Inicio">Home</a>
+    <a href="#services" data-en="Insurance Services" data-es="Servicios">Insurance Services</a>
+    <a href="#book" data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</a>
+    <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+    <button id="langToggle" class="lang-toggle">Español</button>
+  </nav>
+</header>
 
-  <header>
-    <div class="wrap nav">
-      <div class="brand-name">Insure with Yuki</div>
-      <div>Farmers Insurance • Bonita CA</div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <h1>Insurance made clear and personal.</h1>
+<main>
+  <!-- HERO / INTRO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <span class="badge" data-en="Farmers Insurance — Bonita, CA" data-es="Farmers Insurance — Bonita, CA">Farmers Insurance — Bonita, CA</span>
+      <h1 data-en="Protection that grows with you." data-es="Protección que crece contigo.">Protection that grows with you.</h1>
+      <p data-en="Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL4)"
+         data-es="Auto • Casa • Umbrella • Comercial • Vida (Plazo, ROP, IUL4)">
+        Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL4)
+      </p>
       <p>
-        Auto home life and business insurance can feel confusing.
-        I help you review what you have now and set up clear coverage that matches your real risks and your monthly comfort.
-        My goal is that you finish our appointment feeling calm clear and confident about what you pay for and how you are protected.
+        <a class="btn primary" href="#book" data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</a>
+        <a class="btn secondary" href="#services" data-en="View Services" data-es="Ver Servicios">View Services</a>
       </p>
+    </div>
+  </section>
 
-      <a class="btn" href="https://outlook.office.com/bookwithme/user/31659bfed4c34964bad4f12a37b73299@chrismcmurryinsurance.com?anonymous&ep=signature&ismsaljsauthenabled" target="_blank">
-        Book an appointment
-      </a>
-
-      <p class="small">
-        Email a copy of your current declarations page so I can compare your coverage and build a clear side by side comparison with Farmers.
-      </p>
-    </section>
-
-    <!-- Insurance services -->
-    <section class="section">
-      <h2>Insurance services</h2>
-      <div class="card">
-        <div class="tag-row">
-          Auto • Home • Life • Commercial • Business
-        </div>
-        <ul style="margin-top:4px;padding-left:18px;">
-          <li>Auto and commercial vehicle coverage</li>
-          <li>Homeowners and umbrella protection</li>
-          <li>Renters and condo insurance</li>
-          <li>Business general liability and workers comp</li>
-          <li>Life and financial protection</li>
-          <li>Accidental death and income replacement</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Life insurance (multiple cards, including IUL Juvenile) -->
-    <section class="section">
-      <h2>Life insurance</h2>
-
-      <div class="card">
-        <h3 style="margin-bottom:6px;">Term life</h3>
-        <p>
-          Term life is simple protection for a set period of time like 10 or 20 years. It is usually the lowest monthly cost.
-        </p>
-        <ul style="margin-top:6px;padding-left:18px;">
-          <li>Covers you during key years while kids are growing or a mortgage is in place.</li>
-          <li>Higher coverage amounts can be more affordable than permanent life insurance.</li>
-          <li>Good for income replacement and mortgage protection during your main working years.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-bottom:6px;">Return of Premium term</h3>
-        <p>
-          Return of Premium term works like term life but if you outlive the term you can get close to your money back.
-        </p>
-        <ul style="margin-top:6px;padding-left:18px;">
-          <li>Protection during the term just like regular term life.</li>
-          <li>If you keep the policy to the end you can receive back most of what you paid in premiums.</li>
-          <li>Feels like a forced savings plan you can use later for debt savings or another strategy.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-bottom:6px;">Whole life</h3>
-        <p>
-          Whole life is permanent coverage with a fixed monthly payment and steady cash value growth.
-        </p>
-        <ul style="margin-top:6px;padding-left:18px;">
-          <li>Lifetime coverage as long as premiums are paid.</li>
-          <li>Premiums are designed to stay the same so it is easier to plan long term.</li>
-          <li>Cash value grows slowly and does not depend on the stock market.</li>
-          <li>Can help with final expenses or emergencies while still leaving a benefit to your family.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-bottom:6px;">Indexed Universal Life</h3>
-        <p>
-          Indexed Universal Life is flexible life insurance with a savings bucket that can grow over time.
-        </p>
-        <ul style="margin-top:6px;padding-left:18px;">
-          <li>Flexible premium structure so you can increase or decrease funding within limits.</li>
-          <li>Cash value is tied to market indexes with downside protection not invested directly in stocks.</li>
-          <li>Possible to use the cash value later for big goals emergencies or retirement income.</li>
-          <li>The life insurance can still pay the remaining amount to your family when you pass away.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-bottom:6px;">Indexed Universal Life (Juvenile)</h3>
-        <p>
-          An Indexed Universal Life Juvenile policy is designed for children or young adults so you can lock in protection and long term savings early.
-        </p>
-        <ul style="margin-top:6px;padding-left:18px;">
-          <li>Covers a child or young adult while they are generally younger and healthier.</li>
-          <li>Premiums are based on their age which can keep the cost more manageable.</li>
-          <li>A portion of what you pay goes into a cash value bucket that can grow over many years.</li>
-          <li>Later in life they may be able to use the cash value for goals like education a first home or retirement support while keeping coverage.</li>
-        </ul>
-        <p style="margin-top:6px;">
-          During our appointment we can look at whether a simple term plan a Return of Premium option or a mix with Whole Life and Indexed Universal Life Juvenile makes the most sense for your family.
-        </p>
-      </div>
-    </section>
-
-    <!-- Commercial -->
-    <section class="section">
-      <h2>Commercial insurance</h2>
-      <div class="card">
-        <p>We can set up protection for your business so your work vehicles and your company are not exposed if something happens.</p>
-        <ul style="margin-top:6px;padding-left:18px;">
-          <li>Commercial auto for contractors and small fleets</li>
-          <li>Business owners policy for offices shops and salons</li>
-          <li>General liability when a job location or client asks for proof of insurance</li>
-          <li>Workers compensation when you have employees on payroll</li>
-        </ul>
-        <p style="margin-top:8px;">
-          Bring your current policies or we can start from the beginning and build something that matches how your business runs day to day.
-        </p>
-      </div>
-    </section>
-
-        <!-- Contact at the bottom -->
-    <section class="section">
-      <h2>Contact</h2>
-      <div class="contact-grid">
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 data-en="Insurance Services" data-es="Servicios de Seguros">Insurance Services</h2>
+      <div class="grid cards">
         <div class="card">
-          <p>
-            Yuki Kobayashi<br>
-            Insurance Strategist<br>
-            Chris McMurry Farmers Insurance<br><br>
-            Address 5120 Robinwood Rd Ste B22<br>
-            Bonita CA 91902
-          </p>
-          <br>
-          <p>
-            Direct
-            <a href="tel:+18588868107">858 886 8107</a><br>
-            Office
-            <a href="tel:+16194702613">(619) 470 2613</a><br>
-            Email
-            <a href="mailto:Yukiko.cmcmurry@farmersagency.com">Yukiko.cmcmurry@farmersagency.com</a><br>
-            CA License 4456617
+          <h3 data-en="Auto & Commercial Auto" data-es="Auto y Auto Comercial">Auto & Commercial Auto</h3>
+          <p class="small" data-en="Smart liability limits, deductibles, and multi-policy discounts tailored to your driving and business needs."
+             data-es="Límites y deducibles inteligentes, con descuentos por varias pólizas adaptadas a tu forma de manejar y a tu negocio.">
+            Smart liability limits, deductibles, and multi-policy discounts tailored to your driving and business needs.
           </p>
         </div>
         <div class="card">
-          <p>
-            I help families new homeowners self employed professionals and small business owners who want clear coverage and one main point of contact instead of a generic 800 number.
+          <h3 data-en="Home, Renters & Condo" data-es="Casa, Inquilinos y Condo">Home, Renters & Condo</h3>
+          <p class="small" data-en="Extended replacement options, water/backup coverage, and structures that keep you umbrella-eligible."
+             data-es="Opciones de reposición extendida, cobertura de agua/alcantarillado y estructuras que te mantienen elegible para umbrella.">
+            Extended replacement options, water/backup coverage, and structures that keep you umbrella-eligible.
+          </p>
+        </div>
+        <div class="card">
+          <h3 data-en="Business & Liability" data-es="Comercial y Responsabilidad">Business & Liability</h3>
+          <p class="small" data-en="Contractors, offices, BOP/Prop-Box strategy, and workers’ comp to protect your operations and income."
+             data-es="Contratistas, oficinas, estrategia BOP/Prop-Box y compensación de trabajadores para proteger tu operación e ingresos.">
+            Contractors, offices, BOP/Prop-Box strategy, and workers’ comp to protect your operations and income.
+          </p>
+        </div>
+        <div class="card">
+          <h3 data-en="Life & Income Protection" data-es="Vida y Protección de Ingresos">Life & Income Protection</h3>
+          <p class="small" data-en="Term, Return of Premium Term, and Indexed UL (IUL4) to protect the people you love and the income you’ve built."
+             data-es="Plazo, Plazo con Devolución (ROP) y UL Indexado (IUL4) para proteger a las personas que amas y el ingreso que has construido.">
+            Term, Return of Premium Term, and Indexed UL (IUL4) to protect the people you love and the income you’ve built.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- BOOK APPOINTMENT -->
+  <section class="section" id="book">
+    <div class="container">
+      <h2 data-en="Book an Appointment" data-es="Agendar una Cita">Book an Appointment</h2>
+      <p class="small" data-en="Choose the time that fits you best and I’ll confirm by email or text."
+         data-es="Elige el tiempo que mejor se adapte a ti y te confirmo por correo o texto.">
+        Choose the time that fits you best and I’ll confirm by email or text.
+      </p>
+      <div class="grid cards">
+        <a class="card" href="mailto:Yukiko.cmcmurry@farmersagency.com?subject=15-minute%20Quick%20Question" >
+          <h3 data-en="15-min • Quick question" data-es="15 min • Pregunta rápida">15-min • Quick question</h3>
+          <p class="small" data-en="Perfect for 1–2 questions or a fast quote check."
+             data-es="Perfecto para 1–2 preguntas o una revisión rápida de cotización.">
+            Perfect for 1–2 questions or a fast quote check.
+          </p>
+        </a>
+        <a class="card" href="mailto:Yukiko.cmcmurry@farmersagency.com?subject=30-minute%20Coverage%20Review">
+          <h3 data-en="30-min • Coverage review" data-es="30 min • Revisión de coberturas">30-min • Coverage review</h3>
+          <p class="small" data-en="We compare your current policies with Farmers and adjust limits and deductibles."
+             data-es="Comparamos tus pólizas actuales con Farmers y ajustamos límites y deducibles.">
+            We compare your current policies with Farmers and adjust limits and deductibles.
+          </p>
+        </a>
+        <a class="card" href="mailto:Yukiko.cmcmurry@farmersagency.com?subject=45-minute%20New%20Client%20Consult">
+          <h3 data-en="45-min • New client consult" data-es="45 min • Consulta para nuevo cliente">45-min • New client consult</h3>
+          <p class="small" data-en="Auto, Home, Commercial, and Life strategy in one conversation."
+             data-es="Estrategia de Auto, Casa, Comercial y Vida en una sola conversación.">
+            Auto, Home, Commercial, and Life strategy in one conversation.
+          </p>
+        </a>
+      </div>
+      <hr class="sep" />
+      <p class="small" data-en="If you prefer, you can also call or text me directly at the number below."
+         data-es="Si prefieres, también puedes llamarme o mandarme texto al número de abajo.">
+        If you prefer, you can also call or text me directly at the number below.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 data-en="Contact" data-es="Contacto">Contact</h2>
+      <div style="display:flex;align-items:center;gap:16px;margin:8px 0 14px;">
+        <!-- If your headshot file is different, change IMG_5179.png below -->
+        <img src="assets/IMG_5179.png" alt="Yukiko Kobayashi" class="headshot" />
+        <div>
+          <div style="font-weight:700;">Yukiko “Yuki” Kobayashi</div>
+          <div class="small">Farmers Insurance — Chris McMurry Agency • Bonita, CA</div>
+        </div>
+      </div>
+      <ul class="list">
+        <li><strong data-en="Direct" data-es="Directo">Direct</strong>: <a href="tel:+18588868107">(858) 886-8107</a></li>
+        <li><strong data-en="Office" data-es="Oficina">Office</strong>: <a href="tel:+16194702613">(619) 470-2613</a></li>
+        <li><strong>Email</strong>: <a href="mailto:Yukiko.cmcmurry@farmersagency.com">Yukiko.cmcmurry@farmersagency.com</a></li>
+        <li><strong data-en="Alternate" data-es="Alterno">Alternate</strong>: <a href="mailto:hello@insurewithyuki.com">hello@insurewithyuki.com</a></li>
+        <li><strong data-en="Address" data-es="Dirección">Address</strong>: 5120 Robinwood Rd, Ste B22, Bonita, CA 91902</li>
+        <li>CA DOI License #: 4456617</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Insure with Yuki • Farmers Insurance — Bonita, CA
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href');
+      if(id.length>1 && document.querySelector(id)){
+        e.preventDefault();
+        document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+
+  // Bilingual toggle
+  (function(){
+    const btn = document.getElementById('langToggle');
+    if(!btn) return;
+    let es = false;
+    const swap = ()=>{
+      document.documentElement.lang = es ? 'es' : 'en';
+      document.querySelectorAll('[data-en][data-es]').forEach(el=>{
+        el.textContent = es ? el.getAttribute('data-es') : el.getAttribute('data-en');
+      });
+      btn.textContent = es ? 'English' : 'Español';
+    };
+    btn.addEventListener('click', ()=>{ es = !es; swap(); });
+    swap();
+  })();
+</script>
+</body>
+</html>
