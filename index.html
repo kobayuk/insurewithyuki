@@ -3,207 +3,143 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Insure with Yuki — Auto • Home • Life • Commercial</title>
-  <meta name="description" content="Auto, Home, Umbrella, Commercial, and Life Insurance with Yukiko “Yuki” Kobayashi — Farmers Insurance, Bonita CA." />
+  <title>Insure with Yuki | Farmers Insurance</title>
+  <meta name="description" content="Risk Protection & Asset Strategy with Yukiko “Yuki” Kobayashi, Insurance Strategist — Farmers Insurance." />
+
   <style>
-    :root{--ink:#0b214a;--ink2:#15356b;--sky:#f6f8fc;--card:#fff;--muted:#5b6b86;--accent:#e31c3d;--radius:14px;}
-    *{box-sizing:border-box;}
-    html,body{margin:0;padding:0;font-family:system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--sky);line-height:1.6;scroll-behavior:smooth;}
-    a{color:var(--ink2);text-decoration:none;}
-    header{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.08);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
-    .brand{display:flex;align-items:center;gap:12px;}
-    .brand img{height:48px;}
-    nav a{margin-left:14px;font-weight:600;font-size:.95rem;}
-    .lang-toggle{border:none;background:var(--accent);color:#fff;padding:6px 12px;border-radius:8px;cursor:pointer;margin-left:14px;font-size:.85rem;}
-    .btn{display:inline-block;padding:12px 22px;border-radius:var(--radius);font-weight:600;font-size:.95rem;}
-    .btn.primary{background:var(--accent);color:#fff;}
-    .btn.secondary{background:#e7ecf6;color:#0b214a;}
-    .container{max-width:1000px;margin:auto;padding:0 20px;}
-    .section{padding:60px 0;}
-    .hero{padding:80px 0;background:linear-gradient(145deg,#f5f8fc,#fff);text-align:center;}
-    .hero h1{font-size:2.2rem;margin:.3rem 0 .6rem;}
-    .hero p{color:var(--muted);}
-    .grid{display:grid;gap:20px;}
-    .cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
-    .card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 4px 10px rgba(0,0,0,.06);}
-    .card h3{margin-top:0;}
-    .badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef3ff;color:#15356b;font-weight:600;font-size:.8rem;}
-    .small{font-size:.95rem;color:var(--muted);}
-    .headshot{width:90px;height:90px;object-fit:cover;border-radius:50%;border:2px solid #e6eaf2;}
-    .list{list-style:none;padding:0;margin:0;}
-    .list li{margin:6px 0;}
-    hr.sep{border:none;border-top:1px solid #e8ecf4;margin:26px 0;}
-    footer{background:#fff;text-align:center;padding:30px 20px;color:var(--muted);font-size:.85rem;}
-    @media(max-width:700px){
-      header{flex-direction:column;align-items:flex-start;gap:8px;}
-      nav a,.lang-toggle{margin-left:0;margin-right:12px;display:inline-block;margin-top:4px;}
+    :root {
+      --primary:#0b214a;
+      --accent:#e31c3d;
+      --light:#f4f7fc;
+      --muted:#5b6b86;
     }
+
+    body {
+      margin:0;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      background:var(--light);
+      color:var(--primary);
+      line-height:1.6;
+    }
+
+    header {
+      background:white;
+      padding:20px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height:45px;
+    }
+
+    nav a {
+      margin-left:20px;
+      text-decoration:none;
+      font-weight:600;
+      color:var(--primary);
+    }
+
+    .hero {
+      text-align:center;
+      padding:100px 20px;
+    }
+
+    .hero h1 {
+      font-size:2.4rem;
+      margin-bottom:10px;
+    }
+
+    .hero h2 {
+      font-weight:400;
+      color:var(--muted);
+      margin-top:0;
+    }
+
+    .btn {
+      display:inline-block;
+      margin-top:30px;
+      padding:14px 28px;
+      background:var(--accent);
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:600;
+    }
+
+    .section {
+      padding:60px 20px;
+      max-width:1000px;
+      margin:auto;
+      text-align:center;
+    }
+
+    footer {
+      text-align:center;
+      padding:40px 20px;
+      background:white;
+      font-size:0.85rem;
+      color:var(--muted);
+      margin-top:60px;
+    }
+
   </style>
 </head>
+
 <body>
+
 <header>
-  <div class="brand">
-    <!-- If your logo file has a different name, change the src below -->
-    <img src="assets/farmers-logo.png" alt="Farmers Insurance logo" />
-    <strong>Insure with Yuki</strong>
+  <div>
+    <img src="assets/farmers-logo.png" alt="Farmers Insurance">
   </div>
   <nav>
-    <a href="#home" data-en="Home" data-es="Inicio">Home</a>
-    <a href="#services" data-en="Insurance Services" data-es="Servicios">Insurance Services</a>
-    <a href="#book" data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</a>
-    <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
-    <button id="langToggle" class="lang-toggle">Español</button>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
   </nav>
 </header>
 
-<main>
-  <!-- HERO / INTRO -->
-  <section class="hero" id="home">
-    <div class="container">
-      <span class="badge" data-en="Farmers Insurance — Bonita, CA" data-es="Farmers Insurance — Bonita, CA">Farmers Insurance — Bonita, CA</span>
-      <h1 data-en="Protection that grows with you." data-es="Protección que crece contigo.">Protection that grows with you.</h1>
-      <p data-en="Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL4)"
-         data-es="Auto • Casa • Umbrella • Comercial • Vida (Plazo, ROP, IUL4)">
-        Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL4)
-      </p>
-      <p>
-        <a class="btn primary" href="#book" data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</a>
-        <a class="btn secondary" href="#services" data-en="View Services" data-es="Ver Servicios">View Services</a>
-      </p>
-    </div>
-  </section>
+<section class="hero">
+  <h1>Yukiko “Yuki” Kobayashi</h1>
+  <h2>Insurance Strategist</h2>
+  <h2>Risk Protection & Asset Strategy</h2>
+  <p>Farmers Insurance</p>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="container">
-      <h2 data-en="Insurance Services" data-es="Servicios de Seguros">Insurance Services</h2>
-      <div class="grid cards">
-        <div class="card">
-          <h3 data-en="Auto & Commercial Auto" data-es="Auto y Auto Comercial">Auto & Commercial Auto</h3>
-          <p class="small" data-en="Smart liability limits, deductibles, and multi-policy discounts tailored to your driving and business needs."
-             data-es="Límites y deducibles inteligentes, con descuentos por varias pólizas adaptadas a tu forma de manejar y a tu negocio.">
-            Smart liability limits, deductibles, and multi-policy discounts tailored to your driving and business needs.
-          </p>
-        </div>
-        <div class="card">
-          <h3 data-en="Home, Renters & Condo" data-es="Casa, Inquilinos y Condo">Home, Renters & Condo</h3>
-          <p class="small" data-en="Extended replacement options, water/backup coverage, and structures that keep you umbrella-eligible."
-             data-es="Opciones de reposición extendida, cobertura de agua/alcantarillado y estructuras que te mantienen elegible para umbrella.">
-            Extended replacement options, water/backup coverage, and structures that keep you umbrella-eligible.
-          </p>
-        </div>
-        <div class="card">
-          <h3 data-en="Business & Liability" data-es="Comercial y Responsabilidad">Business & Liability</h3>
-          <p class="small" data-en="Contractors, offices, BOP/Prop-Box strategy, and workers’ comp to protect your operations and income."
-             data-es="Contratistas, oficinas, estrategia BOP/Prop-Box y compensación de trabajadores para proteger tu operación e ingresos.">
-            Contractors, offices, BOP/Prop-Box strategy, and workers’ comp to protect your operations and income.
-          </p>
-        </div>
-        <div class="card">
-          <h3 data-en="Life & Income Protection" data-es="Vida y Protección de Ingresos">Life & Income Protection</h3>
-          <p class="small" data-en="Term, Return of Premium Term, and Indexed UL (IUL4) to protect the people you love and the income you’ve built."
-             data-es="Plazo, Plazo con Devolución (ROP) y UL Indexado (IUL4) para proteger a las personas que amas y el ingreso que has construido.">
-            Term, Return of Premium Term, and Indexed UL (IUL4) to protect the people you love and the income you’ve built.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <a class="btn" href="#">Strategy Sessions Coming Soon</a>
+</section>
 
-  <!-- BOOK APPOINTMENT -->
-  <section class="section" id="book">
-    <div class="container">
-      <h2 data-en="Book an Appointment" data-es="Agendar una Cita">Book an Appointment</h2>
-      <p class="small" data-en="Choose the time that fits you best and I’ll confirm by email or text."
-         data-es="Elige el tiempo que mejor se adapte a ti y te confirmo por correo o texto.">
-        Choose the time that fits you best and I’ll confirm by email or text.
-      </p>
-      <div class="grid cards">
-        <a class="card" href="mailto:Yukiko.cmcmurry@farmersagency.com?subject=15-minute%20Quick%20Question" >
-          <h3 data-en="15-min • Quick question" data-es="15 min • Pregunta rápida">15-min • Quick question</h3>
-          <p class="small" data-en="Perfect for 1–2 questions or a fast quote check."
-             data-es="Perfecto para 1–2 preguntas o una revisión rápida de cotización.">
-            Perfect for 1–2 questions or a fast quote check.
-          </p>
-        </a>
-        <a class="card" href="mailto:Yukiko.cmcmurry@farmersagency.com?subject=30-minute%20Coverage%20Review">
-          <h3 data-en="30-min • Coverage review" data-es="30 min • Revisión de coberturas">30-min • Coverage review</h3>
-          <p class="small" data-en="We compare your current policies with Farmers and adjust limits and deductibles."
-             data-es="Comparamos tus pólizas actuales con Farmers y ajustamos límites y deducibles.">
-            We compare your current policies with Farmers and adjust limits and deductibles.
-          </p>
-        </a>
-        <a class="card" href="mailto:Yukiko.cmcmurry@farmersagency.com?subject=45-minute%20New%20Client%20Consult">
-          <h3 data-en="45-min • New client consult" data-es="45 min • Consulta para nuevo cliente">45-min • New client consult</h3>
-          <p class="small" data-en="Auto, Home, Commercial, and Life strategy in one conversation."
-             data-es="Estrategia de Auto, Casa, Comercial y Vida en una sola conversación.">
-            Auto, Home, Commercial, and Life strategy in one conversation.
-          </p>
-        </a>
-      </div>
-      <hr class="sep" />
-      <p class="small" data-en="If you prefer, you can also call or text me directly at the number below."
-         data-es="Si prefieres, también puedes llamarme o mandarme texto al número de abajo.">
-        If you prefer, you can also call or text me directly at the number below.
-      </p>
-    </div>
-  </section>
+<section class="section" id="about">
+  <h2>Strategic Insurance Guidance</h2>
+  <p>
+    Protection is not about price — it's about structure, liability positioning,
+    and long-term asset preservation. I work with individuals, families,
+    and business owners to design risk strategies that evolve with their growth.
+  </p>
+</section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container">
-      <h2 data-en="Contact" data-es="Contacto">Contact</h2>
-      <div style="display:flex;align-items:center;gap:16px;margin:8px 0 14px;">
-        <!-- If your headshot file is different, change IMG_5179.png below -->
-        <img src="assets/IMG_5179.png" alt="Yukiko Kobayashi" class="headshot" />
-        <div>
-          <div style="font-weight:700;">Yukiko “Yuki” Kobayashi</div>
-          <div class="small">Farmers Insurance — Chris McMurry Agency • Bonita, CA</div>
-        </div>
-      </div>
-      <ul class="list">
-        <li><strong data-en="Direct" data-es="Directo">Direct</strong>: <a href="tel:+18588868107">(858) 886-8107</a></li>
-        <li><strong data-en="Office" data-es="Oficina">Office</strong>: <a href="tel:+16194702613">(619) 470-2613</a></li>
-        <li><strong>Email</strong>: <a href="mailto:Yukiko.cmcmurry@farmersagency.com">Yukiko.cmcmurry@farmersagency.com</a></li>
-        <li><strong data-en="Alternate" data-es="Alterno">Alternate</strong>: <a href="mailto:hello@insurewithyuki.com">hello@insurewithyuki.com</a></li>
-        <li><strong data-en="Address" data-es="Dirección">Address</strong>: 5120 Robinwood Rd, Ste B22, Bonita, CA 91902</li>
-        <li>CA DOI License #: 4456617</li>
-      </ul>
-    </div>
-  </section>
-</main>
+<section class="section" id="services">
+  <h2>Insurance Services</h2>
+  <p>
+    Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL4)
+  </p>
+</section>
+
+<section class="section">
+  <h3>Office Location</h3>
+  <p>
+    9988 Hibert Street Ste 212<br>
+    San Diego CA 92131
+  </p>
+</section>
+
+<section class="section">
+  <p>CA DOI License #: 4456617</p>
+</section>
 
 <footer>
-  © 2025 Insure with Yuki • Farmers Insurance — Bonita, CA
+  © 2025 Insure with Yuki | Farmers Insurance
 </footer>
 
-<script>
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      const id = a.getAttribute('href');
-      if(id.length>1 && document.querySelector(id)){
-        e.preventDefault();
-        document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    });
-  });
-
-  // Bilingual toggle
-  (function(){
-    const btn = document.getElementById('langToggle');
-    if(!btn) return;
-    let es = false;
-    const swap = ()=>{
-      document.documentElement.lang = es ? 'es' : 'en';
-      document.querySelectorAll('[data-en][data-es]').forEach(el=>{
-        el.textContent = es ? el.getAttribute('data-es') : el.getAttribute('data-en');
-      });
-      btn.textContent = es ? 'English' : 'Español';
-    };
-    btn.addEventListener('click', ()=>{ es = !es; swap(); });
-    swap();
-  })();
-</script>
 </body>
 </html>
