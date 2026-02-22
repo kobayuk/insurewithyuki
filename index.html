@@ -4,48 +4,92 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Insure with Yuki — Farmers Insurance</title>
-  <meta name="description" content="Auto, Home, Umbrella, Commercial, and Life Insurance with Yukiko “Yuki” Kobayashi — Farmers Insurance." />
+  <meta name="description" content="Auto, Home, Umbrella, Commercial, and Life Insurance with Yukiko “Yuki” Kobayashi — Farmers Insurance, San Diego CA." />
+
   <style>
-    :root{--ink:#0b214a;--ink2:#15356b;--sky:#f6f8fc;--card:#fff;--muted:#5b6b86;--accent:#e31c3d;--radius:14px;}
+    :root{
+      --ink:#0b214a;
+      --ink2:#15356b;
+      --sky:#f6f8fc;
+      --card:#fff;
+      --muted:#5b6b86;
+      --accent:#e31c3d;
+      --radius:14px;
+    }
     *{box-sizing:border-box;}
-    html,body{margin:0;padding:0;font-family:system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--sky);line-height:1.6;scroll-behavior:smooth;}
+    html,body{
+      margin:0;padding:0;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);background:var(--sky);
+      line-height:1.6;scroll-behavior:smooth;
+    }
     a{color:var(--ink2);text-decoration:none;}
-    header{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.08);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+    header{
+      background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.08);
+      padding:12px 20px;display:flex;align-items:center;justify-content:space-between;
+      position:sticky;top:0;z-index:10;
+    }
     .brand{display:flex;align-items:center;gap:12px;}
-    .brand img{height:48px;}
+    .brand img{height:44px;max-width:180px;object-fit:contain;}
     nav a{margin-left:14px;font-weight:600;font-size:.95rem;}
-    .lang-toggle{border:none;background:var(--accent);color:#fff;padding:6px 12px;border-radius:8px;cursor:pointer;margin-left:14px;font-size:.85rem;}
-    .btn{display:inline-block;padding:12px 22px;border-radius:var(--radius);font-weight:600;font-size:.95rem;}
+    .lang-toggle{
+      border:none;background:var(--accent);color:#fff;
+      padding:6px 12px;border-radius:8px;cursor:pointer;
+      margin-left:14px;font-size:.85rem;
+    }
+    .btn{
+      display:inline-block;padding:12px 22px;border-radius:var(--radius);
+      font-weight:700;font-size:.95rem;
+    }
     .btn.primary{background:var(--accent);color:#fff;}
-    .btn.secondary{background:#e7ecf6;color:#0b214a;}
+    .btn.secondary{background:#e7ecf6;color:var(--ink);}
     .container{max-width:1000px;margin:auto;padding:0 20px;}
     .section{padding:60px 0;}
-    .hero{padding:80px 0;background:linear-gradient(145deg,#f5f8fc,#fff);text-align:center;}
-    .hero h1{font-size:2.2rem;margin:.3rem 0 .6rem;}
-    .hero p{color:var(--muted);}
+    .hero{
+      padding:78px 0;background:linear-gradient(145deg,#f5f8fc,#fff);
+      text-align:center;
+    }
+    .hero h1{font-size:2.2rem;margin:.35rem 0 .6rem;}
+    .hero p{color:var(--muted);margin:.35rem 0;}
     .grid{display:grid;gap:20px;}
     .cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
-    .card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 4px 10px rgba(0,0,0,.06);}
-    .card h3{margin-top:0;}
-    .badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef3ff;color:#15356b;font-weight:600;font-size:.8rem;}
+    .card{
+      background:#fff;border-radius:var(--radius);padding:22px;
+      box-shadow:0 4px 10px rgba(0,0,0,.06);
+      border:1px solid #e8ecf4;
+    }
+    .card h3{margin:0 0 8px;}
+    .badge{
+      display:inline-block;padding:4px 10px;border-radius:999px;
+      background:#eef3ff;color:#15356b;font-weight:700;font-size:.8rem;
+    }
     .small{font-size:.95rem;color:var(--muted);}
-    .headshot{width:90px;height:90px;object-fit:cover;border-radius:50%;border:2px solid #e6eaf2;}
+    .headshot{
+      width:92px;height:92px;object-fit:cover;border-radius:50%;
+      border:2px solid #e6eaf2;
+    }
     .list{list-style:none;padding:0;margin:0;}
-    .list li{margin:6px 0;}
+    .list li{margin:8px 0;}
     hr.sep{border:none;border-top:1px solid #e8ecf4;margin:26px 0;}
-    footer{background:#fff;text-align:center;padding:30px 20px;color:var(--muted);font-size:.85rem;}
+    footer{
+      background:#fff;text-align:center;padding:26px 20px;
+      color:var(--muted);font-size:.85rem;
+      border-top:1px solid #e8ecf4;
+    }
     @media(max-width:700px){
       header{flex-direction:column;align-items:flex-start;gap:8px;}
       nav a,.lang-toggle{margin-left:0;margin-right:12px;display:inline-block;margin-top:4px;}
     }
   </style>
 </head>
+
 <body>
 <header>
   <div class="brand">
-    <img src="assets/farmers-logo.png" alt="Farmers Insurance logo" />
+    <img src="assets/farmers-insurance-exchange-logo.png" alt="Farmers Insurance logo" />
     <strong>Insure with Yuki</strong>
   </div>
+
   <nav>
     <a href="#home" data-en="Home" data-es="Inicio">Home</a>
     <a href="#services" data-en="Insurance Services" data-es="Servicios">Insurance Services</a>
@@ -56,16 +100,27 @@
 </header>
 
 <main>
+  <!-- HOME -->
   <section class="hero" id="home">
     <div class="container">
-      <!-- Updated: removed Bonita -->
-      <span class="badge" data-en="Farmers Insurance" data-es="Farmers Insurance">Farmers Insurance</span>
+      <span class="badge"
+        data-en="Insurance Strategist • Farmers Insurance"
+        data-es="Estratega de Seguros • Farmers Insurance">
+        Insurance Strategist • Farmers Insurance
+      </span>
 
-      <h1 data-en="Protection that grows with you." data-es="Protección que crece contigo.">Protection that grows with you.</h1>
-      <p data-en="Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL4)"
-         data-es="Auto • Casa • Umbrella • Comercial • Vida (Plazo, ROP, IUL4)">
-        Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL4)
+      <h1
+        data-en="Protection that grows with you."
+        data-es="Protección que crece contigo.">
+        Protection that grows with you.
+      </h1>
+
+      <p
+        data-en="Auto • Home • Umbrella • Commercial • Life"
+        data-es="Auto • Casa • Umbrella • Comercial • Vida">
+        Auto • Home • Umbrella • Commercial • Life
       </p>
+
       <p>
         <a class="btn primary" href="#book" data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</a>
         <a class="btn secondary" href="#services" data-en="View Services" data-es="Ver Servicios">View Services</a>
@@ -73,103 +128,134 @@
     </div>
   </section>
 
+  <!-- SERVICES -->
   <section class="section" id="services">
     <div class="container">
       <h2 data-en="Insurance Services" data-es="Servicios de Seguros">Insurance Services</h2>
+
       <div class="grid cards">
         <div class="card">
-          <h3 data-en="Auto & Commercial Auto" data-es="Auto y Auto Comercial">Auto & Commercial Auto</h3>
+          <h3 data-en="Auto & Commercial Vehicle Coverage" data-es="Auto y Vehículos Comerciales">Auto & Commercial Vehicle Coverage</h3>
           <p class="small"
-             data-en="Liability-focused protection, deductibles, and multi-policy discounts tailored to your needs."
-             data-es="Protección enfocada en responsabilidad, deducibles y descuentos por varias pólizas según tus necesidades.">
-            Liability-focused protection, deductibles, and multi-policy discounts tailored to your needs.
+            data-en="Liability-focused protection, deductibles, and clean advice on limits."
+            data-es="Protección enfocada en responsabilidad, deducibles y guía clara sobre límites.">
+            Liability-focused protection, deductibles, and clean advice on limits.
           </p>
         </div>
+
         <div class="card">
-          <h3 data-en="Home, Renters & Condo" data-es="Casa, Inquilinos y Condo">Home, Renters & Condo</h3>
+          <h3 data-en="Homeowners & Umbrella Protection" data-es="Casa y Umbrella">Homeowners & Umbrella Protection</h3>
           <p class="small"
-             data-en="Replacement cost strategy, water/backup options, and coverage built for claim-time clarity."
-             data-es="Estrategia de costo de reposición, opciones de agua/alcantarillado y cobertura diseñada para claridad en un reclamo.">
-            Replacement cost strategy, water/backup options, and coverage built for claim-time clarity.
+            data-en="Built to reduce gaps and surprises during a claim."
+            data-es="Diseñado para reducir huecos y sorpresas durante un reclamo.">
+            Built to reduce gaps and surprises during a claim.
           </p>
         </div>
+
         <div class="card">
-          <h3 data-en="Business & Liability" data-es="Comercial y Responsabilidad">Business & Liability</h3>
+          <h3 data-en="Renters & Condo Insurance" data-es="Inquilinos y Condo">Renters & Condo Insurance</h3>
           <p class="small"
-             data-en="BOP, General Liability, Commercial Auto, and Workers’ Comp support for small businesses."
-             data-es="BOP, Responsabilidad General, Auto Comercial y apoyo con Compensación de Trabajadores para pequeños negocios.">
-            BOP, General Liability, Commercial Auto, and Workers’ Comp support for small businesses.
+            data-en="Simple, strong protection for contents + liability."
+            data-es="Protección simple y fuerte para pertenencias + responsabilidad.">
+            Simple, strong protection for contents + liability.
           </p>
         </div>
+
         <div class="card">
-          <h3 data-en="Life & Income Protection" data-es="Vida y Protección de Ingresos">Life & Income Protection</h3>
+          <h3 data-en="Business, Liability & Workers Comp" data-es="Negocio, Responsabilidad y Workers Comp">Business, Liability & Workers Comp</h3>
           <p class="small"
-             data-en="Term, Return of Premium Term, and Indexed UL (IUL4) to protect your family and your future."
-             data-es="Plazo, Plazo con Devolución (ROP) y UL Indexado (IUL4) para proteger a tu familia y tu futuro.">
-            Term, Return of Premium Term, and Indexed UL (IUL4) to protect your family and your future.
+            data-en="Support for small businesses: BOP/GL, Commercial Auto, and Workers Comp."
+            data-es="Apoyo para pequeños negocios: BOP/GL, Auto Comercial y Workers Comp.">
+            Support for small businesses: BOP/GL, Commercial Auto, and Workers Comp.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-en="Life & Financial Protection" data-es="Vida y Protección Financiera">Life & Financial Protection</h3>
+          <p class="small"
+            data-en="Term and IUL strategies to protect families and long-term goals."
+            data-es="Estrategias de Plazo e IUL para proteger familias y metas a largo plazo.">
+            Term and IUL strategies to protect families and long-term goals.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-en="Accidental Death & Income Replacement" data-es="Muerte Accidental y Reemplazo de Ingresos">Accidental Death & Income Replacement</h3>
+          <p class="small"
+            data-en="Extra protection options for stability and peace of mind."
+            data-es="Opciones adicionales para estabilidad y tranquilidad.">
+            Extra protection options for stability and peace of mind.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- BOOK -->
   <section class="section" id="book">
     <div class="container">
-      <h2 data-en="Book an Appointment" data-es="Agendar una Cita">Book an Appointment</h2>
+      <h2 data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</h2>
       <p class="small"
-         data-en="Choose a time option below and I’ll coordinate with you."
-         data-es="Elige una opción de tiempo abajo y coordino contigo.">
-        Choose a time option below and I’ll coordinate with you.
+        data-en="For now, use the options below and I’ll confirm the time by text or call."
+        data-es="Por ahora, usa las opciones abajo y confirmo la hora por texto o llamada.">
+        For now, use the options below and I’ll confirm the time by text or call.
       </p>
 
-      <!-- Updated: removed email links; buttons go to Contact -->
       <div class="grid cards">
-        <a class="card" href="#contact">
+        <a class="card" href="tel:+16192500023">
           <h3 data-en="15-min • Quick question" data-es="15 min • Pregunta rápida">15-min • Quick question</h3>
           <p class="small"
-             data-en="Perfect for 1–2 questions or a fast quote check."
-             data-es="Perfecto para 1–2 preguntas o una revisión rápida.">
+            data-en="Perfect for 1–2 questions or a fast quote check."
+            data-es="Perfecto para 1–2 preguntas o una revisión rápida.">
             Perfect for 1–2 questions or a fast quote check.
           </p>
+          <div class="small" style="font-weight:700;">(619) 250-0023</div>
         </a>
 
-        <a class="card" href="#contact">
-          <h3 data-en="30-min • Coverage review" data-es="30 min • Revisión de coberturas">30-min • Coverage review</h3>
+        <a class="card" href="tel:+16192500023">
+          <h3 data-en="30-min • Coverage review" data-es="30 min • Revisión de cobertura">30-min • Coverage review</h3>
           <p class="small"
-             data-en="We compare coverage and adjust limits and deductibles."
-             data-es="Comparamos la cobertura y ajustamos límites y deducibles.">
+            data-en="We compare coverage and adjust limits and deductibles."
+            data-es="Comparamos cobertura y ajustamos límites y deducibles.">
             We compare coverage and adjust limits and deductibles.
           </p>
+          <div class="small" style="font-weight:700;">(619) 250-0023</div>
         </a>
 
-        <a class="card" href="#contact">
-          <h3 data-en="45-min • New client consult" data-es="45 min • Consulta para nuevo cliente">45-min • New client consult</h3>
+        <a class="card" href="tel:+16192500023">
+          <h3 data-en="45-min • New client consult" data-es="45 min • Consulta nuevo cliente">45-min • New client consult</h3>
           <p class="small"
-             data-en="Auto, Home, Business, and Life strategy in one conversation."
-             data-es="Estrategia de Auto, Casa, Comercial y Vida en una sola conversación.">
+            data-en="Auto, Home, Business, and Life strategy in one conversation."
+            data-es="Estrategia de Auto, Casa, Negocio y Vida en una sola llamada.">
             Auto, Home, Business, and Life strategy in one conversation.
           </p>
+          <div class="small" style="font-weight:700;">(619) 250-0023</div>
         </a>
       </div>
 
       <hr class="sep" />
-      <p class="small" data-en="Prefer to call instead? Use the phone number below."
-         data-es="¿Prefieres llamar? Usa el número de abajo.">
-        Prefer to call instead? Use the phone number below.
+      <p class="small"
+        data-en="If you prefer, you can also scroll down and use the Contact section."
+        data-es="Si prefieres, también puedes bajar a la sección de Contacto.">
+        If you prefer, you can also scroll down and use the Contact section.
       </p>
     </div>
   </section>
 
-  <!-- Updated Contact section: new phone + new address, no email, no Bonita -->
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container">
       <h2 data-en="Contact" data-es="Contacto">Contact</h2>
 
       <div style="display:flex;align-items:center;gap:16px;margin:8px 0 14px;">
-        <img src="assets/IMG_5179.png" alt="Yukiko Kobayashi" class="headshot" />
+        <img src="assets/IMG_3326.jpeg" alt="Yukiko Kobayashi" class="headshot" />
         <div>
-          <div style="font-weight:700;">Yukiko “Yuki” Kobayashi</div>
-          <div class="small" data-en="Insurance Strategist • Farmers Insurance" data-es="Estratega de Seguros • Farmers Insurance">Insurance Strategist • Farmers Insurance</div>
+          <div style="font-weight:800;">Yukiko “Yuki” Kobayashi</div>
+          <div class="small"
+            data-en="Insurance Strategist • Farmers Insurance"
+            data-es="Estratega de Seguros • Farmers Insurance">
+            Insurance Strategist • Farmers Insurance
+          </div>
         </div>
       </div>
 
@@ -183,7 +269,7 @@
 </main>
 
 <footer>
-  © 2025 Insure with Yuki • Farmers Insurance
+  © 2026 Insure with Yuki • Farmers Insurance
 </footer>
 
 <script>
