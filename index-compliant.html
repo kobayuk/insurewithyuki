@@ -1,486 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Insure with Yuki | Insurance Strategist</title>
-  <meta name="description" content="Insure with Yuki helps San Diego families, professionals, and small business owners explore smart insurance options for home, auto, life, and business coverage." />
-  <style>
-    :root{
-      --bg:#f7f9fc;
-      --card:#ffffff;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --accent:#2563eb;
-      --accent-dark:#1d4ed8;
-      --line:#e5e7eb;
-      --soft:#eef4ff;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Insure with Yuki | Insurance Strategist</title>
 
-    *{
-      box-sizing:border-box;
-    }
+<style>
+body { font-family: Arial; margin:0; background:#f7f9fc; color:#1f2937; }
+.container { max-width:1000px; margin:auto; padding:20px; }
+.brand { font-size:24px; font-weight:bold; margin-bottom:20px; }
 
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.5;
-    }
+.hero h1 { font-size:34px; margin-bottom:10px; }
+.hero p { font-size:18px; color:#4b5563; }
 
-    .container{
-      max-width:1100px;
-      margin:0 auto;
-      padding:24px;
-    }
+.btn {
+display:inline-block;
+margin-top:10px;
+margin-right:10px;
+padding:12px 20px;
+background:#2563eb;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
 
-    .topbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      padding:10px 0 20px;
-    }
+.section { margin-top:40px; }
 
-    .brand{
-      font-size:26px;
-      font-weight:700;
-      letter-spacing:.2px;
-    }
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:16px;
+}
 
-    .top-contact{
-      font-size:14px;
-      color:var(--muted);
-      text-align:right;
-    }
+.card {
+background:white;
+padding:20px;
+border-radius:10px;
+border:1px solid #e5e7eb;
+}
 
-    .top-contact a{
-      color:var(--text);
-      text-decoration:none;
-      font-weight:600;
-    }
+input, select {
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
 
-    .hero{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:28px;
-      align-items:center;
-      padding:28px 0 18px;
-    }
+button {
+padding:12px 20px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
 
-    .hero-copy{
-      background:linear-gradient(180deg,#ffffff 0%, #f9fbff 100%);
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:34px;
-      box-shadow:0 10px 30px rgba(15,23,42,.05);
-    }
+.contact-wrap {
+display:flex;
+align-items:center;
+gap:15px;
+margin-top:10px;
+}
 
-    .eyebrow{
-      display:inline-block;
-      background:var(--soft);
-      color:var(--accent-dark);
-      font-size:13px;
-      font-weight:700;
-      padding:8px 12px;
-      border-radius:999px;
-      margin-bottom:16px;
-    }
+.headshot {
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+}
 
-    h1{
-      font-size:42px;
-      line-height:1.1;
-      margin:0 0 14px;
-    }
-
-    .hero p{
-      font-size:18px;
-      color:#4b5563;
-      margin:0 0 22px;
-    }
-
-    .cta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-bottom:18px;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:13px 20px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      transition:.2s ease;
-    }
-
-    .btn-primary{
-      background:var(--accent);
-      color:#fff;
-    }
-
-    .btn-primary:hover{
-      background:var(--accent-dark);
-    }
-
-    .btn-secondary{
-      background:#fff;
-      color:var(--text);
-      border:1px solid var(--line);
-    }
-
-    .trust-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .hero-card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:26px;
-      box-shadow:0 10px 30px rgba(15,23,42,.05);
-    }
-
-    .profile{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:18px;
-    }
-
-    .headshot{
-      width:96px;
-      height:96px;
-      border-radius:50%;
-      object-fit:cover;
-      border:2px solid #eef2f7;
-      background:#fff;
-    }
-
-    .profile-name{
-      font-size:20px;
-      font-weight:700;
-      margin-bottom:4px;
-    }
-
-    .profile-role{
-      color:var(--muted);
-      font-size:15px;
-    }
-
-    .mini-box{
-      background:#f9fafb;
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:14px 16px;
-      margin-top:12px;
-    }
-
-    .mini-box strong{
-      display:block;
-      margin-bottom:6px;
-    }
-
-    .section{
-      padding:18px 0;
-    }
-
-    .section-title{
-      font-size:30px;
-      margin:0 0 16px;
-    }
-
-    .section-sub{
-      color:var(--muted);
-      font-size:17px;
-      margin:0 0 24px;
-      max-width:760px;
-    }
-
-    .grid-3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:22px;
-      box-shadow:0 8px 24px rgba(15,23,42,.04);
-    }
-
-    .card h3{
-      margin:0 0 10px;
-      font-size:20px;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-size:15px;
-    }
-
-    .service-list{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
-    }
-
-    .service-item{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:22px;
-    }
-
-    .service-item h3{
-      margin:0 0 10px;
-      font-size:20px;
-    }
-
-    .service-item p{
-      margin:0;
-      color:var(--muted);
-    }
-
-    .cta-banner{
-      margin-top:14px;
-      background:linear-gradient(135deg,#2563eb 0%, #1d4ed8 100%);
-      color:#fff;
-      border-radius:22px;
-      padding:30px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-    }
-
-    .cta-banner h2{
-      margin:0 0 8px;
-      font-size:30px;
-    }
-
-    .cta-banner p{
-      margin:0;
-      color:rgba(255,255,255,.9);
-      max-width:700px;
-    }
-
-    .cta-banner .btn{
-      background:#fff;
-      color:#1d4ed8;
-      white-space:nowrap;
-    }
-
-    .contact{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-    }
-
-    .contact-card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:22px;
-    }
-
-    .contact-card h3{
-      margin-top:0;
-      margin-bottom:12px;
-    }
-
-    .contact-card p, .contact-card a{
-      color:var(--muted);
-      text-decoration:none;
-      margin:0;
-    }
-
-    .footer{
-      border-top:1px solid var(--line);
-      margin-top:34px;
-      padding:22px 0 10px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    @media (max-width: 900px){
-      .hero,
-      .grid-3,
-      .service-list,
-      .contact{
-        grid-template-columns:1fr;
-      }
-
-      .cta-banner{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .topbar{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .top-contact{
-        text-align:left;
-      }
-
-      h1{
-        font-size:34px;
-      }
-
-      .section-title{
-        font-size:26px;
-      }
-    }
-  </style>
+.footer {
+margin-top:40px;
+font-size:14px;
+color:#6b7280;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
+<div class="container">
 
-    <div class="topbar">
-      <div class="brand">Insure with Yuki</div>
-      <div class="top-contact">
-        <div><a href="tel:16192440221">(619) 244-0221</a></div>
-        <div>San Diego, California</div>
-      </div>
-    </div>
+<div class="brand">Insure with Yuki</div>
 
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">Insurance Strategist | San Diego & California</div>
-        <h1>Smart insurance guidance for families, professionals, and small business owners</h1>
-        <p>
-          I help clients explore practical coverage options for home, auto, life, and business insurance with a personalized, education-first approach.
-        </p>
+<!-- HERO -->
+<div class="hero">
+<h1>Insurance guidance for San Diego families, business owners, and diverse communities</h1>
 
-        <div class="cta-row">
-          <a href="https://outlook.office.com/book/YOURBOOKINGLINK" class="btn btn-primary">Book a Consultation</a>
-          <a href="tel:16192440221" class="btn btn-secondary">Call (619) 244-0221</a>
-        </div>
+<p>
+Helping San Diego families, small business owners, and multicultural communities explore smart coverage options with a personalized, education-first approach.
+</p>
 
-        <div class="trust-row">
-          <span>✔ Personalized guidance</span>
-          <span>✔ San Diego based</span>
-          <span>✔ Business & personal coverage focus</span>
-        </div>
-      </div>
+<a href="#quote" class="btn">Get a Quote</a>
+<a href="https://outlook.office.com/book/YOURBOOKINGLINK" class="btn">Book a Call</a>
+</div>
 
-      <div class="hero-card">
-        <div class="profile">
-          <img src="assets/yuki.jpg" alt="Yuki Kobayashi" class="headshot" />
-          <div>
-            <div class="profile-name">Yukiko “Yuki” Kobayashi</div>
-            <div class="profile-role">Insurance Strategist</div>
-          </div>
-        </div>
+<!-- WHY -->
+<div class="section">
+<h2>Why clients reach out</h2>
 
-        <div class="mini-box">
-          <strong>How I can help</strong>
-          Coverage reviews, quote comparisons, policy guidance, and support for clients looking for clarity before making insurance decisions.
-        </div>
+<div class="grid">
+<div class="card"><h3>Coverage Review</h3><p>Identify gaps and improve protection.</p></div>
+<div class="card"><h3>Quote Comparison</h3><p>Find competitive options.</p></div>
+<div class="card"><h3>Business Support</h3><p>Protect and grow your business.</p></div>
+</div>
+</div>
 
-        <div class="mini-box">
-          <strong>Who I work with</strong>
-          Homeowners, drivers, families, condo owners, and small business owners across San Diego and California.
-        </div>
+<!-- COMMUNITY -->
+<div class="section">
+<h2>Rooted in community</h2>
 
-        <div class="mini-box">
-          <strong>Best next step</strong>
-          Book a quick consultation and I’ll help you identify what to review first.
-        </div>
-      </div>
-    </section>
+<p>
+Serving San Diego’s Latino and multicultural communities with a relationship-based, trust-driven approach.
+</p>
 
-    <section class="section">
-      <h2 class="section-title">Why clients reach out</h2>
-      <p class="section-sub">
-        Most people are not looking for more insurance noise. They want clarity, competitive options, and someone who can help them understand what makes sense for their situation.
-      </p>
+<div class="grid">
+<div class="card"><h3>Community Focused</h3><p>Built on relationships and referrals.</p></div>
+<div class="card"><h3>Bilingual Friendly</h3><p>Clear and personal communication.</p></div>
+<div class="card"><h3>Small Business Mindset</h3><p>Practical protection for growth.</p></div>
+</div>
+</div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>Coverage Review</h3>
-          <p>Review current policies and identify possible gaps, overlaps, or opportunities to improve protection.</p>
-        </div>
-        <div class="card">
-          <h3>Quote Comparison</h3>
-          <p>Compare available options and pricing to understand what is competitive in the current market.</p>
-        </div>
-        <div class="card">
-          <h3>Business Support</h3>
-          <p>Help business owners explore practical insurance solutions that support growth and day-to-day operations.</p>
-        </div>
-      </div>
-    </section>
+<!-- SERVICES -->
+<div class="section">
+<h2>Insurance Solutions</h2>
 
-    <section class="section">
-      <h2 class="section-title">Insurance solutions</h2>
-      <p class="section-sub">
-        Support is available for both personal and business insurance needs, with a consultative approach focused on fit, value, and long-term protection.
-      </p>
+<div class="grid">
+<div class="card">Home Insurance</div>
+<div class="card">Auto Insurance</div>
+<div class="card">Life Insurance</div>
+<div class="card">Business Insurance</div>
+</div>
+</div>
 
-      <div class="service-list">
-        <div class="service-item">
-          <h3>Home Insurance</h3>
-          <p>Options for homeowners, condo owners, and property protection reviews.</p>
-        </div>
-        <div class="service-item">
-          <h3>Auto Insurance</h3>
-          <p>Coverage guidance for drivers looking to review protection, limits, and pricing.</p>
-        </div>
-        <div class="service-item">
-          <h3>Life Insurance</h3>
-          <p>Explore solutions built around family protection, future planning, and financial goals.</p>
-        </div>
-        <div class="service-item">
-          <h3>Business Insurance</h3>
-          <p>Support for business owners looking at liability, property, and other core coverage needs.</p>
-        </div>
-      </div>
-    </section>
+<!-- QUOTE FORM -->
+<div id="quote" class="section">
+<h2>Get a Quote in 60 Seconds</h2>
 
-    <section class="section">
-      <div class="cta-banner">
-        <div>
-          <h2>Ready to review your coverage?</h2>
-          <p>
-            Whether you want a second opinion, a quote comparison, or guidance on where to start, the easiest next step is a quick consultation.
-          </p>
-        </div>
-        <a href="https://outlook.office.com/book/YOURBOOKINGLINK" class="btn">Book Now</a>
-      </div>
-    </section>
+<form action="https://formspree.io/f/YOURFORMID" method="POST">
 
-    <section class="section">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact">
-        <div class="contact-card">
-          <h3>Get in touch</h3>
-          <p><a href="tel:16192440221">(619) 244-0221</a></p>
-          <p>San Diego, California</p>
-        </div>
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="email" name="email" placeholder="Email" required>
 
-        <div class="contact-card">
-          <h3>Book a consultation</h3>
-          <p>Use the booking link above to schedule a convenient time to connect.</p>
-        </div>
-      </div>
-    </section>
+<select name="coverage">
+<option>Type of Insurance</option>
+<option>Home</option>
+<option>Auto</option>
+<option>Life</option>
+<option>Business</option>
+</select>
 
-    <div class="footer">
-      © 2026 Insure with Yuki
-    </div>
+<input type="text" name="notes" placeholder="Optional details">
 
-  </div>
+<button type="submit">Request Quote</button>
+
+</form>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+<h2>Contact</h2>
+
+<div class="contact-wrap">
+<img src="assets/yuki.jpg" class="headshot" />
+<div>
+<strong>Yukiko “Yuki” Kobayashi</strong><br/>
+Insurance Strategist
+</div>
+</div>
+
+<p style="margin-top:10px;">
+📞 (619) 244-0221<br/>
+📍 San Diego, CA
+</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Insure with Yuki
+</div>
+
+</div>
 </body>
 </html>
