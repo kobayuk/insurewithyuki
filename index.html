@@ -38,9 +38,17 @@
       top:0;
       z-index:10;
     }
-    .brand{display:flex;align-items:center;gap:12px;}
-    .brand img{height:44px;width:auto;display:block;}
-    nav a{margin-left:14px;font-weight:600;font-size:.95rem;}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+    }
+    nav a{
+      margin-left:14px;
+      font-weight:600;
+      font-size:.95rem;
+    }
     .lang-toggle{
       border:none;
       background:var(--accent);
@@ -57,6 +65,8 @@
       border-radius:var(--radius);
       font-weight:600;
       font-size:.95rem;
+      margin-right:10px;
+      margin-bottom:10px;
     }
     .btn.primary{background:var(--accent);color:#fff;}
     .btn.secondary{background:#e7ecf6;color:var(--ink);}
@@ -88,18 +98,8 @@
       font-size:.8rem;
     }
     .small{font-size:.95rem;color:var(--muted);}
-    .headshot{
-      width:92px;
-      height:92px;
-      object-fit:cover;
-      border-radius:50%;
-      border:2px solid #e6eaf2;
-      display:block;
-      background:#fff;
-    }
     .list{list-style:none;padding:0;margin:0;}
     .list li{margin:6px 0;}
-    hr.sep{border:none;border-top:1px solid #e8ecf4;margin:26px 0;}
     footer{
       background:#fff;
       text-align:center;
@@ -117,23 +117,19 @@
 <body>
 <header>
   <div class="brand">
-    <!-- Farmers logo -->
-    <img src="assets/farmers-insurance-exchange-logo.png" alt="Farmers Insurance logo" />
     <strong>Insure with Yuki</strong>
   </div>
 
-  <!-- NAV (Option B) -->
   <nav>
     <a href="#home" data-en="Home" data-es="Inicio">Home</a>
     <a href="#services" data-en="Insurance Services" data-es="Servicios">Insurance Services</a>
-    <a href="#book" data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</a>
+    <a href="https://outlook.office.com/bookwithme/user/1098621dbdb24e61813d54abefbaa753@Yukiagency.onmicrosoft.com?anonymous&ismsaljsauthenabled&ep=link" target="_blank" rel="noopener" data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</a>
     <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
     <button id="langToggle" class="lang-toggle">Español</button>
   </nav>
 </header>
 
 <main>
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="container">
       <span class="badge"
@@ -150,9 +146,20 @@
       <p data-en="Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL)"
          data-es="Auto • Casa • Umbrella • Comercial • Vida (Plazo, ROP, IUL)">
         Auto • Home • Umbrella • Commercial • Life (Term, ROP, IUL)
-     
-   
-  <!-- SERVICES -->
+      </p>
+
+      <p>
+        <a class="btn primary" href="https://outlook.office.com/bookwithme/user/1098621dbdb24e61813d54abefbaa753@Yukiagency.onmicrosoft.com?anonymous&ismsaljsauthenabled&ep=link" target="_blank" rel="noopener" data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</a>
+        <a class="btn secondary" href="#services" data-en="View Services" data-es="Ver Servicios">View Services</a>
+      </p>
+
+      <p>
+        <span data-en="Or call/text" data-es="O llama/envía texto">Or call/text</span>
+        <a href="tel:+16192500023">(619) 250-0023</a>
+      </p>
+    </div>
+  </section>
+
   <section class="section" id="services">
     <div class="container">
       <h2 data-en="Insurance Services" data-es="Servicios de Seguros">Insurance Services</h2>
@@ -215,70 +222,15 @@
     </div>
   </section>
 
-  <!-- BOOK -->
-  <section class="section" id="book">
-    <div class="container">
-      <h2 data-en="Book Appointment" data-es="Agendar Cita">Book Appointment</h2>
-      <p class="small"
-         data-en="For now, choose a time option below and I’ll confirm by text."
-         data-es="Por ahora, elige una opción abajo y te confirmo por texto.">
-        For now, choose a time option below and I’ll confirm by text.
-      </p>
-
-      <!-- Temporary booking via call-to-text or call -->
-      <div class="grid cards">
-        <a class="card" href="tel:+16192500023">
-          <h3 data-en="15-min • Quick question" data-es="15 min • Pregunta rápida">15-min • Quick question</h3>
-          <p class="small"
-             data-en="Fast check-in for 1–2 questions."
-             data-es="Revisión rápida para 1–2 preguntas.">
-            Fast check-in for 1–2 questions.
-          </p>
-        </a>
-
-        <a class="card" href="tel:+16192500023">
-          <h3 data-en="30-min • Coverage review" data-es="30 min • Revisión de coberturas">30-min • Coverage review</h3>
-          <p class="small"
-             data-en="Compare coverage, limits, and deductibles."
-             data-es="Comparamos cobertura, límites y deducibles.">
-            Compare coverage, limits, and deductibles.
-          </p>
-        </a>
-
-        <a class="card" href="tel:+16192500023">
-          <h3 data-en="45-min • New client consult" data-es="45 min • Consulta nuevo cliente">45-min • New client consult</h3>
-          <p class="small"
-             data-en="Auto, Home, Business, and Life strategy."
-             data-es="Estrategia de Auto, Casa, Negocio y Vida.">
-            Auto, Home, Business, and Life strategy.
-          </p>
-        </a>
-      </div>
-
-      <hr class="sep" />
-      <p class="small"
-         data-en="Once your Booking link is active, we’ll swap these buttons to the scheduler automatically."
-         data-es="Cuando tu enlace de Booking esté activo, cambiamos estos botones al calendario automáticamente.">
-        Once your Booking link is active, we’ll swap these buttons to the scheduler automatically.
-      </p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container">
       <h2 data-en="Contact" data-es="Contacto">Contact</h2>
 
-      <div style="display:flex;align-items:center;gap:16px;margin:8px 0 14px;">
-        <!-- Headshot -->
-        <img src="assets/IMG_3326.jpeg" alt="Yukiko Kobayashi" class="headshot" />
-        <div>
-          <div style="font-weight:700;">Yukiko “Yuki” Kobayashi</div>
-          <div class="small" data-en="Insurance Strategist" data-es="Estratega de Seguros">Insurance Strategist</div>
-        </div>
+      <div style="margin:8px 0 14px;">
+        <div style="font-weight:700;">Yukiko “Yuki” Kobayashi</div>
+        <div class="small" data-en="Insurance Strategist" data-es="Estratega de Seguros">Insurance Strategist</div>
       </div>
 
-      <!-- FINAL CONTACT: remove old numbers/email/location2; keep DOI; add new phone + SD address -->
       <ul class="list">
         <li><strong>Phone</strong>: <a href="tel:+16192500023">(619) 250-0023</a></li>
         <li><strong>Address</strong>: 9988 Hibert Street Ste 212, San Diego CA 92131</li>
@@ -293,7 +245,6 @@
 </footer>
 
 <script>
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click', e=>{
       const id = a.getAttribute('href');
@@ -304,7 +255,6 @@
     });
   });
 
-  // Bilingual toggle
   (function(){
     const btn = document.getElementById('langToggle');
     if(!btn) return;
