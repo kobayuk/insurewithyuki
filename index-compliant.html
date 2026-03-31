@@ -8,7 +8,12 @@
 <style>
 body { font-family: Arial; margin:0; background:#f7f9fc; color:#1f2937; }
 .container { max-width:1000px; margin:auto; padding:20px; }
-.brand { font-size:24px; font-weight:bold; margin-bottom:20px; }
+.brand { font-size:24px; font-weight:bold; margin-bottom:10px; }
+
+.lang-toggle {
+margin-bottom:20px;
+font-size:14px;
+}
 
 .hero h1 { font-size:34px; margin-bottom:10px; }
 .hero p { font-size:18px; color:#4b5563; }
@@ -78,6 +83,15 @@ font-size:14px;
 color:#6b7280;
 }
 </style>
+
+<script>
+function setLang(lang){
+document.querySelectorAll("[data-en]").forEach(el=>{
+el.innerText = el.getAttribute("data-" + lang);
+});
+}
+</script>
+
 </head>
 
 <body>
@@ -85,47 +99,62 @@ color:#6b7280;
 
 <div class="brand">Insure with Yuki</div>
 
+<div class="lang-toggle">
+<button onclick="setLang('en')">English</button>
+<button onclick="setLang('es')">Español</button>
+</div>
+
 <!-- HERO -->
 <div class="hero">
-<h1>Insurance guidance for San Diego families, business owners, and diverse communities</h1>
+<h1 data-en="Insurance guidance for San Diego families, business owners, and diverse communities"
+data-es="Asesoría de seguros para familias, negocios y comunidades diversas en San Diego">
+Insurance guidance for San Diego families, business owners, and diverse communities
+</h1>
 
-<p>
-Helping San Diego families, small business owners, and multicultural communities explore smart coverage options with a personalized, education-first approach.
+<p data-en="Helping families, small business owners, and multicultural communities explore smart coverage options with a personalized approach."
+data-es="Ayudando a familias, dueños de negocios y comunidades multiculturales a encontrar opciones de seguro adecuadas con un enfoque personalizado.">
+Helping families, small business owners, and multicultural communities explore smart coverage options with a personalized approach.
 </p>
 
-<a href="#quote" class="btn">Get a Quote</a>
-<a href="https://outlook.office.com/book/YOURBOOKINGLINK" class="btn">Book a Call</a>
+<a href="#quote" class="btn" data-en="Get a Quote" data-es="Cotizar Ahora">Get a Quote</a>
+<a href="https://outlook.office.com/book/YOURBOOKINGLINK" class="btn" data-en="Book a Call" data-es="Agendar Llamada">Book a Call</a>
 </div>
 
 <!-- WHY -->
 <div class="section">
-<h2>Why clients reach out</h2>
+<h2 data-en="Why clients reach out" data-es="Por qué los clientes nos contactan">Why clients reach out</h2>
 
 <div class="grid">
-<div class="card"><h3>Coverage Review</h3><p>Identify gaps and improve protection.</p></div>
-<div class="card"><h3>Quote Comparison</h3><p>Find competitive options.</p></div>
-<div class="card"><h3>Business Support</h3><p>Protect and grow your business.</p></div>
+<div class="card">
+<h3 data-en="Coverage Review" data-es="Revisión de cobertura">Coverage Review</h3>
+<p data-en="Identify gaps and improve protection." data-es="Identificamos vacíos y mejoramos tu protección."></p>
+</div>
+
+<div class="card">
+<h3 data-en="Quote Comparison" data-es="Comparación de precios">Quote Comparison</h3>
+<p data-en="Find competitive options." data-es="Encontramos opciones competitivas."></p>
+</div>
+
+<div class="card">
+<h3 data-en="Business Support" data-es="Apoyo para negocios">Business Support</h3>
+<p data-en="Protect and grow your business." data-es="Protege y haz crecer tu negocio."></p>
+</div>
 </div>
 </div>
 
 <!-- COMMUNITY -->
 <div class="section">
-<h2>Rooted in community</h2>
+<h2 data-en="Rooted in community" data-es="Enfocados en la comunidad">Rooted in community</h2>
 
-<p>
-Serving San Diego’s Latino and multicultural communities with a relationship-based, trust-driven approach.
+<p data-en="Serving San Diego’s Latino and multicultural communities with a relationship-based approach."
+data-es="Sirviendo a la comunidad Latina y multicultural en San Diego con un enfoque basado en relaciones.">
+Serving San Diego’s Latino and multicultural communities with a relationship-based approach.
 </p>
-
-<div class="grid">
-<div class="card"><h3>Community Focused</h3><p>Built on relationships and referrals.</p></div>
-<div class="card"><h3>Bilingual Friendly</h3><p>Clear and personal communication.</p></div>
-<div class="card"><h3>Small Business Mindset</h3><p>Practical protection for growth.</p></div>
-</div>
 </div>
 
 <!-- SERVICES -->
 <div class="section">
-<h2>Insurance Solutions</h2>
+<h2 data-en="Insurance Solutions" data-es="Soluciones de seguros">Insurance Solutions</h2>
 
 <div class="grid">
 <div class="card">Home Insurance</div>
@@ -135,34 +164,34 @@ Serving San Diego’s Latino and multicultural communities with a relationship-b
 </div>
 </div>
 
-<!-- QUOTE FORM -->
+<!-- FORM -->
 <div id="quote" class="section">
-<h2>Get a Quote in 60 Seconds</h2>
+<h2 data-en="Get a Quote in 60 Seconds" data-es="Cotiza en 60 segundos">Get a Quote in 60 Seconds</h2>
 
 <form action="https://formspree.io/f/YOURFORMID" method="POST">
 
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<input type="email" name="email" placeholder="Email" required>
+<input type="text" name="name" placeholder="Full Name / Nombre" required>
+<input type="tel" name="phone" placeholder="Phone / Teléfono" required>
+<input type="email" name="email" placeholder="Email / Correo" required>
 
 <select name="coverage">
-<option>Type of Insurance</option>
+<option>Type / Tipo</option>
 <option>Home</option>
 <option>Auto</option>
 <option>Life</option>
 <option>Business</option>
 </select>
 
-<input type="text" name="notes" placeholder="Optional details">
+<input type="text" name="notes" placeholder="Details / Detalles">
 
-<button type="submit">Request Quote</button>
+<button type="submit">Submit</button>
 
 </form>
 </div>
 
 <!-- CONTACT -->
 <div class="section">
-<h2>Contact</h2>
+<h2 data-en="Contact" data-es="Contacto">Contact</h2>
 
 <div class="contact-wrap">
 <img src="assets/yuki.jpg" class="headshot" />
@@ -172,13 +201,12 @@ Insurance Strategist
 </div>
 </div>
 
-<p style="margin-top:10px;">
+<p>
 📞 (619) 244-0221<br/>
 📍 San Diego, CA
 </p>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
 © 2026 Insure with Yuki
 </div>
