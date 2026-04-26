@@ -1,216 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Insure with Yuki | Insurance Strategist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yuki Kobayashi Insurance | Coverage Review</title>
+  <meta name="description" content="Schedule a no-pressure insurance coverage review with Yuki Kobayashi. Auto, home, renters, business, life, and umbrella insurance guidance." />
 
-<style>
-body { font-family: Arial; margin:0; background:#f7f9fc; color:#1f2937; }
-.container { max-width:1000px; margin:auto; padding:20px; }
-.brand { font-size:24px; font-weight:bold; margin-bottom:10px; }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+    }
 
-.lang-toggle {
-margin-bottom:20px;
-font-size:14px;
-}
+    header {
+      background: #0b1f3a;
+      color: #ffffff;
+      padding: 24px 20px;
+      text-align: center;
+    }
 
-.hero h1 { font-size:34px; margin-bottom:10px; }
-.hero p { font-size:18px; color:#4b5563; }
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 0.5px;
+    }
 
-.btn {
-display:inline-block;
-margin-top:10px;
-margin-right:10px;
-padding:12px 20px;
-background:#2563eb;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
+    header p {
+      margin: 8px 0 0;
+      font-size: 18px;
+      color: #e5e7eb;
+    }
 
-.section { margin-top:40px; }
+    .hero {
+      padding: 70px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #f8fafc, #e5edf7);
+    }
 
-.grid {
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:16px;
-}
+    .hero h2 {
+      font-size: 38px;
+      color: #0b1f3a;
+      margin-bottom: 20px;
+    }
 
-.card {
-background:white;
-padding:20px;
-border-radius:10px;
-border:1px solid #e5e7eb;
-}
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 20px;
+    }
 
-input, select {
-width:100%;
-padding:10px;
-margin-bottom:10px;
-border-radius:6px;
-border:1px solid #ccc;
-}
+    .button {
+      display: inline-block;
+      padding: 16px 34px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 20px;
+      background: #003087;
+      color: #ffffff;
+    }
 
-button {
-padding:12px 20px;
-background:#2563eb;
-color:white;
-border:none;
-border-radius:6px;
-font-weight:bold;
-cursor:pointer;
-}
+    .button:hover {
+      background: #001f5c;
+    }
 
-.contact-wrap {
-display:flex;
-align-items:center;
-gap:15px;
-margin-top:10px;
-}
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-.headshot {
-width:90px;
-height:90px;
-border-radius:50%;
-object-fit:cover;
-}
+    h2 {
+      color: #0b1f3a;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-.footer {
-margin-top:40px;
-font-size:14px;
-color:#6b7280;
-}
-</style>
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 35px;
+    }
 
-<script>
-function setLang(lang){
-document.querySelectorAll("[data-en]").forEach(el=>{
-el.innerText = el.getAttribute("data-" + lang);
-});
-}
-</script>
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 28px;
+      background: #ffffff;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    }
 
+    .card h3 {
+      margin-top: 0;
+      color: #0b1f3a;
+    }
+
+    .cta {
+      background: #0b1f3a;
+      color: #ffffff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta h2 {
+      color: #ffffff;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-size: 20px;
+    }
+
+    footer {
+      background: #111827;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ffffff;
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
 
-<div class="brand">Insure with Yuki</div>
+  <header>
+    <h1>Yuki Kobayashi Insurance</h1>
+    <p>Local insurance guidance backed by Farmers</p>
+  </header>
 
-<div class="lang-toggle">
-<button onclick="setLang('en')">English</button>
-<button onclick="setLang('es')">Español</button>
-</div>
+  <section class="hero">
+    <h2>When Was the Last Time You Reviewed Your Insurance?</h2>
 
-<!-- HERO -->
-<div class="hero">
-<h1 data-en="Insurance guidance for San Diego families, business owners, and diverse communities"
-data-es="Asesoría de seguros para familias, negocios y comunidades diversas en San Diego">
-Insurance guidance for San Diego families, business owners, and diverse communities
-</h1>
+    <p>
+      Most people don’t realize what they’re missing until it’s too late.
+      Schedule a simple, no-pressure coverage review to better understand your options.
+    </p>
 
-<p data-en="Helping families, small business owners, and multicultural communities explore smart coverage options with a personalized approach."
-data-es="Ayudando a familias, dueños de negocios y comunidades multiculturales a encontrar opciones de seguro adecuadas con un enfoque personalizado.">
-Helping families, small business owners, and multicultural communities explore smart coverage options with a personalized approach.
-</p>
+    <a class="button" href="https://calendly.com/ykobayashi-farmers" target="_blank">
+      Schedule a Coverage Review
+    </a>
+  </section>
 
-<a href="#quote" class="btn" data-en="Get a Quote" data-es="Cotizar Ahora">Get a Quote</a>
-<a href="https://outlook.office.com/bookwithme/user/f7161289792a43a78434cda698b01d8c@farmersagent.com/meetingtype/b0ZJEy0lN0yq-cKg_fyzBQ2?anonymous&ep=owaSlotsCopyLink" class="btn" data-en="Schedule a Coverage Review" data-es="Agendar Revisión de Cobertura">Schedule a Coverage Review</a>
-</div>
+  <section>
+    <h2>Insurance Should Feel Clear — Not Confusing</h2>
 
-<!-- WHY -->
-<div class="section">
-<h2 data-en="Why clients reach out" data-es="Por qué los clientes nos contactan">Why clients reach out</h2>
+    <p style="text-align:center; max-width:850px; margin:auto; font-size:18px;">
+      I help individuals, families, and business owners review their coverage,
+      identify possible gaps, and make sure their protection still fits their current needs.
+    </p>
 
-<div class="grid">
-<div class="card">
-<h3 data-en="Coverage Review" data-es="Revisión de cobertura">Coverage Review</h3>
-<p data-en="Identify gaps and improve protection." data-es="Identificamos vacíos y mejoramos tu protección."></p>
-</div>
+    <div class="cards">
+      <div class="card">
+        <h3>Personal Insurance</h3>
+        <p>
+          Auto, home, renters, condo, umbrella, and life insurance reviews designed to help protect what matters most.
+        </p>
+      </div>
 
-<div class="card">
-<h3 data-en="Quote Comparison" data-es="Comparación de precios">Quote Comparison</h3>
-<p data-en="Find competitive options." data-es="Encontramos opciones competitivas."></p>
-</div>
+      <div class="card">
+        <h3>Business Insurance</h3>
+        <p>
+          Guidance for small business owners needing coverage such as general liability, workers’ comp, commercial auto, and more.
+        </p>
+      </div>
 
-<div class="card">
-<h3 data-en="Business Support" data-es="Apoyo para negocios">Business Support</h3>
-<p data-en="Protect and grow your business." data-es="Protege y haz crecer tu negocio."></p>
-</div>
-</div>
-</div>
+      <div class="card">
+        <h3>Coverage Reviews</h3>
+        <p>
+          A no-pressure second opinion to help you understand whether your current policy still fits your life, assets, and budget.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<!-- COMMUNITY -->
-<div class="section">
-<h2 data-en="Rooted in community" data-es="Enfocados en la comunidad">Rooted in community</h2>
+  <section class="cta">
+    <h2>Book a Private Coverage Review</h2>
 
-<p data-en="Serving San Diego’s Latino and multicultural communities with a relationship-based approach."
-data-es="Sirviendo a la comunidad Latina y multicultural en San Diego con un enfoque basado en relaciones.">
-Serving San Diego’s Latino and multicultural communities with a relationship-based approach.
-</p>
-</div>
+    <p>
+      A short conversation can help you understand what you have, what may be missing,
+      and what options may better fit your situation.
+    </p>
 
-<!-- SERVICES -->
-<div class="section">
-<h2 data-en="Insurance Solutions" data-es="Soluciones de seguros">Insurance Solutions</h2>
+    <a class="button" href="https://calendly.com/ykobayashi-farmers" target="_blank">
+      Schedule a Coverage Review
+    </a>
+  </section>
 
-<div class="grid">
-<div class="card">Home Insurance</div>
-<div class="card">Auto Insurance</div>
-<div class="card">Life Insurance</div>
-<div class="card">Business Insurance</div>
-</div>
-</div>
+  <footer>
+    <p>Yuki Kobayashi Insurance</p>
+    <p>
+      Website: <a href="https://insurewithyuki.com">InsureWithYuki.com</a>
+    </p>
+    <p>
+      This website provides general insurance information and does not modify, bind, or guarantee coverage.
+      Coverage is subject to underwriting approval and policy terms.
+    </p>
+  </footer>
 
-<!-- FORM -->
-<div id="quote" class="section">
-<h2 data-en="Get a Quote in 60 Seconds" data-es="Cotiza en 60 segundos">Get a Quote in 60 Seconds</h2>
-
-<form action="https://formspree.io/f/YOURFORMID" method="POST">
-
-<input type="text" name="name" placeholder="Full Name / Nombre" required>
-<input type="tel" name="phone" placeholder="Phone / Teléfono" required>
-<input type="email" name="email" placeholder="Email / Correo" required>
-
-<select name="coverage">
-<option>Type / Tipo</option>
-<option>Home</option>
-<option>Auto</option>
-<option>Life</option>
-<option>Business</option>
-</select>
-
-<input type="text" name="notes" placeholder="Details / Detalles">
-
-<button type="submit">Submit</button>
-
-</form>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-<h2 data-en="Contact" data-es="Contacto">Contact</h2>
-
-<div class="contact-wrap">
-<img src="assets/yuki.jpg" class="headshot" />
-<div>
-<strong>Yukiko “Yuki” Kobayashi</strong><br/>
-Insurance Strategist
-</div>
-</div>
-
-<p>
-📞 (619) 244-0221<br/>
-📍 San Diego, CA
-</p>
-</div>
-
-<div class="footer">
-© 2026 Insure with Yuki
-</div>
-
-</div>
 </body>
 </html>
