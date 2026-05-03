@@ -6,7 +6,7 @@
 
   <title>Insure With Yuki | California Insurance Strategist</title>
 
-  <meta name="description" content="Insure With Yuki helps California homeowners, condo owners, families, and business owners review insurance coverage, identify gaps, and protect what they are building." />
+  <meta name="description" content="Insure With Yuki helps California homeowners, families, business owners, and clients review insurance coverage, identify gaps, and protect what they are building." />
 
   <style>
     * {
@@ -37,29 +37,37 @@
       display: block;
     }
 
-    .mobile-actions {
-      display: none;
-      background: #061426;
-      padding: 18px;
-      gap: 12px;
-      justify-content: center;
+    .quick-links {
+      display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      padding: 24px 18px 28px;
+      background: #061426;
+      border-top: 1px solid rgba(199, 154, 85, 0.35);
     }
 
-    .mobile-actions a {
+    .quick-links a {
       text-decoration: none;
       background: #c79a55;
       color: #061426;
-      padding: 14px 20px;
+      padding: 14px 22px;
       border-radius: 6px;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 15px;
       text-align: center;
+      min-width: 190px;
     }
 
-    .mobile-actions a.secondary {
+    .quick-links a.secondary {
       background: #ffffff;
       color: #061426;
+    }
+
+    .quick-links a.dark {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid #c79a55;
     }
 
     .disclaimer {
@@ -68,7 +76,7 @@
       font-size: 12px;
       line-height: 1.5;
       text-align: center;
-      padding: 18px 20px 28px;
+      padding: 18px 20px 30px;
     }
 
     .disclaimer a {
@@ -81,8 +89,13 @@
         max-width: 100%;
       }
 
-      .mobile-actions {
-        display: flex;
+      .quick-links {
+        padding: 18px 14px 24px;
+      }
+
+      .quick-links a {
+        width: 100%;
+        min-width: unset;
       }
     }
   </style>
@@ -98,9 +111,25 @@
     />
   </main>
 
-  <div class="mobile-actions">
+  <div class="quick-links">
     <a href="https://calendly.com/ykobayashi-farmers" target="_blank" rel="noopener">
       Book a Coverage Review
+    </a>
+
+    <a class="secondary" href="https://www.dropbox.com/request/ohnk5tikn9bmis5emsr2" target="_blank" rel="noopener">
+      Upload Dec Page / ID
+    </a>
+
+    <a class="dark" href="services.html">
+      Personal Insurance
+    </a>
+
+    <a class="dark" href="services.html#business">
+      Business Insurance
+    </a>
+
+    <a class="dark" href="life.html">
+      Life & Specialty
     </a>
 
     <a class="secondary" href="tel:8587275011">
