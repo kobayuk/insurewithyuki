@@ -24,12 +24,13 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .homepage-wrapper {
-      position: relative;
+    .homepage-link {
+      display: block;
       width: 100%;
       max-width: 1536px;
       margin: 0 auto;
       background: #06172a;
+      cursor: pointer;
     }
 
     .homepage-image {
@@ -37,135 +38,24 @@
       height: auto;
       display: block;
     }
-
-    /* Invisible clickable areas over the image buttons */
-    .click-zone {
-      position: absolute;
-      display: block;
-      z-index: 10;
-      text-indent: -9999px;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0);
-      cursor: pointer;
-    }
-
-    /* Top hero button: Book a Coverage Review */
-    .hero-book {
-      left: 4.1%;
-      top: 34.6%;
-      width: 13.7%;
-      height: 3.9%;
-    }
-
-    /* Top hero button: Explore Services */
-    .hero-explore {
-      left: 18.8%;
-      top: 34.7%;
-      width: 11.8%;
-      height: 3.8%;
-    }
-
-    /* Bottom gold button: Book Your Coverage Review */
-    .bottom-book {
-      left: 30.8%;
-      top: 91.1%;
-      width: 30.0%;
-      height: 7.5%;
-    }
-
-    /* Optional: service card buttons */
-    .personal-button {
-      left: 3.8%;
-      top: 83.3%;
-      width: 12.7%;
-      height: 2.7%;
-    }
-
-    .business-button {
-      left: 26.0%;
-      top: 83.3%;
-      width: 13.0%;
-      height: 2.7%;
-    }
-
-    .life-button {
-      left: 51.0%;
-      top: 83.3%;
-      width: 14.0%;
-      height: 2.7%;
-    }
-
-    @media (max-width: 700px) {
-      .hero-book,
-      .hero-explore,
-      .personal-button,
-      .business-button,
-      .life-button {
-        display: none;
-      }
-
-      .bottom-book {
-        left: 24%;
-        top: 91%;
-        width: 42%;
-        height: 8%;
-      }
-    }
   </style>
 </head>
 
 <body>
-  <main class="homepage-wrapper">
 
+  <a
+    class="homepage-link"
+    href="https://calendly.com/ykobayashi-farmers"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Book a coverage review with Insure With Yuki"
+  >
     <img
       class="homepage-image"
       src="assets/6F980266-1EAE-4C49-BFF9-C0C6C555F631.jpeg"
       alt="Insure With Yuki luxury insurance advisor homepage layout"
     />
-
-    <!-- Clickable booking overlays -->
-    <a
-      class="click-zone hero-book"
-      href="https://calendly.com/ykobayashi-farmers"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Book a Coverage Review
-    </a>
-
-    <a
-      class="click-zone bottom-book"
-      href="https://calendly.com/ykobayashi-farmers"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Book Your Coverage Review
-    </a>
-
-    <!-- Clickable internal section overlays -->
-    <a class="click-zone hero-explore" href="#services">
-      Explore Services
-    </a>
-
-    <a class="click-zone personal-button" href="#personal">
-      Review Personal Coverage
-    </a>
-
-    <a class="click-zone business-button" href="#business">
-      Request Business Review
-    </a>
-
-    <a class="click-zone life-button" href="#life">
-      Request Life and Specialty Options
-    </a>
-
-  </main>
-
-  <!-- Hidden anchor targets for internal clicks -->
-  <section id="services"></section>
-  <section id="personal"></section>
-  <section id="business"></section>
-  <section id="life"></section>
+  </a>
 
 </body>
 </html>
