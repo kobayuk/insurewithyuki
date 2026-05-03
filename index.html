@@ -3,330 +3,1020 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Insure With Yuki | California Insurance Strategist</title>
-
-  <meta
-    name="description"
-    content="Insure With Yuki helps California homeowners, families, business owners, and clients review insurance coverage, identify gaps, and protect what they are building."
-  />
-
+  <title>Insure With Yuki | Insurance Strategy, Clarity, Protection</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --navy: #06172A;
+      --navy-2: #09213A;
+      --navy-soft: #0E2D4A;
+      --ivory: #F7F1E8;
+      --ivory-2: #FFF9F0;
+      --taupe: #A8856A;
+      --gold: #D9A35B;
+      --gold-soft: #E6BE7A;
+      --text: #1B2430;
+      --muted: #6C6A67;
+      --line: rgba(217, 163, 91, 0.38);
+      --shadow: 0 24px 60px rgba(6, 23, 42, 0.20);
+      --radius: 22px;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: Inter, Arial, Helvetica, sans-serif;
     }
 
-    html,
+    * { box-sizing: border-box; }
+
     body {
-      width: 100%;
-      min-height: 100%;
-      background: #061426;
-      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--ivory);
+      line-height: 1.55;
     }
 
-    .page-wrapper {
-      width: 100%;
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(217,163,91,.18), transparent 28rem),
+        linear-gradient(180deg, #fffaf2 0%, #f6efe4 100%);
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(6, 23, 42, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(217, 163, 91, .22);
+    }
+
+    .nav {
       display: flex;
-      justify-content: center;
-      background: #061426;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      min-height: 84px;
     }
 
-    .mockup-wrap {
-      position: relative;
-      width: 100%;
-      max-width: 1400px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: max-content;
     }
 
-    .homepage-design {
-      width: 100%;
-      max-width: 1400px;
-      height: auto;
-      display: block;
+    .monogram {
+      font-family: var(--serif);
+      font-size: 42px;
+      line-height: 1;
+      color: var(--gold);
+      letter-spacing: -3px;
     }
 
-    .hotspot {
-      position: absolute;
-      display: block;
-      z-index: 5;
-      background: rgba(255, 255, 255, 0);
-      cursor: pointer;
+    .brand-title {
+      color: #fff;
+      font-family: var(--serif);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: 20px;
+      line-height: 1.1;
     }
 
-    .hotspot:focus {
-      outline: 2px solid #c79a55;
-      outline-offset: 2px;
+    .brand-tag {
+      color: var(--gold-soft);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      font-weight: 700;
     }
 
-    /* Header CTA: Schedule a Review */
-    .schedule {
-      top: 1.6%;
-      left: 84.5%;
-      width: 11.5%;
-      height: 2.5%;
-    }
-
-    /* Hero buttons */
-    .book-hero {
-      top: 24.3%;
-      left: 4.7%;
-      width: 19%;
-      height: 3.1%;
-    }
-
-    .explore-hero {
-      top: 24.3%;
-      left: 25.5%;
-      width: 17%;
-      height: 3.1%;
-    }
-
-    /* Hero QR area */
-    .qr-hero {
-      top: 20.6%;
-      left: 79%;
-      width: 17%;
-      height: 9.2%;
-    }
-
-    /* Top navigation labels inside the image */
-    .nav-personal {
-      top: 1.9%;
-      left: 38%;
-      width: 7%;
-      height: 2%;
-    }
-
-    .nav-business {
-      top: 1.9%;
-      left: 45%;
-      width: 7%;
-      height: 2%;
-    }
-
-    .nav-life {
-      top: 1.9%;
-      left: 52%;
-      width: 11%;
-      height: 2%;
-    }
-
-    .nav-contact {
-      top: 1.9%;
-      left: 75%;
-      width: 7%;
-      height: 2%;
-    }
-
-    /* Service card clickable areas */
-    .personal-card {
-      top: 48.5%;
-      left: 3%;
-      width: 29.5%;
-      height: 19.5%;
-    }
-
-    .business-card {
-      top: 48.5%;
-      left: 34.5%;
-      width: 30%;
-      height: 19.5%;
-    }
-
-    .life-card {
-      top: 48.5%;
-      left: 66%;
-      width: 30%;
-      height: 19.5%;
-    }
-
-    /* Bottom card buttons */
-    .review-bottom {
-      top: 66.5%;
-      left: 6.7%;
-      width: 18%;
-      height: 3%;
-    }
-
-    .business-bottom {
-      top: 66.5%;
-      left: 36%;
-      width: 24%;
-      height: 3%;
-    }
-
-    .life-bottom {
-      top: 66.5%;
-      left: 73%;
-      width: 18%;
-      height: 3%;
-    }
-
-    /* Bottom QR area */
-    .qr-bottom {
-      top: 87.5%;
-      left: 60%;
-      width: 13%;
-      height: 8.5%;
-    }
-
-    .disclaimer {
-      background: #061426;
-      color: #d8d8d8;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: #fff;
       font-size: 12px;
-      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      font-weight: 700;
+    }
+
+    .nav-links a:first-child {
+      color: var(--gold-soft);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 8px;
+    }
+
+    .header-cta,
+    .btn-primary,
+    .btn-secondary,
+    .btn-card,
+    .btn-dark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 8px;
+      font-weight: 800;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+      transition: .25s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .header-cta {
+      background: linear-gradient(135deg, #F1C47D, #C98D45);
+      color: #06172A;
+      padding: 15px 20px;
+      font-size: 12px;
+      box-shadow: 0 12px 30px rgba(217, 163, 91, .23);
+    }
+
+    .header-cta:hover,
+    .btn-primary:hover,
+    .btn-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(217, 163, 91, .32);
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(6,23,42,.98) 0%, rgba(6,23,42,.94) 40%, rgba(6,23,42,.35) 70%, rgba(6,23,42,.05) 100%),
+        url('/images/san-diego-waterfront.jpg') center/cover no-repeat;
+      min-height: 650px;
+      color: #fff;
+      position: relative;
+      border-bottom: 1px solid rgba(217, 163, 91, .25);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: end;
+      min-height: 650px;
+      gap: 44px;
+      padding: 70px 0 0;
+    }
+
+    .hero-copy {
+      align-self: center;
+      padding: 20px 0 76px;
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      color: var(--gold-soft);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: var(--serif);
+      line-height: .98;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(46px, 6.2vw, 78px);
+      letter-spacing: -1.6px;
+      max-width: 680px;
+    }
+
+    h1 span { color: var(--gold); }
+
+    .hero-line {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      max-width: 470px;
+      margin: 28px 0 24px;
+      color: var(--gold);
+    }
+
+    .hero-line::before,
+    .hero-line::after {
+      content: "";
+      height: 1px;
+      background: var(--gold);
+      flex: 1;
+      opacity: .7;
+    }
+
+    .hero-subhead {
+      font-size: clamp(19px, 2.2vw, 25px);
+      max-width: 600px;
+      color: rgba(255,255,255,.95);
+      margin: 0 0 18px;
+      line-height: 1.35;
+    }
+
+    .hero-body {
+      max-width: 590px;
+      color: rgba(255,255,255,.82);
+      font-size: 17px;
+      margin: 0 0 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 17px 25px;
+      background: linear-gradient(135deg, #F1C47D, #C98D45);
+      color: var(--navy);
+      border: 1px solid rgba(255,255,255,.1);
+      font-size: 13px;
+    }
+
+    .btn-secondary {
+      padding: 17px 25px;
+      border: 1px solid var(--gold);
+      color: var(--gold-soft);
+      font-size: 13px;
+      background: rgba(6, 23, 42, .35);
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      align-self: end;
+      min-height: 570px;
+    }
+
+    .hero-photo {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: min(500px, 100%);
+      filter: drop-shadow(0 36px 50px rgba(0,0,0,.35));
+    }
+
+    .floating-badge {
+      position: absolute;
+      right: 8px;
+      bottom: 44px;
+      width: 300px;
+      padding: 18px 20px;
+      background: rgba(6, 23, 42, .88);
+      border: 1px solid rgba(217, 163, 91, .45);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .floating-badge strong {
+      display: block;
+      color: var(--gold-soft);
+      font-family: var(--serif);
+      font-size: 25px;
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+
+    .floating-badge span {
+      display: block;
+      color: rgba(255,255,255,.82);
+      font-size: 13px;
+    }
+
+    /* PILLARS */
+    .pillars {
+      background: rgba(255, 249, 240, .9);
+      border-bottom: 1px solid rgba(168, 133, 106, .22);
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      padding: 40px 0;
+    }
+
+    .pillar {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 20px;
+      padding: 8px 34px;
+      border-right: 1px solid rgba(168,133,106,.35);
+      min-height: 150px;
+    }
+
+    .pillar:last-child { border-right: none; }
+
+    .icon-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      border: 2px solid var(--gold);
+      color: var(--gold-soft);
+      font-size: 33px;
+    }
+
+    .pillar h3 {
+      font-size: 26px;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .pillar p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.45;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 74px 0;
+    }
+
+    .section-head {
       text-align: center;
-      padding: 18px 20px 30px;
+      max-width: 790px;
+      margin: 0 auto 38px;
     }
 
-    .disclaimer a {
-      color: #c79a55;
+    .section-kicker {
+      color: #A26C2D;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 13px;
     }
 
-    @media (max-width: 768px) {
-      .homepage-design,
-      .mockup-wrap {
-        width: 100%;
-        max-width: 100%;
-      }
+    .section h2 {
+      font-size: clamp(36px, 4.7vw, 56px);
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
 
-      .hotspot:focus {
-        outline: 1px solid #c79a55;
-      }
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: linear-gradient(180deg, #08213A, #041423);
+      border: 1px solid rgba(217,163,91,.35);
+      color: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 575px;
+    }
+
+    .service-card-top {
+      padding: 28px 28px 18px;
+    }
+
+    .service-icon {
+      width: 66px;
+      height: 66px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold-soft);
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 26px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      margin-bottom: 9px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: rgba(255,255,255,.8);
+      font-size: 15px;
+    }
+
+    .service-image {
+      height: 185px;
+      background: linear-gradient(135deg, rgba(217,163,91,.18), rgba(6,23,42,.3)), var(--navy-soft);
+      margin: 2px 28px 18px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .personal-img { background-image: url('/images/personal-insurance-home.jpg'); }
+    .business-img { background-image: url('/images/business-insurance-building.jpg'); }
+    .specialty-img { background-image: url('/images/specialty-market-california.jpg'); }
+
+    .service-list {
+      list-style: none;
+      padding: 0 28px;
+      margin: 0 0 24px;
+      display: grid;
+      gap: 9px;
+      color: rgba(255,255,255,.92);
+      font-size: 15px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .service-list li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 900;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 18px;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .card-action {
+      margin-top: auto;
+      padding: 0 28px 28px;
+    }
+
+    .btn-card {
+      width: 100%;
+      background: linear-gradient(135deg, #F1C47D, #C98D45);
+      color: var(--navy);
+      padding: 15px 18px;
+      font-size: 13px;
+    }
+
+    /* PROCESS */
+    .process {
+      background: #fff9f0;
+      padding-top: 66px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process-step {
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(168,133,106,.22);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 12px 35px rgba(6,23,42,.07);
+    }
+
+    .step-number {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .process-step h3 {
+      color: var(--navy);
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .process-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* WHY */
+    .why-band {
+      background: linear-gradient(135deg, #07192D, #0E2D4A);
+      color: #fff;
+      padding: 72px 0;
+      position: relative;
+    }
+
+    .why-band::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 20%, rgba(217,163,91,.16), transparent 22rem);
+      pointer-events: none;
+    }
+
+    .why-content {
+      position: relative;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .why-content h2 {
+      color: #fff;
+      font-size: clamp(36px, 4.4vw, 58px);
+      margin-bottom: 18px;
+    }
+
+    .why-content p {
+      color: rgba(255,255,255,.78);
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .proof-item {
+      border: 1px solid rgba(217,163,91,.33);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 22px;
+      min-height: 130px;
+    }
+
+    .proof-item strong {
+      display: block;
+      color: var(--gold-soft);
+      margin-bottom: 7px;
+      font-family: var(--serif);
+      font-size: 21px;
+    }
+
+    .proof-item span {
+      display: block;
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+    }
+
+    .carrier-strip {
+      background: var(--navy);
+      color: #fff;
+      border: 1px solid rgba(217,163,91,.3);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .carrier-strip .shield {
+      font-size: 34px;
+      color: var(--gold);
+    }
+
+    .carrier-strip p {
+      margin: 0;
+      color: rgba(255,255,255,.88);
+      font-size: 18px;
+      font-family: var(--serif);
+    }
+
+    .carrier-strip span { color: var(--gold-soft); }
+
+    /* FINAL CTA */
+    .final-cta {
+      padding: 82px 0 48px;
+      background:
+        radial-gradient(circle at 85% 25%, rgba(217,163,91,.18), transparent 22rem),
+        var(--ivory);
+    }
+
+    .cta-panel {
+      background: linear-gradient(135deg, #06172A, #0E2D4A);
+      border: 1px solid rgba(217,163,91,.38);
+      color: #fff;
+      border-radius: 26px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 1.05fr .58fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .cta-panel h2 {
+      color: #fff;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .cta-panel h2 span { color: var(--gold-soft); }
+
+    .cta-panel p {
+      color: rgba(255,255,255,.78);
+      margin: 0 0 24px;
+      font-size: 16px;
+    }
+
+    .btn-dark {
+      background: linear-gradient(135deg, #F1C47D, #C98D45);
+      color: var(--navy);
+      padding: 15px 20px;
+      font-size: 13px;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 116px 1fr;
+      gap: 20px;
+      align-items: center;
+      border-left: 1px solid rgba(217,163,91,.35);
+      border-right: 1px solid rgba(217,163,91,.35);
+      padding: 0 32px;
+    }
+
+    .contact-photo {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      background: url('/images/yuki-headshot.png') center/cover no-repeat;
+      border: 3px solid var(--gold);
+      box-shadow: 0 18px 32px rgba(0,0,0,.25);
+    }
+
+    .contact-name {
+      font-family: var(--serif);
+      font-size: 29px;
+      line-height: 1.05;
+      margin-bottom: 4px;
+    }
+
+    .contact-title {
+      color: var(--gold-soft);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .contact-lines {
+      display: grid;
+      gap: 6px;
+      font-size: 14px;
+      color: rgba(255,255,255,.86);
+    }
+
+    .right-logo {
+      text-align: center;
+    }
+
+    .right-logo .big-yK {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 92px;
+      letter-spacing: -6px;
+      line-height: .8;
+      margin-bottom: 18px;
+    }
+
+    .right-logo .logo-word {
+      font-family: var(--serif);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 24px;
+      line-height: 1.18;
+    }
+
+    .right-logo .logo-tag {
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      margin-top: 18px;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 24px 0 34px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1060px) {
+      .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; padding-top: 46px; }
+      .hero-photo-wrap { min-height: 430px; }
+      .hero-photo { left: 50%; transform: translateX(-50%); }
+      .floating-badge { right: auto; left: 0; bottom: 22px; }
+      .pillar-grid, .service-grid, .process-grid, .why-content, .cta-panel { grid-template-columns: 1fr; }
+      .pillar { border-right: none; border-bottom: 1px solid rgba(168,133,106,.25); }
+      .pillar:last-child { border-bottom: none; }
+      .contact-card { border: none; padding: 0; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, 1180px); }
+      .nav { min-height: 74px; }
+      .brand-title { font-size: 16px; }
+      .brand-tag { font-size: 8px; }
+      .monogram { font-size: 34px; }
+      .header-cta { display: none; }
+      .hero { min-height: auto; }
+      .hero-inner { min-height: auto; }
+      .hero-copy { padding-bottom: 34px; }
+      .hero-photo-wrap { display: none; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .pillar { grid-template-columns: 1fr; padding: 20px 4px; text-align: left; }
+      .service-card { min-height: auto; }
+      .proof-grid { grid-template-columns: 1fr; }
+      .carrier-strip { align-items: flex-start; }
+      .cta-panel { padding: 28px; }
+      .contact-card { grid-template-columns: 1fr; }
+      .right-logo .big-yK { font-size: 70px; }
     }
   </style>
 </head>
-
 <body>
+  <main class="page">
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#" class="brand" aria-label="Insure With Yuki Home">
+          <div class="monogram">YK</div>
+          <div>
+            <div class="brand-title">Insure With Yuki</div>
+            <div class="brand-tag">Strategy. Clarity. Protection.</div>
+          </div>
+        </a>
 
-  <main class="page-wrapper">
-    <div class="mockup-wrap">
-      <img
-        class="homepage-design"
-        src="assets/final-web-design.png"
-        alt="Insure With Yuki insurance strategy for personal, business, life, and specialty protection"
-      />
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#personal">Personal</a>
+          <a href="#business">Business</a>
+          <a href="#specialty">Life & Specialty</a>
+          <a href="#about">About</a>
+          <a href="#resources">Resources</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-      <!-- Header / navigation clickable zones -->
-      <a
-        class="hotspot nav-personal"
-        href="services.html"
-        aria-label="Personal insurance"
-      ></a>
+        <a href="https://calendly.com/yuki-insurewithyuki/30min" class="header-cta">Schedule a Review</a>
+      </div>
+    </header>
 
-      <a
-        class="hotspot nav-business"
-        href="services.html#business"
-        aria-label="Business insurance"
-      ></a>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">Insurance strategy for California homes, businesses, and families</div>
+          <h1>Protect what you’ve <span>worked hard to build.</span></h1>
+          <div class="hero-line" aria-hidden="true">◇</div>
+          <p class="hero-subhead">A more thoughtful approach to insurance — built around clarity, strategy, and protection that fits your life, home, and business.</p>
+          <p class="hero-body">We help you understand your options, identify potential coverage gaps, and make confident decisions before a claim, closing, or business risk becomes expensive.</p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="https://calendly.com/yuki-insurewithyuki/30min">Book a Coverage Review</a>
+            <a class="btn-secondary" href="#services">Explore Services</a>
+          </div>
+        </div>
 
-      <a
-        class="hotspot nav-life"
-        href="life.html"
-        aria-label="Life and specialty insurance"
-      ></a>
+        <div class="hero-photo-wrap" aria-label="Yuki professional portrait with San Diego skyline">
+          <img class="hero-photo" src="/images/yuki-headshot-hero.png" alt="Yukiko Yuki Kobayashi, Insurance Strategist and Advisor" />
+          <div class="floating-badge">
+            <strong>More than a quote.</strong>
+            <span>You get personalized guidance, smarter protection, and confidence in your coverage.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <a
-        class="hotspot nav-contact"
-        href="tel:8587275011"
-        aria-label="Call or text Yuki"
-      ></a>
+    <section class="pillars" aria-label="What makes Insure With Yuki different">
+      <div class="container pillar-grid">
+        <article class="pillar">
+          <div class="icon-circle">✦</div>
+          <div>
+            <h3>Personalized Guidance</h3>
+            <p>We take time to understand your situation before recommending coverage.</p>
+          </div>
+        </article>
+        <article class="pillar">
+          <div class="icon-circle">◆</div>
+          <div>
+            <h3>Smarter Protection</h3>
+            <p>We focus on protection that fits your risks, priorities, lifestyle, and business goals.</p>
+          </div>
+        </article>
+        <article class="pillar">
+          <div class="icon-circle">✓</div>
+          <div>
+            <h3>Confidence in Your Coverage</h3>
+            <p>You’ll know what your policy does, what it does not, and how to move forward with clarity.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <a
-        class="hotspot schedule"
-        href="https://calendly.com/ykobayashi-farmers"
-        target="_blank"
-        rel="noopener"
-        aria-label="Schedule a review"
-      ></a>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Explore Services</div>
+          <h2>Coverage built around how you live, work, and grow.</h2>
+          <p>Insurance should feel clear, not overwhelming. We help individuals, families, and business owners explore coverage options with guidance that is strategic, personal, and built around real protection.</p>
+        </div>
 
-      <!-- Hero clickable zones -->
-      <a
-        class="hotspot book-hero"
-        href="https://calendly.com/ykobayashi-farmers"
-        target="_blank"
-        rel="noopener"
-        aria-label="Book a coverage review"
-      ></a>
+        <div class="service-grid">
+          <article class="service-card" id="personal">
+            <div class="service-card-top">
+              <div class="service-icon">⌂</div>
+              <h3>Personal Insurance</h3>
+              <p>Protection for your home, car, family, and lifestyle — with guidance that helps you understand your options clearly.</p>
+            </div>
+            <div class="service-image personal-img" role="img" aria-label="Elegant home at sunset"></div>
+            <ul class="service-list">
+              <li>Home Insurance</li>
+              <li>Auto Insurance</li>
+              <li>Condo Insurance</li>
+              <li>Renters Insurance</li>
+              <li>Umbrella / Excess Liability</li>
+              <li>Life Insurance</li>
+              <li>Earthquake and California FAIR Plan Support</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://calendly.com/yuki-insurewithyuki/30min" class="btn-card">Review My Coverage</a>
+            </div>
+          </article>
 
-      <a
-        class="hotspot explore-hero"
-        href="services.html"
-        aria-label="Explore services"
-      ></a>
+          <article class="service-card" id="business">
+            <div class="service-card-top">
+              <div class="service-icon">▣</div>
+              <h3>Business Insurance</h3>
+              <p>Strategic protection for business owners who need more than a basic policy.</p>
+            </div>
+            <div class="service-image business-img" role="img" aria-label="Modern business building"></div>
+            <ul class="service-list">
+              <li>Business Owner’s Policy</li>
+              <li>General Liability</li>
+              <li>Workers’ Compensation</li>
+              <li>Commercial Auto</li>
+              <li>Cyber Liability</li>
+              <li>Professional Liability</li>
+              <li>Umbrella / Excess Liability</li>
+              <li>Specialty Market Access</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://calendly.com/yuki-insurewithyuki/30min" class="btn-card">Request a Business Review</a>
+            </div>
+          </article>
 
-      <a
-        class="hotspot qr-hero"
-        href="https://calendly.com/ykobayashi-farmers"
-        target="_blank"
-        rel="noopener"
-        aria-label="Book your coverage review"
-      ></a>
+          <article class="service-card" id="specialty">
+            <div class="service-card-top">
+              <div class="service-icon">◇</div>
+              <h3>Specialty Market Access</h3>
+              <p>When standard coverage is not enough, we help explore broader solutions.</p>
+            </div>
+            <div class="service-image specialty-img" role="img" aria-label="California coastline"></div>
+            <ul class="service-list">
+              <li>Whole Life Insurance for Mortgage Protection</li>
+              <li>Term Life Insurance</li>
+              <li>Return of Premium Options</li>
+              <li>Index Universal Life</li>
+              <li>Specialty Property</li>
+              <li>Earthquake and California FAIR Plan Support</li>
+              <li>Hard-to-place and specialty business risks</li>
+            </ul>
+            <div class="card-action">
+              <a href="https://calendly.com/yuki-insurewithyuki/30min" class="btn-card">Explore My Options</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <!-- Service card clickable zones -->
-      <a
-        class="hotspot personal-card"
-        href="services.html"
-        aria-label="Personal insurance services"
-      ></a>
+    <section class="section process" aria-label="Coverage review process">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">The Coverage Review</div>
+          <h2>Know what you have. Understand what may be missing.</h2>
+          <p>A simple, advisor-led process designed to give you clarity before the decision becomes expensive.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step">
+            <div class="step-number">01</div>
+            <h3>Review</h3>
+            <p>We review your current policies, limits, deductibles, and coverage structure.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-number">02</div>
+            <h3>Identify</h3>
+            <p>We look for exposure that could appear during a claim, closing, lawsuit, renewal, or business change.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-number">03</div>
+            <h3>Strategize</h3>
+            <p>We explain your options clearly and help match coverage to your real needs.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-number">04</div>
+            <h3>Protect</h3>
+            <p>You move forward with a plan built around your home, assets, lifestyle, and business goals.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <a
-        class="hotspot business-card"
-        href="services.html#business"
-        aria-label="Business insurance services"
-      ></a>
+    <section class="why-band" id="about">
+      <div class="container why-content">
+        <div>
+          <div class="eyebrow">Why Work With Yuki?</div>
+          <h2>You deserve more than a fast quote.</h2>
+          <p>You deserve someone who helps you understand the decision before you make it. Insure With Yuki is built around clear guidance, thoughtful strategy, and protection that fits real life — not guesswork.</p>
+          <div class="carrier-strip">
+            <div class="shield">♢</div>
+            <p>Backed by <span>Farmers Insurance</span> with access to additional carrier options when broader placement is needed.</p>
+          </div>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-item">
+            <strong>California-Licensed Advisor</strong>
+            <span>Guidance built around California risks, market changes, and real coverage needs.</span>
+          </article>
+          <article class="proof-item">
+            <strong>Personal + Business Support</strong>
+            <span>One advisor for your home, lifestyle, business, and long-term protection strategy.</span>
+          </article>
+          <article class="proof-item">
+            <strong>Coverage Clarity Before You Decide</strong>
+            <span>Clear explanations before you bind, renew, switch, buy, close, or grow.</span>
+          </article>
+          <article class="proof-item">
+            <strong>Local San Diego Insight</strong>
+            <span>Support for homeowners, condo owners, business owners, and real estate professionals.</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <a
-        class="hotspot life-card"
-        href="life.html"
-        aria-label="Life and specialty insurance services"
-      ></a>
+    <section class="final-cta" id="contact">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <h2><span>Before you renew, buy, close, or grow —</span> know where your coverage stands.</h2>
+            <p>Most coverage problems are discovered too late — after a claim, escrow delay, lawsuit, or uncovered loss. A coverage review gives you clarity before the decision becomes expensive.</p>
+            <a href="https://calendly.com/yuki-insurewithyuki/30min" class="btn-dark">Book Your Coverage Review →</a>
+          </div>
 
-      <!-- Bottom CTA clickable zones -->
-      <a
-        class="hotspot review-bottom"
-        href="https://calendly.com/ykobayashi-farmers"
-        target="_blank"
-        rel="noopener"
-        aria-label="Review my coverage"
-      ></a>
+          <div class="contact-card">
+            <div class="contact-photo" role="img" aria-label="Yuki headshot"></div>
+            <div>
+              <div class="contact-name">Yukiko “Yuki” Kobayashi</div>
+              <div class="contact-title">Insurance Strategist & Advisor</div>
+              <div class="contact-lines">
+                <span>Call or Text: (858) 727-5011</span>
+                <span>ykobayashi@farmersagency.com</span>
+                <span>InsureWithYuki.com</span>
+                <span>9988 Hibert Street Ste 212, San Diego, CA 92131</span>
+                <span>CA Insurance License #4456617</span>
+              </div>
+            </div>
+          </div>
 
-      <a
-        class="hotspot business-bottom"
-        href="https://calendly.com/ykobayashi-farmers"
-        target="_blank"
-        rel="noopener"
-        aria-label="Request a business review"
-      ></a>
-
-      <a
-        class="hotspot life-bottom"
-        href="life.html"
-        aria-label="Explore my life and specialty insurance options"
-      ></a>
-
-      <a
-        class="hotspot qr-bottom"
-        href="https://www.dropbox.com/request/ohnk5tikn9bmis5emsr2"
-        target="_blank"
-        rel="noopener"
-        aria-label="Upload declaration page or ID"
-      ></a>
-    </div>
+          <div class="right-logo">
+            <div class="big-yK">YK</div>
+            <div class="logo-word">Insure<br />With Yuki</div>
+            <div class="logo-tag">Strategy. Clarity. Protection.</div>
+          </div>
+        </div>
+        <div class="footer-note">© Insure With Yuki. Insurance products and availability vary by carrier, underwriting, and state requirements.</div>
+      </div>
+    </section>
   </main>
-
-  <div class="disclaimer">
-    By scheduling a coverage review or submitting a request, you agree to receive SMS messages from Insure With Yuki regarding your insurance inquiry.
-    Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance.
-    Consent is not a condition of purchase.
-    See our
-    <a href="https://insurewithyuki.com/privacy.html">Privacy Policy</a>
-    and
-    <a href="https://insurewithyuki.com/terms-and-conditions.html">Terms & Conditions</a>.
-    <br />
-    © 2026 Insure With Yuki. CA Lic. #4432017.
-  </div>
-
 </body>
 </html>
