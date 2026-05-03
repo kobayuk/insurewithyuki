@@ -57,6 +57,7 @@
       display: flex;
       flex-direction: column;
       line-height: 1.1;
+      text-decoration: none;
     }
 
     .brand-name {
@@ -115,7 +116,6 @@
     }
 
     .homepage-image-wrap {
-      position: relative;
       width: 100%;
       max-width: 1600px;
       margin: 0 auto;
@@ -126,13 +126,6 @@
       width: 100%;
       height: auto;
       display: block;
-    }
-
-    .floating-cta {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 30;
     }
 
     .footer {
@@ -163,16 +156,6 @@
       .brand-name {
         font-size: 19px;
       }
-
-      .floating-cta {
-        left: 18px;
-        right: 18px;
-        bottom: 18px;
-      }
-
-      .floating-cta .book-btn {
-        width: 100%;
-      }
     }
 
     @media (max-width: 520px) {
@@ -187,6 +170,10 @@
       .brand-line {
         font-size: 10px;
       }
+
+      .book-btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -197,7 +184,7 @@
     <header class="top-bar">
       <div class="top-bar-inner">
 
-        <a href="#home" class="brand" style="text-decoration: none;">
+        <a href="#home" class="brand">
           <span class="brand-name">Insure With Yuki</span>
           <span class="brand-line">Strategic Guidance. Personalized Protection.</span>
         </a>
@@ -230,21 +217,10 @@
       />
     </section>
 
-    <section id="personal" style="height: 1px;"></section>
-    <section id="business" style="height: 1px;"></section>
-    <section id="life" style="height: 1px;"></section>
-    <section id="contact" style="height: 1px;"></section>
-
-    <div class="floating-cta">
-      <a
-        class="book-btn"
-        href="https://calendly.com/ykobayashi-farmers"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Book Your Coverage Review
-      </a>
-    </div>
+    <section id="personal"></section>
+    <section id="business"></section>
+    <section id="life"></section>
+    <section id="contact"></section>
 
     <footer class="footer">
       <strong>Yukiko “Yuki” Kobayashi</strong> · Insurance Strategist & Advisor<br />
