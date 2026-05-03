@@ -16,91 +16,18 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html,
     body {
       margin: 0;
+      padding: 0;
       background: #06172a;
       font-family: Arial, Helvetica, sans-serif;
-      color: #ffffff;
     }
 
-    .page {
-      width: 100%;
-      min-height: 100vh;
-      background: #06172a;
-    }
-
-    .top-bar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      width: 100%;
-      background: rgba(6, 23, 42, 0.96);
-      border-bottom: 1px solid rgba(215, 160, 75, 0.35);
-      backdrop-filter: blur(14px);
-    }
-
-    .top-bar-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-      text-decoration: none;
-    }
-
-    .brand-name {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
-
-    .brand-line {
-      margin-top: 4px;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #f0c977;
-      font-weight: 700;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      font-weight: 700;
-    }
-
-    .nav-links a {
-      color: rgba(255, 255, 255, 0.86);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: #f0c977;
-    }
-
-    .homepage-image-wrap {
+    .homepage-wrapper {
       position: relative;
       width: 100%;
-      max-width: 1600px;
+      max-width: 1536px;
       margin: 0 auto;
       background: #06172a;
     }
@@ -111,95 +38,134 @@
       display: block;
     }
 
-    .footer {
-      padding: 22px 18px 34px;
-      text-align: center;
-      background: #06172a;
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 12px;
-      line-height: 1.5;
+    /* Invisible clickable areas over the image buttons */
+    .click-zone {
+      position: absolute;
+      display: block;
+      z-index: 10;
+      text-indent: -9999px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0);
+      cursor: pointer;
     }
 
-    .footer strong {
-      color: #f0c977;
-      font-weight: 700;
+    /* Top hero button: Book a Coverage Review */
+    .hero-book {
+      left: 4.1%;
+      top: 34.6%;
+      width: 13.7%;
+      height: 3.9%;
     }
 
-    @media (max-width: 900px) {
-      .top-bar-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .brand-name {
-        font-size: 19px;
-      }
+    /* Top hero button: Explore Services */
+    .hero-explore {
+      left: 18.8%;
+      top: 34.7%;
+      width: 11.8%;
+      height: 3.8%;
     }
 
-    @media (max-width: 520px) {
-      .top-bar-inner {
-        padding: 12px 16px;
-      }
+    /* Bottom gold button: Book Your Coverage Review */
+    .bottom-book {
+      left: 30.8%;
+      top: 91.1%;
+      width: 30.0%;
+      height: 7.5%;
+    }
 
-      .nav-links {
+    /* Optional: service card buttons */
+    .personal-button {
+      left: 3.8%;
+      top: 83.3%;
+      width: 12.7%;
+      height: 2.7%;
+    }
+
+    .business-button {
+      left: 26.0%;
+      top: 83.3%;
+      width: 13.0%;
+      height: 2.7%;
+    }
+
+    .life-button {
+      left: 51.0%;
+      top: 83.3%;
+      width: 14.0%;
+      height: 2.7%;
+    }
+
+    @media (max-width: 700px) {
+      .hero-book,
+      .hero-explore,
+      .personal-button,
+      .business-button,
+      .life-button {
         display: none;
       }
 
-      .brand-line {
-        font-size: 10px;
+      .bottom-book {
+        left: 24%;
+        top: 91%;
+        width: 42%;
+        height: 8%;
       }
     }
   </style>
 </head>
 
 <body>
-  <main class="page">
+  <main class="homepage-wrapper">
 
-    <header class="top-bar">
-      <div class="top-bar-inner">
+    <img
+      class="homepage-image"
+      src="assets/6F980266-1EAE-4C49-BFF9-C0C6C555F631.jpeg"
+      alt="Insure With Yuki luxury insurance advisor homepage layout"
+    />
 
-        <a href="#home" class="brand">
-          <span class="brand-name">Insure With Yuki</span>
-          <span class="brand-line">Strategic Guidance. Personalized Protection.</span>
-        </a>
+    <!-- Clickable booking overlays -->
+    <a
+      class="click-zone hero-book"
+      href="https://calendly.com/ykobayashi-farmers"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Book a Coverage Review
+    </a>
 
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#personal">Personal</a>
-          <a href="#business">Business</a>
-          <a href="#life">Life & Specialty</a>
-          <a href="#contact">Contact</a>
-        </nav>
+    <a
+      class="click-zone bottom-book"
+      href="https://calendly.com/ykobayashi-farmers"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Book Your Coverage Review
+    </a>
 
-      </div>
-    </header>
+    <!-- Clickable internal section overlays -->
+    <a class="click-zone hero-explore" href="#services">
+      Explore Services
+    </a>
 
-    <section id="home" class="homepage-image-wrap">
-      <img
-        class="homepage-image"
-        src="assets/6F980266-1EAE-4C49-BFF9-C0C6C555F631.jpeg"
-        alt="Insure With Yuki luxury insurance advisor homepage layout"
-      />
-    </section>
+    <a class="click-zone personal-button" href="#personal">
+      Review Personal Coverage
+    </a>
 
-    <section id="personal"></section>
-    <section id="business"></section>
-    <section id="life"></section>
-    <section id="contact"></section>
+    <a class="click-zone business-button" href="#business">
+      Request Business Review
+    </a>
 
-    <footer class="footer">
-      <strong>Yukiko “Yuki” Kobayashi</strong> · Insurance Strategist & Advisor<br />
-      Call or Text: (858) 727-5011 · ykobayashi@farmersagency.com · InsureWithYuki.com<br />
-      9988 Hibert Street Ste 212, San Diego, CA 92131 · CA Insurance License #4456617<br /><br />
-      Coverage options, pricing, carriers, eligibility, and availability vary by underwriting,
-      line of business, state requirements, and available appointment/access.
-    </footer>
+    <a class="click-zone life-button" href="#life">
+      Request Life and Specialty Options
+    </a>
 
   </main>
+
+  <!-- Hidden anchor targets for internal clicks -->
+  <section id="services"></section>
+  <section id="personal"></section>
+  <section id="business"></section>
+  <section id="life"></section>
+
 </body>
 </html>
