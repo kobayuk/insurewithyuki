@@ -6,7 +6,10 @@
 
   <title>Insure With Yuki | California Insurance Strategist</title>
 
-  <meta name="description" content="Insure With Yuki helps California homeowners, families, business owners, and clients review insurance coverage, identify gaps, and protect what they are building." />
+  <meta
+    name="description"
+    content="Insure With Yuki helps California homeowners, families, business owners, and clients review insurance coverage, identify gaps, and protect what they are building."
+  />
 
   <style>
     * {
@@ -21,6 +24,43 @@
       min-height: 100%;
       background: #061426;
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: #061426;
+      border-bottom: 1px solid rgba(199, 154, 85, 0.35);
+    }
+
+    .top-actions a,
+    .quick-links a {
+      text-decoration: none;
+      background: #c79a55;
+      color: #061426;
+      padding: 14px 22px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 15px;
+      text-align: center;
+      min-width: 190px;
+      display: inline-block;
+    }
+
+    .top-actions a.secondary,
+    .quick-links a.secondary {
+      background: #ffffff;
+      color: #061426;
+    }
+
+    .top-actions a.dark,
+    .quick-links a.dark {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid #c79a55;
     }
 
     .page-wrapper {
@@ -47,29 +87,6 @@
       border-top: 1px solid rgba(199, 154, 85, 0.35);
     }
 
-    .quick-links a {
-      text-decoration: none;
-      background: #c79a55;
-      color: #061426;
-      padding: 14px 22px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 15px;
-      text-align: center;
-      min-width: 190px;
-    }
-
-    .quick-links a.secondary {
-      background: #ffffff;
-      color: #061426;
-    }
-
-    .quick-links a.dark {
-      background: transparent;
-      color: #ffffff;
-      border: 1px solid #c79a55;
-    }
-
     .disclaimer {
       background: #061426;
       color: #d8d8d8;
@@ -89,10 +106,12 @@
         max-width: 100%;
       }
 
+      .top-actions,
       .quick-links {
-        padding: 18px 14px 24px;
+        padding: 16px 14px 22px;
       }
 
+      .top-actions a,
       .quick-links a {
         width: 100%;
         min-width: unset;
@@ -103,10 +122,24 @@
 
 <body>
 
+  <div class="top-actions">
+    <a href="https://calendly.com/ykobayashi-farmers" target="_blank" rel="noopener">
+      Book a Coverage Review
+    </a>
+
+    <a class="secondary" href="https://www.dropbox.com/request/ohnk5tikn9bmis5emsr2" target="_blank" rel="noopener">
+      Upload Dec Page / ID
+    </a>
+
+    <a class="dark" href="tel:8587275011">
+      Call or Text Yuki
+    </a>
+  </div>
+
   <main class="page-wrapper">
     <img
       class="homepage-design"
-      assets/final-web-design.png
+      src="assets/final-web-design.png"
       alt="Insure With Yuki insurance strategy for personal, business, life, and specialty protection"
     />
   </main>
