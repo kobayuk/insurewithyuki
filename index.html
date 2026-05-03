@@ -9,275 +9,80 @@
   <meta name="description" content="Insure With Yuki helps California homeowners, condo owners, families, and business owners review insurance coverage, identify gaps, and protect what they are building." />
 
   <style>
-    :root {
-      --primary: #1f2a44;
-      --accent: #a8856a;
-      --light: #f7f3ef;
-      --white: #ffffff;
-      --dark: #1c1c1c;
-      --muted: #6f6f6f;
-      --border: #e4ddd6;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html,
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav {
-      max-width: 1180px;
-      margin: auto;
-      padding: 18px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--primary);
-      letter-spacing: 0.5px;
-    }
-
-    .nav-links a {
-      margin-left: 22px;
-      text-decoration: none;
-      color: var(--primary);
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .hero {
-      background: linear-gradient(rgba(31, 42, 68, 0.78), rgba(31, 42, 68, 0.78)), url("hero-image.jpg");
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      padding: 110px 24px;
-    }
-
-    .hero-content {
-      max-width: 1080px;
-      margin: auto;
-    }
-
-    .hero h1 {
-      max-width: 780px;
-      font-size: 52px;
-      line-height: 1.1;
-      margin-bottom: 22px;
-    }
-
-    .hero p {
-      max-width: 680px;
-      font-size: 20px;
-      margin-bottom: 34px;
-    }
-
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: var(--white);
-    }
-
-    .btn-secondary {
-      background: var(--white);
-      color: var(--primary);
-    }
-
-    .section {
-      padding: 80px 24px;
-    }
-
-    .section-light {
-      background: var(--light);
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: auto;
-    }
-
-    .section-title {
-      max-width: 780px;
-      margin-bottom: 42px;
-    }
-
-    .section-title h2 {
-      color: var(--primary);
-      font-size: 38px;
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--white);
-      padding: 30px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    }
-
-    .card h3 {
-      color: var(--primary);
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 46px;
-      align-items: center;
-    }
-
-    .split img {
       width: 100%;
-      border-radius: 10px;
-      border: 1px solid var(--border);
+      min-height: 100%;
+      background: #061426;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .checklist {
-      list-style: none;
-      margin-top: 22px;
+    .page-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: #061426;
     }
 
-    .checklist li {
-      margin-bottom: 12px;
-      padding-left: 28px;
-      position: relative;
+    .homepage-design {
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
+      display: block;
     }
 
-    .checklist li::before {
-      content: "✓";
-      color: var(--accent);
+    .mobile-actions {
+      display: none;
+      background: #061426;
+      padding: 18px;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .mobile-actions a {
+      text-decoration: none;
+      background: #c79a55;
+      color: #061426;
+      padding: 14px 20px;
+      border-radius: 6px;
       font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
-
-    .cta {
-      background: var(--primary);
-      color: var(--white);
-      padding: 80px 24px;
+      font-size: 15px;
       text-align: center;
     }
 
-    .cta h2 {
-      font-size: 38px;
-      margin-bottom: 18px;
+    .mobile-actions a.secondary {
+      background: #ffffff;
+      color: #061426;
     }
 
-    .cta p {
-      max-width: 720px;
-      margin: 0 auto 30px;
-      font-size: 18px;
-    }
-
-    .contact-box {
-      background: var(--white);
-      color: var(--dark);
-      padding: 34px;
-      border-radius: 10px;
-      max-width: 720px;
-      margin: 40px auto 0;
-      text-align: left;
-    }
-
-    .contact-box h3 {
-      color: var(--primary);
-      margin-bottom: 16px;
-    }
-
-    .contact-box p {
-      margin-bottom: 8px;
-      color: var(--dark);
-    }
-
-    footer {
-      background: #111827;
-      color: var(--white);
-      padding: 34px 24px;
+    .disclaimer {
+      background: #061426;
+      color: #d8d8d8;
+      font-size: 12px;
+      line-height: 1.5;
       text-align: center;
-      font-size: 14px;
+      padding: 18px 20px 28px;
     }
 
-    footer p {
-      margin-bottom: 8px;
-      color: #d1d5db;
+    .disclaimer a {
+      color: #c79a55;
     }
 
-    @media (max-width: 900px) {
-      .hero h1 {
-        font-size: 38px;
+    @media (max-width: 768px) {
+      .homepage-design {
+        width: 100%;
+        max-width: 100%;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        margin-top: 12px;
-      }
-
-      .nav-links a {
-        display: inline-block;
-        margin: 8px 12px 0 0;
+      .mobile-actions {
+        display: flex;
       }
     }
   </style>
@@ -285,226 +90,35 @@
 
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="logo">Insure With Yuki</div>
-      <div class="nav-links">
-        <a href="#personal">Personal</a>
-        <a href="#business">Business</a>
-        <a href="#condo">Condo Review</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </header>
+  <main class="page-wrapper">
+    <img
+      class="homepage-design"
+      src="assets/final-web-design.png"
+      alt="Insure With Yuki insurance strategy for personal, business, life, and specialty protection"
+    />
+  </main>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1><section>   <img      src="assets/final-web-design.png"      alt="Insure With Yuki insurance strategy website design"      style="width:100%; max-width:100%; height:auto; display:block;"   /> </section>, property, and business you are building.</h1>
-      <p>
-        Work with a California-licensed Insurance Strategist who helps you understand your coverage, identify gaps, and make smarter protection decisions before a claim exposes them.
-      </p>
+  <div class="mobile-actions">
+    <a href="https://calendly.com/ykobayashi-farmers" target="_blank" rel="noopener">
+      Book a Coverage Review
+    </a>
 
-      <div class="button-group">
-        <a class="btn btn-primary" href="https://calendly.com/ykobayashi-farmers" target="_blank">Book a Coverage Review</a>
-        <a class="btn btn-secondary" href="tel:8587275011">Call or Text Yuki</a>
-      </div>
-    </div>
-  </section>
+    <a class="secondary" href="tel:8587275011">
+      Call or Text Yuki
+    </a>
+  </div>
 
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-title">
-        <h2>Not all policies protect you the same way.</h2>
-        <p>
-          Many people believe they have “full coverage” until a claim, lawsuit, HOA issue, or business exposure shows them what was missing. My role is to help you understand the strategy behind the policy.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Coverage Review</h3>
-          <p>
-            Review your current policy limits, deductibles, endorsements, and potential gaps so you know what you actually have.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Risk Clarity</h3>
-          <p>
-            Identify where your home, condo, auto, umbrella, business, or liability exposure may need stronger protection.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Strategic Placement</h3>
-          <p>
-            Access Farmers solutions and additional specialty markets when a risk needs a broader placement strategy.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="personal" class="section">
-    <div class="container split">
-      <div>
-        <div class="section-title">
-          <h2>Personal Insurance</h2>
-          <p>
-            Protection for your home, vehicles, family, income, and personal liability.
-          </p>
-        </div>
-
-        <ul class="checklist">
-          <li>Home Insurance</li>
-          <li>Condo Insurance</li>
-          <li>Renters Insurance</li>
-          <li>Auto Insurance</li>
-          <li>Umbrella Insurance</li>
-          <li>Life Insurance</li>
-        </ul>
-
-        <br />
-        <a class="btn btn-primary" href="https://https://https://calendly.com/kobayashi-farmers" target="_blank">Review My Coverage</a>
-      </div>
-
-      <div>
-        <img src="yuki-headshot.jpg" alt="Yukiko Kobayashi personal insurance strategist" />
-      </div>
-    </div>
-  </section>
-
-  <section id="business" class="section section-light">
-    <div class="container split">
-      <div>
-        <img src="yuki-headshot.jpg" alt="Yukiko Kobayashi business insurance strategist" />
-      </div>
-
-      <div>
-        <div class="section-title">
-          <h2>Business Insurance</h2>
-          <p>
-            Insurance strategy for small business owners, contractors, professionals, real estate-related businesses, and service-based companies.
-          </p>
-        </div>
-
-        <ul class="checklist">
-          <li>Business Owner’s Policy</li>
-          <li>General Liability</li>
-          <li>Workers’ Compensation</li>
-          <li>Commercial Auto</li>
-          <li>Cyber Liability</li>
-          <li>Professional Liability</li>
-          <li>Umbrella / Excess Liability</li>
-          <li>Specialty Market Access</li>
-        </ul>
-
-        <br />
-        <a class="btn btn-primary" href="https://calendly.com/ykobayashi-farmers" target="_blank">Request a Business Review</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="condo" class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Condo & HOA Coverage Review</h2>
-        <p>
-          Condo owners may be responsible for more than they realize. Your HOA master policy and CC&Rs can affect what your personal condo policy needs to cover.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Walls-In vs. Walls-Out</h3>
-          <p>
-            Understand whether your responsibility starts inside the unit, includes fixtures, or extends to improvements and upgrades.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>CC&R Review</h3>
-          <p>
-            Review association documents to help identify insurance responsibilities that may not be obvious from the policy alone.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Master Policy Gaps</h3>
-          <p>
-            Compare your unit owner policy against the association’s master policy so you can better understand possible exposure.
-          </p>
-        </div>
-      </div>
-
-      <br /><br />
-      <a class="btn btn-primary" href="https://calendly.com/ykobayashi-farmers" target="_blank">Book a Condo Policy Review</a>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="container split">
-      <div>
-        <div class="section-title">
-          <h2>Why work with Yuki?</h2>
-          <p>
-            My approach is not to simply quote a price. I help clients understand the risk, coverage structure, and possible consequences of being underinsured.
-          </p>
-        </div>
-
-        <ul class="checklist">
-          <li>California-licensed insurance guidance</li>
-          <li>Advisor-led coverage review</li>
-          <li>Personal and commercial insurance support</li>
-          <li>Local San Diego market understanding</li>
-          <li>Clear communication before you make decisions</li>
-          <li>Access to Farmers and additional markets when appropriate</li>
-        </ul>
-      </div>
-
-      <div>
-        <img src="yuki-headshot.jpg" alt="Yukiko Kobayashi Insurance Strategist" />
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="cta">
-    <div class="container">
-      <h2>Ready to understand your coverage?</h2>
-      <p>
-        Whether you own a home, live in a condo, run a business, or simply want to make sure your policy still makes sense, start with a coverage review.
-      </p>
-
-      <div class="button-group" style="justify-content: center;">
-        <a class="btn btn-primary" href="https://calendly.com/ykobayashi-farmers" target="_blank">Book Appointment</a>
-        <a class="btn btn-secondary" href="sms:8587275011">Text Yuki</a>
-      </div>
-
-      <div class="contact-box">
-        <h3>Contact</h3>
-        <p><strong>Yukiko Kobayashi</strong></p>
-        <p>Personal Insurance Strategist</p>
-        <p>Call or text: <a href="tel:8587275011">(858) 727-5011</a></p>
-        <p>Email: <a href="mailto:YKobayashi@farmersagency.com">YKobayashi@farmersagency.com</a></p>
-        <p>Website: <a href="https://insurewithyuki.com" target="_blank">InsureWithYuki.com</a></p>
-        <p>CA Lic. #4432017</p>
-      </div>
-    </div>
-  </section>
-<div style="font-size:12px; color:#555; text-align:center; max-width:900px; margin:30px auto; padding:15px;">
-  By scheduling a coverage review or submitting a request, you agree to receive SMS messages from Insure With Yuki regarding your insurance inquiry.
-  Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance.
-  Consent is not a condition of purchase.
-  See our
-  <a href="https://insurewithyuki.com/privacy.html">Privacy Policy</a>
-  and
-  <a href="https://insurewithyuki.com/terms-and-conditions.html">Terms & Conditions</a>.
-</div>
-  <footer>
-    <p>© 2026 Insure With Yuki. All rights reserved.</p>
-    <p>Insurance products and availability may vary by carrier, underwriting guidelines, eligibility, and state requirements.</p>
-    <p>CA Lic. #4432017</p>
-  </footer>
+  <div class="disclaimer">
+    By scheduling a coverage review or submitting a request, you agree to receive SMS messages from Insure With Yuki regarding your insurance inquiry.
+    Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance.
+    Consent is not a condition of purchase.
+    See our
+    <a href="https://insurewithyuki.com/privacy.html">Privacy Policy</a>
+    and
+    <a href="https://insurewithyuki.com/terms-and-conditions.html">Terms & Conditions</a>.
+    <br />
+    © 2026 Insure With Yuki. CA Lic. #4432017.
+  </div>
 
 </body>
 </html>
