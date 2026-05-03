@@ -22,15 +22,15 @@
       padding: 0;
       background: #06172a;
       font-family: Arial, Helvetica, sans-serif;
+      scroll-behavior: smooth;
     }
 
-    .homepage-link {
-      display: block;
+    .homepage-wrapper {
+      position: relative;
       width: 100%;
       max-width: 1536px;
       margin: 0 auto;
       background: #06172a;
-      cursor: pointer;
     }
 
     .homepage-image {
@@ -38,24 +38,228 @@
       height: auto;
       display: block;
     }
+
+    .click-zone {
+      position: absolute;
+      display: block;
+      z-index: 20;
+      background: transparent;
+      text-indent: -9999px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    /* TOP NAVIGATION — transparent over existing image text */
+    .nav-home {
+      left: 22.4%;
+      top: 2.6%;
+      width: 3.8%;
+      height: 3.2%;
+    }
+
+    .nav-personal {
+      left: 28.2%;
+      top: 2.6%;
+      width: 5.8%;
+      height: 3.2%;
+    }
+
+    .nav-business {
+      left: 34.5%;
+      top: 2.6%;
+      width: 5.8%;
+      height: 3.2%;
+    }
+
+    .nav-life {
+      left: 40.7%;
+      top: 2.6%;
+      width: 8.0%;
+      height: 3.2%;
+    }
+
+    .nav-about {
+      left: 49.5%;
+      top: 2.6%;
+      width: 6.4%;
+      height: 3.2%;
+    }
+
+    .nav-resources {
+      left: 56.6%;
+      top: 2.6%;
+      width: 6.8%;
+      height: 3.2%;
+    }
+
+    .nav-contact {
+      left: 63.4%;
+      top: 2.6%;
+      width: 5.2%;
+      height: 3.2%;
+    }
+
+    /* HERO BUTTONS — transparent over existing image buttons */
+    .hero-book {
+      left: 4.1%;
+      top: 34.7%;
+      width: 13.6%;
+      height: 3.8%;
+    }
+
+    .hero-explore {
+      left: 18.8%;
+      top: 34.7%;
+      width: 11.4%;
+      height: 3.8%;
+    }
+
+    /* SERVICE BUTTONS */
+    .personal-button {
+      left: 3.8%;
+      top: 83.2%;
+      width: 12.8%;
+      height: 2.8%;
+    }
+
+    .business-button {
+      left: 26.0%;
+      top: 83.2%;
+      width: 12.9%;
+      height: 2.8%;
+    }
+
+    .life-button {
+      left: 51.0%;
+      top: 83.2%;
+      width: 14.0%;
+      height: 2.8%;
+    }
+
+    /* BOTTOM GOLD BOOKING BUTTON */
+    .bottom-book {
+      left: 31.0%;
+      top: 91.1%;
+      width: 29.6%;
+      height: 7.2%;
+    }
+
+    /* Anchor targets for scrolling */
+    .anchor {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      left: 0;
+      pointer-events: none;
+    }
+
+    #home-target {
+      top: 0%;
+    }
+
+    #personal-target {
+      top: 72%;
+    }
+
+    #business-target {
+      top: 72%;
+    }
+
+    #life-target {
+      top: 72%;
+    }
+
+    #about-target {
+      top: 52%;
+    }
+
+    #resources-target {
+      top: 52%;
+    }
+
+    #contact-target {
+      top: 90%;
+    }
+
+    @media (max-width: 700px) {
+      .click-zone {
+        display: none;
+      }
+
+      .hero-book,
+      .bottom-book {
+        display: block;
+      }
+
+      .hero-book {
+        left: 4%;
+        top: 34.5%;
+        width: 15%;
+        height: 4%;
+      }
+
+      .bottom-book {
+        left: 29%;
+        top: 91%;
+        width: 34%;
+        height: 7.5%;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <main class="homepage-wrapper">
 
-  <a
-    class="homepage-link"
-    href="https://calendly.com/ykobayashi-farmers"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Book a coverage review with Insure With Yuki"
-  >
     <img
       class="homepage-image"
       src="assets/6F980266-1EAE-4C49-BFF9-C0C6C555F631.jpeg"
       alt="Insure With Yuki luxury insurance advisor homepage layout"
     />
-  </a>
 
+    <!-- Scroll anchor targets -->
+    <div id="home-target" class="anchor"></div>
+    <div id="personal-target" class="anchor"></div>
+    <div id="business-target" class="anchor"></div>
+    <div id="life-target" class="anchor"></div>
+    <div id="about-target" class="anchor"></div>
+    <div id="resources-target" class="anchor"></div>
+    <div id="contact-target" class="anchor"></div>
+
+    <!-- Transparent nav overlays over existing image labels -->
+    <a class="click-zone nav-home" href="#home-target">Home</a>
+    <a class="click-zone nav-personal" href="#personal-target">Personal</a>
+    <a class="click-zone nav-business" href="#business-target">Business</a>
+    <a class="click-zone nav-life" href="#life-target">Life & Specialty</a>
+    <a class="click-zone nav-about" href="#about-target">About Yuki</a>
+    <a class="click-zone nav-resources" href="#resources-target">Resources</a>
+    <a class="click-zone nav-contact" href="#contact-target">Contact</a>
+
+    <!-- Transparent booking overlays over existing image buttons -->
+    <a
+      class="click-zone hero-book"
+      href="https://calendly.com/ykobayashi-farmers"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Book a Coverage Review
+    </a>
+
+    <a
+      class="click-zone bottom-book"
+      href="https://calendly.com/ykobayashi-farmers"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Book Your Coverage Review
+    </a>
+
+    <!-- Transparent internal service button overlays -->
+    <a class="click-zone hero-explore" href="#personal-target">Explore Services</a>
+    <a class="click-zone personal-button" href="#personal-target">Review My Personal Coverage</a>
+    <a class="click-zone business-button" href="#business-target">Request a Business Review</a>
+    <a class="click-zone life-button" href="#life-target">Request Life and Specialty Options</a>
+
+  </main>
 </body>
 </html>
